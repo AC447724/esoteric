@@ -3,86 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esoteric</title>
-    <style>
-        :root {
-            --bg: #0d0d0f;
-            --text: #7a7a7d;
-            --accent: #d4af37; /* Muted Gold */
-        }
+    
+    <title>Esoteric Private</title>
+    <meta name="title" content="Esoteric">
+    <meta name="description" content="Private infrastructure and digital archives. Access restricted.">
+    <meta name="robots" content="index, follow">
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://esoteric.win/">
+    <meta property="og:title" content="Esoteric">
+    <meta property="og:description" content="Private infrastructure and digital archives. Access restricted.">
+    <meta property="og:image" content="favicon.png"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Esoteric">
+    <meta property="twitter:description" content="Private infrastructure and digital archives.">
 
-        body {
-            background-color: var(--bg);
-            background-image: radial-gradient(circle at center, #141417 0%, #0d0d0f 100%);
-            color: var(--text);
-            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 400px;
-            padding: 20px;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .logo-box {
-            margin-bottom: 60px;
-            opacity: 0.9;
-        }
-
-        h1 {
-            font-size: 22px;
-            font-weight: 200;
-            letter-spacing: 0.8rem;
-            text-transform: uppercase;
-            color: #ffffff;
-            margin-bottom: 16px;
-        }
-
-        .tagline {
-            font-size: 11px;
-            letter-spacing: 0.3rem;
-            color: var(--text);
-            text-transform: uppercase;
-            opacity: 0.6;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .footer {
-            position: fixed;
-            bottom: 40px;
-            font-size: 9px;
-            color: #2a2a2d;
-            letter-spacing: 0.4rem;
-            text-transform: uppercase;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
+    <main class="container">
         <div class="logo-box">
             <svg width="110" height="110" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                    <radialGradient id="g"><stop offset="0%" stop-color="#d4af37" stop-opacity=".12"/><stop offset="100%" stop-opacity="0"/></radialGradient>
-                    <filter id="f"><feGaussianBlur in="SourceAlpha" stdDeviation=".6"/><feSpecularLighting surfaceScale="4" specularExponent="35" lighting-color="#d4af37"><fePointLight x="-40" y="-40" z="60"/></feSpecularLighting><feComposite in2="SourceAlpha" operator="in"/></filter>
+                    <radialGradient id="g">
+                        <stop offset="0%" stop-color="#d4af37" stop-opacity=".12"/>
+                        <stop offset="100%" stop-opacity="0"/>
+                    </radialGradient>
+                    <filter id="f">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation=".6"/>
+                        <feSpecularLighting surfaceScale="4" specularExponent="35" lighting-color="#d4af37">
+                            <fePointLight x="-40" y="-40" z="60"/>
+                        </feSpecularLighting>
+                        <feComposite in2="SourceAlpha" operator="in"/>
+                    </filter>
                 </defs>
                 <circle cx="50" cy="50" r="45" fill="url(#g)"/>
                 <rect x="10" y="10" width="80" height="80" rx="1" fill="none" stroke="#1c1c1f" stroke-width="8" filter="url(#f)"/>
                 <rect x="10" y="10" width="80" height="80" rx="1" fill="none" stroke="#2a2a2d" stroke-width="0.8"/>
                 <g transform="translate(50 50)" fill="none">
-                    <circle r="26" stroke="#2a2a2d" stroke-width=".5" stroke-dasharray="1 12"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="50s" repeatCount="indefinite"/></circle>
-                    <circle r="18" stroke="#d4af37" stroke-width=".8" stroke-dasharray="4 8" opacity=".2"><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="30s" repeatCount="indefinite"/></circle>
+                    <circle r="26" stroke="#2a2a2d" stroke-width=".5" stroke-dasharray="1 12">
+                        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="50s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle r="18" stroke="#d4af37" stroke-width=".8" stroke-dasharray="4 8" opacity=".2">
+                        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="30s" repeatCount="indefinite"/>
+                    </circle>
                 </g>
                 <path d="M22 22l10 10M78 22L68 32M22 78l10-10M78 78L68 68" stroke="#2a2a2d" stroke-width="1.2"/>
                 <circle cx="50" cy="50" r="3" fill="#d4af37" opacity=".6"/>
@@ -91,11 +55,11 @@
 
         <h1>Esoteric</h1>
         <p class="tagline">Coming Soon</p>
-    </div>
+    </main>
 
-    <div class="footer">
-        MMXXVI
-    </div>
+    <footer class="footer">
+        .win
+    </footer>
 
 </body>
 </html>
