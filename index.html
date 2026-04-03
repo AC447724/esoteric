@@ -1,204 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Esoteric Private</title>
-  <meta name="title" content="Esoteric">
-  <meta name="description" content="Private infrastructure and digital archives. Access restricted.">
-  <meta name="robots" content="index, follow">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://esoteric.win/">
-  <meta property="og:title" content="Esoteric">
-  <meta property="og:description" content="Private infrastructure and digital archives. Access restricted.">
-  <meta property="og:image" content="favicon.png">
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Esoteric">
-  <meta property="twitter:description" content="Private infrastructure and digital archives.">
-  <link rel="icon" type="image/png" href="https://esoteric.win/assets/brand/esoteric.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400&family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0b0b0c;
-      --text: #4a4a4d;
-      --text-mid: #6a6a6d;
-      --accent: #d4af37;
-      --border: #1e1e21;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Inconsolata', monospace;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    /* Subtle grain overlay */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-      opacity: 0.025;
-      pointer-events: none;
-      z-index: 100;
-    }
-
-    /* Horizontal rule lines — top and bottom thirds */
-    body::after {
-      content: '';
-      position: fixed;
-      left: 40px;
-      right: 40px;
-      top: 38px;
-      height: 1px;
-      background: var(--border);
-      pointer-events: none;
-    }
-
-    .rule-bottom {
-      position: fixed;
-      left: 40px;
-      right: 40px;
-      bottom: 38px;
-      height: 1px;
-      background: var(--border);
-    }
-
-    .container {
-      max-width: 360px;
-      padding: 20px;
-      opacity: 0;
-      animation: appear 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
-    }
-
-    .logo-box {
-      margin-bottom: 52px;
-    }
-
-    h1 {
-      font-family: 'Cormorant', serif;
-      font-size: 28px;
-      font-weight: 300;
-      letter-spacing: 0.65rem;
-      text-transform: uppercase;
-      color: #d8d8d4;
-      margin-bottom: 14px;
-    }
-
-    .tagline {
-      font-size: 9px;
-      letter-spacing: 0.35rem;
-      color: var(--text);
-      text-transform: uppercase;
-      font-family: 'Inconsolata', monospace;
-      font-weight: 300;
-    }
-
-    .footer {
-      position: fixed;
-      bottom: 28px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 8px;
-      color: #252528;
-      letter-spacing: 0.45rem;
-      text-transform: uppercase;
-      font-family: 'Inconsolata', monospace;
-      font-weight: 300;
-    }
-
-    /* Corner marks */
-    .corner {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      opacity: 0.18;
-    }
-    .corner::before,
-    .corner::after {
-      content: '';
-      position: absolute;
-      background: var(--text-mid);
-    }
-    .corner::before { width: 1px; height: 100%; }
-    .corner::after  { width: 100%; height: 1px; }
-
-    .corner.tl { top: 32px; left: 32px; }
-    .corner.tr { top: 32px; right: 32px; transform: scaleX(-1); }
-    .corner.bl { bottom: 32px; left: 32px; transform: scaleY(-1); }
-    .corner.br { bottom: 32px; right: 32px; transform: scale(-1); }
-
-    @keyframes appear {
-      from {
-        opacity: 0;
-        transform: translateY(6px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="esoteric.win - something new is coming. eventually.">
+<meta property="og:title" content="esoteric.win">
+<meta property="og:description" content="we have a vision. we have ambition. we do not have a launch date.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<title>coming soon - esoteric.win</title>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;color:#e0e0e0;font-family:'Share Tech Mono',monospace;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;text-align:center}
+.eyebrow{font-size:10px;letter-spacing:4px;color:#444;text-transform:uppercase;margin-bottom:20px}
+.title{font-family:'Special Elite',serif;font-size:clamp(36px,9vw,80px);line-height:1.05;margin-bottom:20px}
+.title span{color:#888}
+.sub{font-size:12px;color:#555;max-width:360px;line-height:1.9;margin-bottom:48px}
+.promises{text-align:left;max-width:320px;width:100%;margin-bottom:48px}
+.promise{display:flex;gap:14px;font-size:12px;padding:9px 0;border-bottom:1px solid #1a1a1a;color:#777;line-height:1.5}
+.promise:last-child{border:none}
+.promise .check{color:#888;flex-shrink:0}
+.promise .cross{color:#333;flex-shrink:0}
+.input-row{display:flex;max-width:340px;width:100%}
+input{flex:1;background:#111;border:1px solid #222;border-right:none;color:#e0e0e0;font-family:'Share Tech Mono',monospace;font-size:12px;padding:12px 16px;outline:none}
+input::placeholder{color:#333}
+input:focus{border-color:#888}
+button{background:#888;border:none;color:#0a0a0a;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:1px;padding:12px 20px;cursor:pointer;text-transform:uppercase}
+button:hover{background:#aaa}
+.fine{font-size:10px;color:#2a2a2a;margin-top:12px;letter-spacing:1px}
+</style>
 </head>
 <body>
-
-  <div class="corner tl"></div>
-  <div class="corner tr"></div>
-  <div class="corner bl"></div>
-  <div class="corner br"></div>
-  <div class="rule-bottom"></div>
-
-  <main class="container">
-    <div class="logo-box">
-      <svg width="180" height="180" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="g">
-            <stop offset="0%" stop-color="#d4af37" stop-opacity=".1"/>
-            <stop offset="100%" stop-opacity="0"/>
-          </radialGradient>
-          <filter id="f">
-            <feGaussianBlur in="SourceAlpha" stdDeviation=".6"/>
-            <feSpecularLighting surfaceScale="4" specularExponent="35" lighting-color="#d4af37">
-              <fePointLight x="-40" y="-40" z="60"/>
-            </feSpecularLighting>
-            <feComposite in2="SourceAlpha" operator="in"/>
-          </filter>
-        </defs>
-        <circle cx="50" cy="50" r="45" fill="url(#g)"/>
-        <rect x="10" y="10" width="80" height="80" rx="1" fill="none" stroke="#1c1c1f" stroke-width="8" filter="url(#f)"/>
-        <rect x="10" y="10" width="80" height="80" rx="1" fill="none" stroke="#232326" stroke-width="0.8"/>
-        <g transform="translate(50 50)" fill="none">
-          <circle r="26" stroke="#222225" stroke-width=".5" stroke-dasharray="1 12">
-            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="50s" repeatCount="indefinite"/>
-          </circle>
-          <circle r="18" stroke="#d4af37" stroke-width=".8" stroke-dasharray="4 8" opacity=".18">
-            <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="30s" repeatCount="indefinite"/>
-          </circle>
-        </g>
-        <path d="M22 22l10 10M78 22L68 32M22 78l10-10M78 78L68 68" stroke="#252528" stroke-width="1.2"/>
-        <circle cx="50" cy="50" r="2.5" fill="#d4af37" opacity=".55"/>
-      </svg>
-    </div>
-
-    <h1>Esoteric</h1>
-    <p class="tagline">Coming Soon</p>
-  </main>
-
-  <footer class="footer">.win</footer>
-
+<div class="eyebrow">esoteric.win · something new</div>
+<div class="title">it's coming.<br><span>eventually.</span></div>
+<div class="sub">we have a vision. we have ambition.<br>we do not have a launch date.<br>we're working on it though. kind of.</div>
+<div class="promises">
+<div class="promise"><span class="check">✓</span><span>logo is done</span></div>
+<div class="promise"><span class="check">✓</span><span>domain purchased (obviously)</span></div>
+<div class="promise"><span class="check">✓</span><span>...</span></div>
+<div class="promise"><span class="cross">✗</span><span>anything else</span></div>
+</div>
+<div class="input-row">
+<input type="email" placeholder="your@email.com">
+<button onclick="this.textContent='ok 👍';this.style.background='#666'">notify me</button>
+</div>
+<div class="fine">we'll email you. or forget to. one of those.</div>
 </body>
 </html>
