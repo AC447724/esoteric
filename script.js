@@ -28,8 +28,8 @@ const pageMarkup = `
         <div class="flex items-center gap-3">
           <button onclick="showComingSoon('Dashboard')" class="flex items-center gap-2 px-5 py-2.5 bg-slate-800 text-white rounded-full text-sm font-semibold hover:bg-slate-700 transition-all duration-300">
             <img src="https://files.catbox.moe/o1hd0x.webp" alt="logo" class="w-4 h-4 rounded-sm object-cover" />
-            Dashboard
-            <span class="text-[11px] uppercase tracking-[0.3em] bg-slate-900/80 px-2 py-1 rounded-full text-textSecondary">Soon</span>
+            <span class="dashboard-label">Dashboard</span>
+            <span class="text-[11px] uppercase tracking-[0.3em] bg-slate-900/80 px-2 py-1 rounded-full text-textSecondary soon-badge">Soon</span>
           </button>
           <button onclick="document.getElementById('terminal').scrollIntoView({behavior: 'smooth'})" class="px-5 py-2.5 bg-void text-white rounded-full text-sm font-semibold hover:bg-slate-800 transition-all duration-300">
             Launch Console
