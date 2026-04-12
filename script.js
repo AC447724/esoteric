@@ -12,7 +12,7 @@ const pageMarkup = `
           <div class="w-12 h-12 rounded-3xl bg-slate-900/40 border border-slate-700/40 flex items-center justify-center overflow-hidden transition-all duration-300 logo-pop">
             <img src="https://files.catbox.moe/o1hd0x.webp" alt="esoteric.win logo" class="w-full h-full object-cover" />
           </div>
-          <span class="font-display font-bold text-xl tracking-tight">esoteric<span class="text-textSecondary">.win</span></span>
+          <span class="font-display font-bold text-xl tracking-tight logo-label">esoteric<span class="text-textSecondary">.win</span></span>
         </a>
 
         <div class="hidden md:flex items-center gap-1 glass rounded-full px-2 py-1.5">
@@ -71,8 +71,8 @@ const pageMarkup = `
                 <i data-lucide="shield-check" class="w-6 h-6 text-textPrimary"></i>
               </div>
               <div>
-                <div class="text-sm uppercase tracking-[0.28em] text-slate-400 mb-1">Guard mode</div>
-                <div class="text-2xl font-bold font-display">Live shield</div>
+                <div class="text-sm uppercase tracking-[0.28em] text-slate-400 mb-1">esoteric</div>
+                <div class="text-2xl font-bold font-display">Guarding</div>
               </div>
             </div>
             <p class="text-sm text-textSecondary mb-4">Obfuscation, hook protection, and anti-debugging checks live inside every protected release.</p>
