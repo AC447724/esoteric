@@ -1,0 +1,1066 @@
+local repo = 'https://raw.githubusercontent.com/deividcomsono/Obsidian/main/'
+local lib = loadstring(game:HttpGet(repo .. 'Library.lua'))()
+local themes = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
+local saves = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
+
+lib.Scheme.AccentColor = Color3.fromRGB(245, 105, 180)
+
+local win = lib:CreateWindow({
+    Title = 'esoteric | rivals',
+    Footer = nil,
+    Center = true,
+    AutoShow = true,
+    Resizable = true,
+    ShowCustomCursor = false,
+    ToggleKeybind = Enum.KeyCode.RightShift
+})
+
+local tabs = {
+    Main = win:AddTab('Main', 'house'),
+    Vis = win:AddTab('Visuals', 'eye'),
+    Skins = win:AddTab('Skins', 'pen'),
+    Rage = win:AddTab('Rage', 'zap'),
+    Misc = win:AddTab('Misc', 'shield'),
+    UI = win:AddTab('UI Settings', 'settings'),
+}
+
+local cfg = {
+    SilentAim = false,
+    SilentAimPart = 'Head',
+    Fov = 150,
+    FovThickness = 1,
+    HitChance = 100,
+    ShowFov = true,
+    FovPulse = false,
+    FovPulseSpeed = 5,
+    FovBreathing = false,
+    FovBreathingSpeed = 3,
+    FovBreathingScale = 1.2,
+    
+    Crosshair = false,
+    CrosshairType = 'Cross',
+    CrosshairSize = 10,
+    CrosshairThickness = 2,
+    CrosshairColor = Color3.fromRGB(255, 255, 255),
+    CrosshairSpin = false,
+    CrosshairSpinSpeed = 100,
+
+    EspEnabled = false,
+    BoxType = '2D',
+    BoxOffset = 2,
+    BoxThickness = 1,
+    BoxColor = Color3.fromRGB(255, 0, 0),
+    HealthBar = false,
+    
+    ShowName = false,
+    NameColor = Color3.new(1,1,1),
+    ShowDistance = false,
+    DistanceColor = Color3.new(0,1,0),
+    ShowItem = false,
+    ItemColor = Color3.new(0,1,1),
+    
+    Chams = false,
+    ChamsFill = Color3.fromRGB(255, 0, 255),
+    ChamsOutline = Color3.new(1,1,1),
+    
+    HeadDot = false,
+    HeadDotSize = 4,
+    HeadDotColor = Color3.new(1,0,0),
+    
+    Skeletons = false,
+    SkeletonColor = Color3.new(1,1,1),
+    
+    ViewArrow = false,
+    ViewArrowColor = Color3.new(1,1,1),
+    
+    RainbowVisuals = false,
+    RainbowSpeed = 1,
+    SelfEsp = false,
+    
+    BoxWidthMult = 1,
+    NamePos = 'Top',
+    DistPos = 'Bottom',
+    ItemPos = 'Bottom',
+    
+    Aimbot = false,
+    AimbotPart = 'Head',
+    AimSmooth = 0.1,
+    Prediction = false,
+    PredictionAmount = 0.15,
+    
+    CamFOVEnabled = false,
+    CamFOV = 70,
+    ThirdPerson = false,
+    ThirdPersonDist = 10,
+
+    SpinBot = false,
+    SpinSpeed = 20,
+    Orbit = false,
+    OrbitTargetMode = 'Closest to Mouse',
+    OrbitPosMode = 'Circle',
+    OrbitSpeed = 10,
+    OrbitRadius = 10,
+    OrbitHeight = 3,
+    Fly = false,
+    FlySpeed = 50,
+    SpeedHack = false,
+    SpeedHackMultiplier = 2,
+    InfJump = false,
+    NoRecoil = false,
+    Tracers = false,
+    TracerColor = Color3.new(1,1,1),
+    ChinaHat = false,
+    ChinaHatRainbow = false,
+    ChinaHatColor = Color3.fromRGB(245, 105, 180),
+    ChinaHatOthers = false,
+    ChinaHatRadius = 1.5,
+    ChinaHatHeight = 1.2,
+    ChinaHatThickness = 1,
+    PerfOverlay = false,
+    HitSounds = false,
+    RainbowVisuals = false,
+    RainbowSpeed = 1,
+    EspFontSize = 13,
+    EspSkeletonThickness = 1,
+    Skins = {},
+    Wraps = {},
+    
+    SilentAimWallCheck = false,
+    AimbotWallCheck = false,
+    Fullbright = false,
+    AntiAFK = true,
+}
+
+local grps = {
+    Primaries = {'Assault Rifle', 'Burst Rifle', 'Sniper', 'Energy Rifle', 'Shotgun', 'Minigun', 'Bow', 'Crossbow'},
+    Secondaries = {'Handgun', 'Revolver', 'Uzi', 'Energy Pistols', 'Shorty', 'Spray', 'Flare Gun'},
+    Melee = {'Katana', 'Knife', 'Gunblade', 'Battle Axe', 'Scythe', 'Daggers', 'Chainsaw', 'Fists'},
+    Tech = {'RPG', 'Flamethrower', 'Freeze Ray', 'Paintball Gun', 'Grenade Launcher', 'Grenade', 'Subspace Tripmine', 'Riot Shield', 'Trower', 'Flashbang', 'Jump Pad', 'Medkit', 'Molotov', 'Satchel', 'Smoke Grenade', 'War Horn'}
+}
+
+local skins_data = {
+    Bow = {'Compound Bow','Raven Bow','Dream Bow','Bat Bow','Frostbite Bow','Key Bow'},
+    ['Assault Rifle'] = {'AKEY-47','AUG','Ginerbread AUG','Tommy Gun','AK-47','Boneclaw Rifle','Phoenix Rifle','10B Visits'},
+    Chainsaw = {'Blobsaw','Handsaws','Mega Drill','Buzzsaw','Festive Buzzsaw'},
+    RPG = {'Nuke Launcher','RPKEY','Spaceship Launcher','Squid Launcher','Pumpkin Launcher','Firework Launcher','Pencil Launcher'},
+    ['Burst Rifle'] = {'Aqua Burst','Electro Rifle','FAMAS','Spectral Burst','Pine Burst','Pixel Burst'},
+    Exogun = {'Singularity','Wondergun','Ray Gun','Repulsor','Exogourd','Midnight Festive Exogun'},
+    Fists = {'Boxing Gloves','Brass Knuckles','Fists Of Hurt','Pumpkin Claws','Festive Fists'},
+    Flamethrower = {'Lamethrower','Pixel Flamethrower','Glitterthrower',"Jack O'Thrower",'Snowblower'},
+    ['Flare Gun'] = {'Dynamite Gun','Firework Gun','Banana Flare','Vexed Flare Gun','Wrapped Flare Gun'},
+    ['Freeze Ray'] = {'Bubble Ray','Temporal Ray','Gum Ray','Spider Ray','Wrapped Freeze Ray'},
+    Grenade = {'Water Balloon','Whoopee Cushion','Dynamite','Soul Grenade','Jingle Grenade','Keynade'},
+    ['Grenade Launcher'] = {'Swashbuckler','Uranium Launcher','Gearnade Launcher','Skull Launcher','Snowball Launcher'},
+    Handgun = {'Hand Gun','Pixel Handgun','Blaster','Gingerbread Handgun','Gumball Handgun','Pumpkin Handgun','Stealth Handgun'},
+    Katana = {'Lightning Bolt','Saber','Stellar Katana',"Devil's Trident",'2025 Katana','Pixel Katana','Keytana'},
+    Minigun = {'Lasergun 3000','Pixel Minigun','Fighter Jet','Pumpkin Minigun','Wrapped Minigun'},
+    ['Paintball Gun'] = {'Boba Gun','Slime Gun','Ketchup Gun','Brain Gun','Snowball Gun'},
+    Revolver = {'Sheriff','Desert Eagle','Peppergun','Boneclaw Revolver','Peppermint Sheriff','Keyvolver'},
+    Slingshot = {'Goalpost','Stick','Harp','Boneshot','Reindeer Slingshot'},
+    ['Subspace Tripmine'] = {"Don't Press",'Spring','DIY Tripmine','Trick or Treat','Dev-in-the-Box'},
+    Uzi = {'Electro Uzi','Water Uzi','Money Gun','Demon Uzi','Pine Uzi','Keyzi'},
+    Sniper = {'Pixel Sniper','Hyper Sniper','Event Horizon','Eyething Sniper','Gingerbread Sniper','Keyper'},
+    Knife = {'Karambit','Chancla','Balisong','Machete','Candy Cane'},
+    Crossbow = {'Pixel Crossbow','Harpoon Crossbow','Violin Crossbow','Frostbite Crossbow'},
+    ['Energy Rifle'] = {'Hacker Rifle','Hydro Rifle','Void Rifle','2025 Energy Rifle','Apex Rifle'},
+    Gunblade = {'Hyper Gunblade','Crude Gunblade','Gunsaw',"Elf's Gunblade"},
+    Shotgun = {'Balloon Shotgun','Hyper Shotgun','Cactus Shotgun','Broomstick','Wrapped Shotgun','Shotkey'},
+    Daggers = {'Aces','Paper Planes','Shurikens','Cookies','Crystal Daggers'},
+    ['Energy Pistols'] = {'Hacker Pistols','Void Pistols','Hydro Pistols','2025 Energy Pistols','Apex Pistols'},
+    Shorty = {'Not So Shorty','Lovely Shorty','Balloon Shorty','Demon Shorty','Wrapped Shorty','Too Shorty'},
+    Spray = {'Lovely Spray','Nailgun','Spray Bottle','Pine Spray'},
+    ['Battle Axe'] = {'The Shred','Ban Axe','Cerulean Axe','Nordic Axe'},
+    ['Riot Shield'] = {'Door','Energy Shield','Masterpiece','Sled'},
+    Scythe = {'Scythe of Death','Anchor','Sakura Scythe','Bat Scythe','Cryo Scythe','Keythe','Bug Net'},
+    Trower = {'Plastic Shovel','Garden Shovel','Paintbrush','Pumpkin Carver','Snow Shovel'},
+    Flashbang = {'Disco ball','Camera','Lightbulb','Skullbang','Shining Star','Pixel Flashbang'},
+    ['Jump Pad'] = {'Trampoline','Bounce House','Shady Chicken Sandwich'},
+    Medkit = {'Sandwich','Laptop','Medkitty','Bucket of Candy','Milk & Cookies','Briefcase'},
+    Molotov = {'Coffee','Torch','Lava Lamp','Vexed Candle','Hot Coals'},
+    Satchel = {'Advanced Satchel','Notebook Satchel',"Bag O' Money",'Suspicious Gift'},
+    ['Smoke Grenade'] = {'Emoji Cloud','Balance','Hourglass','Eyeball','Snowglobe'},
+    ['War Horn'] = {'Trumpet','Megaphone','Air Horn','Mammoth Horn'},
+}
+
+local wrap_conns = {} 
+local wrap_data = loadstring(game:HttpGet('https://raw.githubusercontent.com/PartyStarter240/Rivals/refs/heads/main/WrapData.lua'))()
+
+local http = game:GetService("HttpService")
+local function set_wrap(mdl, json)
+    local d = http:JSONDecode(json)
+    local mp, tx = d.MeshParts or {}, d.Textures or {}
+
+    for _, p in ipairs(mp) do
+        for _, o in ipairs(mdl:GetDescendants()) do
+            if o:IsA("MeshPart") and o.MeshId == p.MeshId then
+                o.Color = Color3.new(unpack(p.Color))
+                local m = p.Material:match("Enum.Material.(.+)")
+                if m and Enum.Material[m] then o.Material = Enum.Material[m] end
+                o.MaterialVariant = p.MaterialVariant or ""
+                o.Transparency = p.Transparency or 0
+                o.Reflectance = p.Reflectance or 0
+                o.TextureID = p.TextureID or ""
+            end
+        end
+    end
+
+    for _, o in ipairs(mdl:GetDescendants()) do
+        if o:IsA("Texture") then o:Destroy() end
+    end
+
+    for _, t in ipairs(tx) do
+        for _, o in ipairs(mdl:GetDescendants()) do
+            if o:IsA("MeshPart") and o.MeshId == t.ParentMeshId then
+                local nt = Instance.new("Texture")
+                nt.Name = t.Name
+                nt.Texture = t.Texture
+                nt.Color3 = Color3.new(unpack(t.Color3))
+                nt.OffsetStudsU, nt.OffsetStudsV = t.OffsetStudsU, t.OffsetStudsV
+                nt.StudsPerTileU, nt.StudsPerTileV = t.StudsPerTileU, t.StudsPerTileV
+                nt.Transparency, nt.ZIndex = t.Transparency, t.ZIndex
+                if t.Face and Enum.NormalId[t.Face] then nt.Face = Enum.NormalId[t.Face] end
+                nt.Parent = o
+            end
+        end
+    end
+end
+
+local ply = game:GetService("Players")
+local rs = game:GetService("RunService")
+local uis = game:GetService("UserInputService")
+local rep = game:GetService("ReplicatedStorage")
+local lp = ply.LocalPlayer
+local cam = workspace.CurrentCamera
+
+local item_lib = require(rep:WaitForChild("Modules"):WaitForChild("ItemLibrary"))
+local vm_class = require(lp:WaitForChild("PlayerScripts"):WaitForChild("Modules"):WaitForChild("ClientReplicatedClasses"):WaitForChild("ClientFighter"):WaitForChild("ClientItem"):WaitForChild("ClientViewModel"))
+local fighter = require(lp:WaitForChild("PlayerScripts"):WaitForChild("Controllers"):WaitForChild("FighterController"))
+
+local function update_skin(w, s)
+    local f = fighter.LocalFighter
+    if f and f.EquippedItem and f.EquippedItem.Name == w then
+        local v = f.EquippedItem.ViewModel
+        if v and item_lib.ViewModels[s] then
+            v.Name, v.Info = s, item_lib.ViewModels[s]
+            if v.Animator then
+                v.Animator:StopAllAnimations()
+                v.Animator:LoadAnimations()
+                v.Animator:PlayIdleAnimation()
+            end
+        end
+    end
+end
+
+local function update_wrap(w, n)
+    local vms = workspace:FindFirstChild("ViewModels")
+    local fp = vms and vms:FindFirstChild("FirstPerson")
+    if not fp then return end
+    
+    for _, m in ipairs(fp:GetChildren()) do
+        if m.Name:find(w) then
+            local k = w:gsub(" ", "")
+            local d = wrap_data[k .. "WrapData"]
+            if d and d[k] and d[k][n] then
+                set_wrap(m, d[k][n])
+            end
+        end
+    end
+end
+
+task.spawn(function()
+    while true do
+        local vms = workspace:WaitForChild("ViewModels", 10)
+        local fp = vms and vms:WaitForChild("FirstPerson", 10)
+        if fp then
+            fp.ChildAdded:Connect(function(m)
+                task.wait() 
+                for w, n in pairs(cfg.Wraps) do
+                    if m.Name:find(w) then
+                        local k = w:gsub(" ", "")
+                        local d = wrap_data[k .. "WrapData"]
+                        if d and d[k] and d[k][n] then
+                            set_wrap(m, d[k][n])
+                        end
+                    end
+                end
+            end)
+            break
+        end
+        task.wait(1)
+    end
+end)
+
+local _old_vm = vm_class.new
+vm_class.new = function(...)
+    local a = {...}
+    local d = a[2]
+    if d and cfg.Skins[d.Name] then d.Name = cfg.Skins[d.Name] end
+    return _old_vm(unpack(a))
+end
+
+local function drag_gui(name, pos, size, text, color)
+    local sg = Instance.new('ScreenGui')
+    sg.Name, sg.ResetOnSpawn, sg.IgnoreGuiInset = name, false, true
+    pcall(function() sg.Parent = game:GetService('CoreGui') end)
+    if not sg.Parent then sg.Parent = lp.PlayerGui end
+
+    local f = Instance.new('Frame', sg)
+    f.Name, f.Size, f.Position = 'Frame', size, pos
+    f.BackgroundColor3, f.BackgroundTransparency = Color3.fromRGB(12, 12, 12), 0.15
+    f.BorderSizePixel, f.Active = 0, true
+
+    Instance.new('UICorner', f).CornerRadius = UDim.new(0, 5)
+    local s = Instance.new('UIStroke', f)
+    s.Color, s.Thickness = Color3.fromRGB(110, 45, 210), 1
+
+    local l = Instance.new('TextLabel', f)
+    l.Name, l.Size, l.Position = 'Label', UDim2.new(1, -8, 1, 0), UDim2.new(0, 6, 0, 0)
+    l.BackgroundTransparency, l.TextColor3 = 1, color or Color3.fromRGB(200, 150, 255)
+    l.Font, l.TextSize, l.TextXAlignment = Enum.Font.Code, 13, Enum.TextXAlignment.Left
+    l.Text, l.RichText = text or '', true
+
+    local drag, d_inp, d_start, s_pos
+    f.InputBegan:Connect(function(i)
+        if i.UserInputType == Enum.UserInputType.MouseButton1 or i.UserInputType == Enum.UserInputType.Touch then
+            drag, d_start, s_pos = true, i.Position, f.Position
+            i.Changed:Connect(function() if i.UserInputState == Enum.UserInputState.End then drag = false end end)
+        end
+    end)
+    f.InputChanged:Connect(function(i) if i.UserInputType == Enum.UserInputType.MouseMovement or i.UserInputType == Enum.UserInputType.Touch then d_inp = i end end)
+    uis.InputChanged:Connect(function(i)
+        if i == d_inp and drag then
+            local del = i.Position - d_start
+            f.Position = UDim2.new(s_pos.X.Scale, s_pos.X.Offset + del.X, s_pos.Y.Scale, s_pos.Y.Offset + del.Y)
+        end
+    end)
+    return sg, f, l
+end
+
+local wm_sg, wm_f, wm_l = drag_gui('Watermark', UDim2.new(0, 10, 0, 10), UDim2.new(0, 190, 0, 26), 'esoteric.win | lit ass scripts', Color3.fromRGB(180, 100, 255))
+local perf_sg, perf_f, perf_l = drag_gui('Perf', UDim2.new(0, 10, 0, 42), UDim2.new(0, 230, 0, 26), 'FPS: -- | Ping: --ms', Color3.fromRGB(100, 255, 180))
+wm_f.Visible, perf_f.Visible = true, false
+
+local hat = nil
+local _h_ls = nil
+local h_snd = Instance.new('Sound', game:GetService('SoundService'))
+h_snd.SoundId = 'rbxassetid://131070686'
+
+local function play_hit() if cfg.HitSounds then h_snd:Play() end end
+
+local function draw_hat(head_pos, h_val, col, ls)
+    local hp, vis = cam:WorldToViewportPoint(head_pos)
+    if not vis then return false end
+    
+    local c_val = h_val / 3.5
+    local h_h, h_r, t_o = c_val * cfg.ChinaHatHeight, c_val * cfg.ChinaHatRadius, h_val * 0.18
+    local cnt = Vector2.new(hp.X, hp.Y - t_o)
+    local top = Vector2.new(cnt.X, cnt.Y - h_h)
+    local pts, seg, idx = {}, 24, 1
+    
+    for i=0, seg-1 do
+        local a = (2 * math.pi / seg) * i - 1.57
+        table.insert(pts, Vector2.new(cnt.X + math.cos(a) * h_r, cnt.Y + math.sin(a) * h_r * 0.3))
+    end
+    
+    for i=1, seg do
+        local l = ls[idx]; l.From, l.To, l.Color, l.Thickness, l.Visible = top, pts[i], col, cfg.ChinaHatThickness, true
+        idx = idx + 1
+    end
+    for i=1, seg do
+        local n_i = (i % seg) + 1
+        local l = ls[idx]; l.From, l.To, l.Color, l.Thickness, l.Visible = pts[i], pts[n_i], col, cfg.ChinaHatThickness, true
+        idx = idx + 1
+    end
+    for i=1, seg, 4 do
+        local opp = ((i + math.floor(seg / 2) - 1) % seg) + 1
+        local l = ls[idx]; l.From, l.To, l.Color, l.Thickness, l.Visible = top, pts[opp], col, cfg.ChinaHatThickness/2, true
+        idx = idx + 1
+    end
+    for i=idx, #ls do ls[i].Visible = false end
+    return true
+end
+
+local function watch_hp(p)
+    local function c(char)
+        local hum = char:WaitForChild('Humanoid', 10)
+        if not hum then return end
+        local last = hum.Health
+        hum.HealthChanged:Connect(function(hp)
+            if hp < last and last > 0 then play_hit() end
+            last = hp
+        end)
+    end
+    p.CharacterAdded:Connect(c)
+    if p.Character then c(p.Character) end
+end
+for _, v in pairs(ply:GetPlayers()) do if v ~= lp then watch_hp(v) end end
+ply.PlayerAdded:Connect(function(v) if v ~= lp then watch_hp(v) end end)
+
+pcall(function()
+    lp.Idled:Connect(function()
+        if cfg.AntiAFK then
+            local vim = game:GetService("VirtualInputManager")
+            vim:SendKeyEvent(true, Enum.KeyCode.RightControl, false, game)
+            task.wait(0.1)
+            vim:SendKeyEvent(false, Enum.KeyCode.RightControl, false, game)
+        end
+    end)
+end)
+
+local fov_c = Drawing.new("Circle")
+fov_c.Thickness, fov_c.NumSides, fov_c.Radius = 1, 100, cfg.Fov
+fov_c.Filled, fov_c.Transparent, fov_c.Color = false, true, Color3.new(1,1,1)
+fov_c.Visible = cfg.ShowFov
+
+local c1, c2 = Drawing.new("Line"), Drawing.new("Line")
+c1.Visible, c2.Visible = false, false
+
+local pts_list = {'Head', 'UpperTorso', 'LowerTorso', 'HumanoidRootPart', 'LeftUpperArm', 'RightUpperArm', 'LeftLowerLeg', 'RightLowerLeg', 'Random'}
+local function get_pt(c, s)
+    if s == 'Random' then
+        local p = {'Head', 'UpperTorso', 'LowerTorso', 'LeftUpperArm', 'RightUpperArm', 'LeftLowerLeg', 'RightLowerLeg'}
+        return c:FindFirstChild(p[math.random(1, #p)])
+    end
+    return c:FindFirstChild(s) or c:FindFirstChild('Head')
+end
+
+local function visible(p)
+    if not p or not lp.Character then return false end
+    local par = RaycastParams.new()
+    par.FilterType, par.FilterDescendantsInstances, par.IgnoreWater = Enum.RaycastFilterType.Exclude, {lp.Character, cam}, true
+    local o, d = cam.CFrame.Position, (p.Position - cam.CFrame.Position)
+    local r = workspace:Raycast(o, d, par)
+    return r == nil or r.Instance:IsDescendantOf(p.Parent)
+end
+
+local function closest()
+    if not cfg.SilentAim then return end
+    local t, s_dist, m_loc = nil, cfg.Fov, uis:GetMouseLocation()
+    for _, v in pairs(ply:GetPlayers()) do
+        if v ~= lp and v.Character and v.Character:FindFirstChild("HumanoidRootPart") then
+            local p = get_pt(v.Character, cfg.SilentAimPart)
+            if not p or (cfg.SilentAimWallCheck and not visible(p)) then continue end
+            local pos, vis = cam:WorldToViewportPoint(p.Position)
+            if vis then
+                local d = (Vector2.new(pos.X, pos.Y) - m_loc).Magnitude
+                if d < s_dist then s_dist, t = d, p end
+            end
+        end
+    end
+    return t
+end
+
+local m_grp = tabs.Main:AddLeftGroupbox('Silent Aim')
+m_grp:AddToggle('SAEn', {Text = 'Silent Aim', Default = false, Callback = function(s) cfg.SilentAim = s end})
+    :AddKeyPicker('SAKey', {Default = 'None', SyncToggleState = true, Mode = 'Toggle', Text = 'Silent Aim'})
+m_grp:AddDropdown('SAPart', {Text = 'Target Part', Values = pts_list, Default = 'Head', Callback = function(v) cfg.SilentAimPart = v end})
+m_grp:AddSlider('SAHit', {Text = 'Hit Chance %', Default = 100, Min = 0, Max = 100, Rounding = 0, Callback = function(v) cfg.HitChance = v end})
+m_grp:AddToggle('SAWall', {Text = 'Wall Check', Default = false, Callback = function(s) cfg.SilentAimWallCheck = s end})
+
+local f_grp = tabs.Main:AddRightGroupbox('FOV Settings')
+f_grp:AddToggle('SAFovCircle', {Text = 'Show FOV', Default = true, Callback = function(s) cfg.ShowFov = s; fov_c.Visible = s end})
+    :AddColorPicker('FovCol', {Default = Color3.fromRGB(255, 255, 255), Title = 'FOV Color', Callback = function(c) fov_c.Color = c end})
+f_grp:AddSlider('SAFOV', {Text = 'Base Radius', Default = 150, Min = 10, Max = 800, Rounding = 0, Callback = function(v) cfg.Fov = v end})
+f_grp:AddSlider('SAFOVThick', {Text = 'Thickness', Default = 1, Min = 1, Max = 5, Rounding = 0, Callback = function(v) cfg.FovThickness = v end})
+f_grp:AddToggle('FovPulseTgl', {Text = 'Pulse (Transparency Fade)', Default = false, Callback = function(s) cfg.FovPulse = s end})
+f_grp:AddSlider('FovPulseSpd', {Text = 'Pulse Speed', Default = 5, Min = 1, Max = 20, Rounding = 1, Callback = function(v) cfg.FovPulseSpeed = v end})
+f_grp:AddToggle('FovBreathTgl', {Text = 'Breathing (Scale In/Out)', Default = false, Callback = function(s) cfg.FovBreathing = s end})
+f_grp:AddSlider('FovBreathSpd', {Text = 'Breathing Speed', Default = 3, Min = 1, Max = 20, Rounding = 1, Callback = function(v) cfg.FovBreathingSpeed = v end})
+
+local c_grp = tabs.Main:AddLeftGroupbox('Custom Crosshair')
+c_grp:AddToggle('CrossEn', {Text = 'Enable Crosshair', Default = false, Callback = function(s) cfg.Crosshair = s end})
+    :AddColorPicker('CrossCol', {Default = Color3.new(1,1,1), Title = 'Crosshair Color', Callback = function(c) cfg.CrosshairColor = c end})
+c_grp:AddDropdown('CrossType', {Text = 'Crosshair Shape', Values = {'Cross', 'Plus'}, Default = 'Cross', Callback = function(v) cfg.CrosshairType = v end})
+c_grp:AddSlider('CrossSz', {Text = 'Size/Length', Default = 10, Min = 2, Max = 50, Rounding = 0, Callback = function(v) cfg.CrosshairSize = v end})
+c_grp:AddSlider('CrossThick', {Text = 'Thickness', Default = 2, Min = 1, Max = 5, Rounding = 0, Callback = function(v) cfg.CrosshairThickness = v end})
+c_grp:AddToggle('CrossSpin', {Text = 'Spin', Default = false, Callback = function(s) cfg.CrosshairSpin = s end})
+c_grp:AddSlider('CrossSpinSpd', {Text = 'Spin Speed', Default = 100, Min = 10, Max = 500, Rounding = 0, Callback = function(v) cfg.CrosshairSpinSpeed = v end})
+
+local e_grp = tabs.Vis:AddLeftGroupbox('ESP Setup')
+e_grp:AddToggle('EspE', {Text = 'ESP Enabled', Default = false, Callback = function(s) cfg.EspEnabled = s end})
+e_grp:AddDropdown('BType', {Text = 'Box Type', Values = {'None', '2D', '2D Corner', '3D', '3D Corner'}, Default = '2D', Callback = function(v) cfg.BoxType = v end})
+e_grp:AddSlider('BOffset', {Text = 'Bounds Distance (Offset)', Default = 2, Min = 0, Max = 20, Rounding = 1, Callback = function(v) cfg.BoxOffset = v end})
+e_grp:AddSlider('BWidth', {Text = 'Box Width Multiplier', Default = 1, Min = 0.1, Max = 3, Rounding = 1, Callback = function(v) cfg.BoxWidthMult = v end})
+e_grp:AddSlider('BThick', {Text = 'Box Thickness', Default = 1, Min = 1, Max = 5, Rounding = 0, Callback = function(v) cfg.BoxThickness = v end})
+    e_grp:AddLabel('Box Color'):AddColorPicker('BoxCol', {Default = Color3.new(1,0,0), Title = 'Box Color', Callback = function(c) cfg.BoxColor = c end})
+    e_grp:AddToggle('EspHealth', {Text = 'Health Bar', Default = false, Callback = function(s) cfg.HealthBar = s end})
+    e_grp:AddToggle('EspSelf', {Text = 'Self ESP', Default = false, Callback = function(s) cfg.SelfEsp = s end})
+    e_grp:AddToggle('EspTracers', {Text = 'Tracer Lines', Default = false, Callback = function(s) cfg.Tracers = s end})
+    e_grp:AddLabel('Tracer Color'):AddColorPicker('TCol', {Default = Color3.new(1,1,1), Title = 'Tracer', Callback = function(c) cfg.TracerColor = c end})
+    e_grp:AddToggle('EspChams', {Text = 'Chams', Default = false, Callback = function(s) cfg.Chams = s end})
+    e_grp:AddLabel('Chams Colors'):AddColorPicker('CFill', {Default = Color3.fromRGB(255,0,255), Title = 'Fill', Callback = function(c) cfg.ChamsFill = c end}):AddColorPicker('COut', {Default = Color3.new(1,1,1), Title = 'Outline', Callback = function(c) cfg.ChamsOutline = c end})
+    
+    e_grp:AddToggle('RainVis', {Text = 'Rainbow Visuals', Default = false, Callback = function(s) cfg.RainbowVisuals = s end})
+    e_grp:AddSlider('RainSpd', {Text = 'Rainbow Speed', Default = 1, Min = 0.1, Max = 5, Rounding = 1, Callback = function(v) cfg.RainbowSpeed = v end})
+    e_grp:AddSlider('EFontSize', {Text = 'ESP Font Size', Default = 13, Min = 8, Max = 24, Rounding = 0, Callback = function(v) cfg.EspFontSize = v end})
+    e_grp:AddSlider('ESkelThick', {Text = 'Skeleton Thickness', Default = 1, Min = 1, Max = 5, Rounding = 0, Callback = function(v) cfg.EspSkeletonThickness = v end})
+
+local i_grp = tabs.Vis:AddRightGroupbox('Extra Visuals')
+i_grp:AddToggle('EName', {Text = 'Name', Default = false, Callback = function(s) cfg.ShowName = s end}):AddColorPicker('CName', {Default = Color3.new(1,1,1), Title='Color', Callback=function(c) cfg.NameColor = c end})
+i_grp:AddDropdown('ENameP', {Text = 'Name Position', Values = {'Top', 'Bottom', 'Left', 'Right'}, Default = 'Top', Callback = function(v) cfg.NamePos = v end})
+i_grp:AddToggle('EDist', {Text = 'Distance', Default = false, Callback = function(s) cfg.ShowDistance = s end}):AddColorPicker('CDist', {Default = Color3.new(0,1,0), Title='Color', Callback=function(c) cfg.DistanceColor = c end})
+i_grp:AddDropdown('EDistP', {Text = 'Dist Position', Values = {'Top', 'Bottom', 'Left', 'Right'}, Default = 'Bottom', Callback = function(v) cfg.DistPos = v end})
+i_grp:AddToggle('EItem', {Text = 'Equipped Item', Default = false, Callback = function(s) cfg.ShowItem = s end}):AddColorPicker('CItem', {Default = Color3.new(0,1,1), Title='Color', Callback=function(c) cfg.ItemColor = c end})
+i_grp:AddDropdown('EItemP', {Text = 'Item Position', Values = {'Top', 'Bottom', 'Left', 'Right'}, Default = 'Bottom', Callback = function(v) cfg.ItemPos = v end})
+i_grp:AddToggle('ESkel', {Text = 'Skeletons', Default = false, Callback = function(s) cfg.Skeletons = s end}):AddColorPicker('CSkel', {Default = Color3.new(1,1,1), Title='Color', Callback=function(c) cfg.SkeletonColor = c end})
+i_grp:AddToggle('EHead', {Text = 'Head Dot', Default = false, Callback = function(s) cfg.HeadDot = s end}):AddColorPicker('CHead', {Default = Color3.new(1,0,0), Title='Color', Callback=function(c) cfg.HeadDotColor = c end})
+i_grp:AddSlider('EHeadSz', {Text = 'Head Dot Size', Default = 4, Min = 1, Max = 10, Rounding = 0, Callback = function(v) cfg.HeadDotSize = v end})
+i_grp:AddToggle('EArrow', {Text = 'View Arrows', Default = false, Callback = function(s) cfg.ViewArrow = s end}):AddColorPicker('CArrow', {Default = Color3.new(1,1,1), Title='Color', Callback=function(c) cfg.ViewArrowColor = c end})
+
+local p_grp = tabs.Vis:AddRightGroupbox('Premium Polish')
+p_grp:AddToggle('PerfO', {Text = 'Performance Overlay', Default = false, Callback = function(s) cfg.PerfOverlay = s; perf_f.Visible = s end})
+
+local u_grp = tabs.Main:AddLeftGroupbox('Menu')
+u_grp:AddToggle('KeybindTgl', {Text = 'Keybind List', Default = true, Callback = function(s) lib:SetKeybindVisibility(s) end})
+u_grp:AddToggle('WatermarkTgl', {Text = 'Watermark', Default = true, Callback = function(s) wm_f.Visible = s end})
+
+local a_grp = tabs.Main:AddLeftGroupbox('Camera Aimbot')
+a_grp:AddToggle('AimBotEn', {Text = 'Aimbot', Default = false, Callback = function(s) cfg.Aimbot = s end})
+    :AddKeyPicker('AimBotKey', {Default = 'None', SyncToggleState = false, Mode = 'Toggle', Text = 'Aimbot'})
+a_grp:AddDropdown('AimBotP', {Text = 'Target Part', Values = pts_list, Default = 'Head', Callback = function(v) cfg.AimbotPart = v end})
+a_grp:AddSlider('AimSmooth', {Text = 'Smoothness', Default = 0.1, Min = 0.01, Max = 1, Rounding = 2, Callback = function(v) cfg.AimSmooth = v end})
+a_grp:AddToggle('AimPred', {Text = 'Prediction', Default = false, Callback = function(s) cfg.Prediction = s end})
+a_grp:AddSlider('AimPredA', {Text = 'Prediction Amount', Default = 0.15, Min = 0.01, Max = 1, Rounding = 2, Callback = function(v) cfg.PredictionAmount = v end})
+a_grp:AddToggle('AimWall', {Text = 'Wall Check', Default = false, Callback = function(s) cfg.AimbotWallCheck = s end})
+
+local v_grp = tabs.Main:AddRightGroupbox('Camera & View')
+v_grp:AddToggle('CamFovTgl', {Text = 'Override Game FOV', Default = false, Callback = function(s) cfg.CamFOVEnabled = s end})
+v_grp:AddSlider('CamFovSz', {Text = 'Field of View', Default = 70, Min = 20, Max = 120, Rounding = 0, Callback = function(v) cfg.CamFOV = v end})
+v_grp:AddToggle('TpTgl', {Text = 'Third Person', Default = false, Callback = function(s) cfg.ThirdPerson = s end})
+v_grp:AddSlider('TpDist', {Text = 'Camera Distance', Default = 10, Min = 5, Max = 50, Rounding = 1, Callback = function(v) cfg.ThirdPersonDist = v end})
+
+local r_grp = tabs.Rage:AddLeftGroupbox('Anti-Aim & Hacks')
+r_grp:AddToggle('SpinB', {Text = 'Spinbot (Anti-Aim)', Default = false, Callback = function(s) cfg.SpinBot = s end})
+r_grp:AddSlider('SpinSpd', {Text = 'Spin Speed', Default = 20, Min = 1, Max = 100, Rounding = 0, Callback = function(v) cfg.SpinSpeed = v end})
+r_grp:AddToggle('ORB', {Text = 'Orbit Mode', Default = false, Callback = function(s) cfg.Orbit = s end})
+r_grp:AddDropdown('ORBTgt', {Text = 'Orbit Target', Values = {'Closest to Mouse', 'Closest Distance', 'Lowest Health', 'Highest Health'}, Default = 'Closest to Mouse', Callback = function(v) cfg.OrbitTargetMode = v end})
+r_grp:AddDropdown('ORBPos', {Text = 'Orbit Position', Values = {'Circle', 'Spiral', 'Relative-Behind', 'Relative-Front', 'Behind', 'Front', 'Top', 'Bottom', 'Left', 'Right'}, Default = 'Circle', Callback = function(v) cfg.OrbitPosMode = v end})
+r_grp:AddToggle('ORBOsc', {Text = 'Oscillating Radius', Default = false, Callback = function(s) cfg.OrbitOscillate = s end})
+r_grp:AddSlider('ORBSpd', {Text = 'Orbit Speed', Default = 10, Min = 1, Max = 100, Rounding = 0, Callback = function(v) cfg.OrbitSpeed = v end})
+r_grp:AddSlider('ORBRad', {Text = 'Orbit Radius', Default = 10, Min = 0, Max = 30, Rounding = 1, Callback = function(v) cfg.OrbitRadius = v end})
+r_grp:AddSlider('ORBH', {Text = 'Orbit Height', Default = 3, Min = -10, Max = 20, Rounding = 1, Callback = function(v) cfg.OrbitHeight = v end})
+
+local m_mv = tabs.Rage:AddRightGroupbox('Movement Mods')
+m_mv:AddToggle('SpdHack', {Text = 'Speed Hack', Default = false, Callback = function(s) cfg.SpeedHack = s end})
+m_mv:AddSlider('SpdMult', {Text = 'Speed Multiplier', Default = 2, Min = 1, Max = 10, Rounding = 1, Callback = function(v) cfg.SpeedHackMultiplier = v end})
+m_mv:AddToggle('FlyTgl', {Text = 'Fly (WASD + Space/Ctrl)', Default = false, Callback = function(s) cfg.Fly = s end})
+m_mv:AddSlider('FlySpd', {Text = 'Fly Speed', Default = 50, Min = 10, Max = 300, Rounding = 0, Callback = function(v) cfg.FlySpeed = v end})
+m_mv:AddToggle('InfJ', {Text = 'Infinite Jump', Default = false, Callback = function(s) cfg.InfJump = s end})
+m_mv:AddToggle('NoRec', {Text = 'No Recoil', Default = false, Callback = function(s) cfg.NoRecoil = s end})
+
+local ms_grp = tabs.Misc:AddLeftGroupbox('Utilities')
+ms_grp:AddToggle('FBEn', {Text = 'Fullbright', Default = false, Callback = function(s) cfg.Fullbright = s end})
+ms_grp:AddToggle('AAFK', {Text = 'Anti-AFK', Default = true, Callback = function(s) cfg.AntiAFK = s end})
+ms_grp:AddToggle('HSnd', {Text = 'Hit Sounds', Default = false, Callback = function(s) cfg.HitSounds = s end})
+ms_grp:AddToggle('CHat', {Text = 'China Hat', Default = false, Callback = function(s) cfg.ChinaHat = s end}):AddColorPicker('CHCol', {Default = Color3.fromRGB(245, 105, 180), Title = 'Hat Color', Callback = function(c) cfg.ChinaHatColor = c end})
+ms_grp:AddToggle('CHOthers', {Text = 'Apply to Others', Default = false, Callback = function(s) cfg.ChinaHatOthers = s end})
+ms_grp:AddToggle('CHRain', {Text = 'Rainbow Hat', Default = false, Callback = function(s) cfg.ChinaHatRainbow = s end})
+ms_grp:AddSlider('CHRad', {Text = 'Hat Radius', Default = 1.5, Min = 0.5, Max = 50, Rounding = 1, Callback = function(v) cfg.ChinaHatRadius = v end})
+ms_grp:AddSlider('CHH', {Text = 'Hat Height', Default = 1.2, Min = 0.5, Max = 50, Rounding = 1, Callback = function(v) cfg.ChinaHatHeight = v end})
+ms_grp:AddSlider('CHThick', {Text = 'Hat Thickness', Default = 1, Min = 1, Max = 10, Rounding = 0, Callback = function(v) cfg.ChinaHatThickness = v end})
+
+local g_grp = tabs.Skins:AddLeftGroupbox('Global Actions')
+g_grp:AddLabel('patched and other shit might be as well idk')
+g_grp:AddButton('Reset All Skins', function()
+    cfg.Skins = {}
+    for _, c in pairs(wrap_conns) do c:Disconnect() end
+    wrap_conns = {}
+end)
+
+for g, wpts in pairs(grps) do
+    local gb = tabs.Skins:AddLeftGroupbox(g)
+    if g == 'Melee' or g == 'Tech' then gb = tabs.Skins:AddRightGroupbox(g) end
+    
+    for _, w in ipairs(wpts) do
+        local sk = {"None"}
+        for _, s in ipairs(skins_data[w] or {}) do table.insert(sk, s) end
+        
+        gb:AddDropdown('Skin_' .. w:gsub(" ", ""), {
+            Text = w .. ' Skin', Values = sk, Default = cfg.Skins[w] or "None",
+            Callback = function(v)
+                cfg.Skins[w] = (v == "None" and nil or v)
+                update_skin(w, v)
+            end
+        })
+
+        local k = w:gsub(" ", "")
+        local wd = wrap_data[k .. "WrapData"]
+        if wd and wd[k] then
+            local wn = {"None"}
+            for n, _ in pairs(wd[k]) do table.insert(wn, n) end
+            table.sort(wn)
+
+            gb:AddDropdown('Wrap_' .. k, {
+                Text = w .. ' Wrap', Values = wn, Default = cfg.Wraps[w] or "None",
+                Callback = function(v)
+                    cfg.Wraps[w] = (v == "None" and nil or v)
+                    update_wrap(w, v)
+                end
+            })
+        end
+    end
+end
+
+local function sec_init()
+    local ws_f, jp_f = 16, 50
+    local blk_rem = {"Analytics", "Report", "Batch", "Log", "Miscellaneous"}
+
+    local old_idx; old_idx = hookmetamethod(game, "__index", newcclosure(function(s, k)
+        if not checkcaller() and s == lp then
+            if k == "WalkSpeed" then return ws_f end
+            if k == "JumpPower" then return jp_f end
+        end
+        return old_idx(s, k)
+    end))
+
+    local old_nc; old_nc = hookmetamethod(game, "__namecall", newcclosure(function(s, ...)
+        local m = getnamecallmethod()
+        if not checkcaller() then
+            if m == "FireServer" or m == "InvokeServer" then
+                local rn = tostring(s)
+                for _, b in ipairs(blk_rem) do if rn:find(b) then return nil end end
+            elseif (m == "Kick" or m == "kick") and s == lp then
+                return nil
+            end
+        end
+        return old_nc(s, ...)
+    end))
+
+    local old_sm; old_sm = hookfunction(getrenv().setmetatable, newcclosure(function(t, mt)
+        if not checkcaller() and mt and typeof(mt) == "table" and rawget(mt, "__mode") == "kv" then
+            if debug.traceback():find("MiscellaneousController") then return old_sm({1, 2, 3}, {}) end
+        end
+        return old_sm(t, mt)
+    end))
+end
+
+task.spawn(function()
+    task.wait(math.random(3, 5))
+    if not game:IsLoaded() then game.Loaded:Once(sec_init) else sec_init() end
+end)
+
+local rot = 0
+rs.RenderStepped:Connect(function(dt)
+    local m_loc = uis:GetMouseLocation()
+    
+    if cfg.CamFOVEnabled then cam.FieldOfView = cfg.CamFOV end
+    if cfg.ThirdPerson then
+        lp.CameraMode, lp.CameraMaxZoomDistance, lp.CameraMinZoomDistance = Enum.CameraMode.Classic, cfg.ThirdPersonDist, cfg.ThirdPersonDist
+    else
+        lp.CameraMaxZoomDistance, lp.CameraMinZoomDistance = 128, 0.5
+    end
+
+    if cfg.PerfOverlay then
+        local fps = math.floor(1 / math.max(dt, 0.001))
+        local ping = math.floor(pcall(function() return game:GetService("Stats").Network.ServerStatsItem['Data Ping']:GetValue() end) and game:GetService("Stats").Network.ServerStatsItem['Data Ping']:GetValue() or 0)
+        perf_l.Text = string.format('<b>FPS:</b> %d  <b>Ping:</b> %dms', fps, ping)
+        if cfg.RainbowVisuals then perf_l.TextColor3 = Color3.fromHSV((tick() * cfg.RainbowSpeed) % 1, 1, 1) end
+    end
+
+    if cfg.Fullbright then
+        local l = game:GetService("Lighting")
+        l.Brightness, l.ClockTime, l.FogEnd, l.GlobalShadows = 2, 14, 1e5, false
+        l.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+    end
+
+    local c = lp.Character
+    if c and c:FindFirstChild('Head') then
+        local head = c.Head
+        if cfg.ChinaHat then
+            if not _h_ls then
+                _h_ls = {}
+                for i=1, 60 do _h_ls[i] = Drawing.new('Line') end
+            end
+            local col = cfg.ChinaHatRainbow and Color3.fromHSV((tick() * cfg.RainbowSpeed) % 1, 1, 1) or cfg.ChinaHatColor
+            local h_val = math.clamp(500 / (cam.CFrame.Position - head.Position).Magnitude, 10, 100)
+            draw_hat(head.Position, h_val, col, _h_ls)
+        elseif _h_ls then for _, l in pairs(_h_ls) do l.Visible = false end end
+    end
+
+    local a_key = lib.Options and lib.Options.AimBotKey
+    if cfg.Aimbot and a_key and a_key:GetState() then
+        local t, s_dist = nil, cfg.Fov
+        for _, v in pairs(ply:GetPlayers()) do
+            if v ~= lp and v.Character and v.Character:FindFirstChild("HumanoidRootPart") then
+                local p = get_pt(v.Character, cfg.AimbotPart)
+                if p and (not cfg.AimbotWallCheck or visible(p)) then
+                    local pos, vis = cam:WorldToViewportPoint(p.Position)
+                    if vis then
+                        local d = (Vector2.new(pos.X, pos.Y) - m_loc).Magnitude
+                        if d < s_dist then s_dist, t = d, p end
+                    end
+                end
+            end
+        end
+        if t then
+            local pos = t.Position
+            if cfg.Prediction and t.AssemblyLinearVelocity.Magnitude > 1 then
+                pos = pos + (t.AssemblyLinearVelocity * cfg.PredictionAmount)
+            end
+            if (cam.CFrame.Position - pos).Magnitude > 0.1 then
+                cam.CFrame = cam.CFrame:Lerp(CFrame.new(cam.CFrame.Position, pos), math.clamp(cfg.AimSmooth * (dt * 60), 0, 1))
+            end
+        end
+    end
+    
+    if c and c:FindFirstChild('HumanoidRootPart') and c:FindFirstChild('Humanoid') then
+        local hrp, hum = c.HumanoidRootPart, c.Humanoid
+        
+        if cfg.Fly then
+            local v = Vector3.new()
+            if uis:IsKeyDown(Enum.KeyCode.W) then v = v + cam.CFrame.LookVector end
+            if uis:IsKeyDown(Enum.KeyCode.S) then v = v - cam.CFrame.LookVector end
+            if uis:IsKeyDown(Enum.KeyCode.A) then v = v - cam.CFrame.RightVector end
+            if uis:IsKeyDown(Enum.KeyCode.D) then v = v + cam.CFrame.RightVector end
+            if uis:IsKeyDown(Enum.KeyCode.Space) then v = v + Vector3.new(0, 1, 0) end
+            if uis:IsKeyDown(Enum.KeyCode.LeftControl) then v = v - Vector3.new(0, 1, 0) end
+            hrp.Velocity = v.Magnitude > 0 and (v.Unit * cfg.FlySpeed) or Vector3.new()
+            hum.PlatformStand = true
+        else hum.PlatformStand = false end
+        
+        if cfg.SpeedHack and hum.MoveDirection.Magnitude > 0 then
+            hrp.Velocity = Vector3.new(hum.MoveDirection.X * (16 * cfg.SpeedHackMultiplier), hrp.Velocity.Y, hum.MoveDirection.Z * (16 * cfg.SpeedHackMultiplier))
+        end
+        
+        if cfg.InfJump and uis:IsKeyDown(Enum.KeyCode.Space) then hum:ChangeState(Enum.HumanoidStateType.Jumping) end
+        
+        if cfg.SpinBot and not cfg.Orbit then hrp.CFrame = hrp.CFrame * CFrame.Angles(0, math.rad(cfg.SpinSpeed), 0) end
+        
+        if cfg.Orbit then
+            local ot, b_val = nil, math.huge
+            if cfg.OrbitTargetMode == 'Highest Health' then b_val = -1 end
+            
+            for _, v in pairs(ply:GetPlayers()) do
+                if v ~= lp and v.Character and v.Character:FindFirstChild("HumanoidRootPart") and v.Character:FindFirstChild("Humanoid") then
+                    local p, h = v.Character.HumanoidRootPart, v.Character.Humanoid
+                    if cfg.OrbitTargetMode == 'Closest to Mouse' then
+                        local pos, vis = cam:WorldToViewportPoint(p.Position)
+                        if vis then
+                            local d = (Vector2.new(pos.X, pos.Y) - m_loc).Magnitude
+                            if d < b_val and d < cfg.Fov then b_val, ot = d, p end
+                        end
+                    elseif cfg.OrbitTargetMode == 'Closest Distance' then
+                        local d = (p.Position - hrp.Position).Magnitude
+                        if d < b_val then b_val, ot = d, p end
+                    elseif cfg.OrbitTargetMode == 'Lowest Health' then
+                        if h.Health > 0 and h.Health < b_val then b_val, ot = h.Health, p end
+                    elseif cfg.OrbitTargetMode == 'Highest Health' then
+                        if h.Health > 0 and h.Health > b_val then b_val, ot = h.Health, p end
+                    end
+                end
+            end
+            
+            if ot then
+                local r, h = cfg.OrbitRadius, cfg.OrbitHeight
+                if cfg.OrbitOscillate then r = r * (1 + math.sin(tick() * 3) * 0.3) end
+                
+                local off = Vector3.new()
+                local mode = cfg.OrbitPosMode
+                if mode == 'Circle' then
+                    local a = tick() * cfg.OrbitSpeed
+                    off = Vector3.new(math.cos(a) * r, h, math.sin(a) * r)
+                elseif mode == 'Spiral' then
+                    local a = tick() * cfg.OrbitSpeed
+                    off = Vector3.new(math.cos(a) * r, h + math.sin(tick() * cfg.OrbitSpeed * 0.5) * (r * 0.8), math.sin(a) * r)
+                elseif mode == 'Relative-Behind' then off = (ot.CFrame.LookVector * -r) + Vector3.new(0, h, 0)
+                elseif mode == 'Relative-Front' then off = (ot.CFrame.LookVector * r) + Vector3.new(0, h, 0)
+                elseif mode == 'Behind' then off = Vector3.new(0, h, r)
+                elseif mode == 'Front' then off = Vector3.new(0, h, -r)
+                elseif mode == 'Right' then off = Vector3.new(r, h, 0)
+                elseif mode == 'Left' then off = Vector3.new(-r, h, 0)
+                elseif mode == 'Top' then off = Vector3.new(0, r + h, 0)
+                elseif mode == 'Bottom' then off = Vector3.new(0, -r + h, 0)
+                end
+                hrp.CFrame = hrp.CFrame:Lerp(CFrame.new(ot.Position + off, ot.Position), math.clamp(0.2 * (dt * 60), 0, 1))
+            elseif cfg.SpinBot then hrp.CFrame = hrp.CFrame * CFrame.Angles(0, math.rad(cfg.SpinSpeed), 0) end
+        end
+    end
+    
+    fov_c.Position, fov_c.Thickness = m_loc, cfg.FovThickness
+    if cfg.FovPulse then fov_c.Transparency = 0.2 + ((math.sin(tick() * cfg.FovPulseSpeed) + 1) / 2 * 0.8) else fov_c.Transparency = 1 end
+    fov_c.Radius = cfg.Fov * (cfg.FovBreathing and (1 + (math.sin(tick() * cfg.FovBreathingSpeed) * (cfg.FovBreathingScale - 1))) or 1)
+    
+    if cfg.Crosshair then
+        c1.Visible, c2.Visible = true, true
+        c1.Thickness, c2.Thickness = cfg.CrosshairThickness, cfg.CrosshairThickness
+        
+        rot = cfg.CrosshairSpin and (rot + cfg.CrosshairSpinSpeed * dt) or (cfg.CrosshairType == 'Plus' and 0 or 45)
+        local r1, r2 = math.rad(rot), math.rad(rot + 90)
+        local s = cfg.CrosshairSize
+        local clr = cfg.RainbowVisuals and Color3.fromHSV((tick() * cfg.RainbowSpeed) % 1, 1, 1) or cfg.CrosshairColor
+        c1.Color, c2.Color = clr, clr
+        
+        c1.From, c1.To = m_loc - Vector2.new(math.cos(r1), math.sin(r1)) * s, m_loc + Vector2.new(math.cos(r1), math.sin(r1)) * s
+        c2.From, c2.To = m_loc - Vector2.new(math.cos(r2), math.sin(r2)) * s, m_loc + Vector2.new(math.cos(r2), math.sin(r2)) * s
+    else c1.Visible, c2.Visible = false, false end
+end)
+
+
+local skel_bones = {
+    {'Head', 'UpperTorso'}, {'UpperTorso', 'LowerTorso'}, {'UpperTorso', 'LeftUpperArm'}, {'LeftUpperArm', 'LeftLowerArm'}, {'LeftLowerArm', 'LeftHand'},
+    {'UpperTorso', 'RightUpperArm'}, {'RightUpperArm', 'RightLowerArm'}, {'RightLowerArm', 'RightHand'},
+    {'LowerTorso', 'LeftUpperLeg'}, {'LeftUpperLeg', 'LeftLowerLeg'}, {'LeftLowerLeg', 'LeftFoot'},
+    {'LowerTorso', 'RightUpperLeg'}, {'RightUpperLeg', 'RightLowerLeg'}, {'RightLowerLeg', 'RightFoot'},
+}
+
+local function get_item(c)
+    for _, i in pairs(c:GetChildren()) do if i:IsA('Tool') or (i:IsA('Model') and i:FindFirstChild('Handle')) then return i.Name end end
+    return 'None'
+end
+
+local function new_esp(p)
+    local ds = {
+        Box = Drawing.new('Square'), Lines = {}, Name = Drawing.new('Text'), Dist = Drawing.new('Text'), Tool = Drawing.new('Text'),
+        HeadDot = Drawing.new('Circle'), Arrow = Drawing.new('Triangle'), Tracer = Drawing.new('Line'), Skeleton = {},
+        HBg = Drawing.new('Line'), HBar = Drawing.new('Line'), CHat = {}
+    }
+    for i=1, 24 do table.insert(ds.Lines, Drawing.new('Line')) end
+    for i=1, 14 do table.insert(ds.Skeleton, Drawing.new('Line')) end
+    for i=1, 60 do table.insert(ds.CHat, Drawing.new('Line')) end
+    
+    local h = Instance.new('Highlight')
+    h.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+    local h_p = nil
+    
+    local function hide()
+        ds.Box.Visible, ds.Name.Visible, ds.Dist.Visible, ds.Tool.Visible = false, false, false, false
+        ds.Arrow.Visible, ds.Tracer.Visible, ds.HeadDot.Visible, ds.HBar.Visible, ds.HBg.Visible = false, false, false, false, false
+        for _, l in pairs(ds.Lines) do l.Visible = false end
+        for _, l in pairs(ds.Skeleton) do l.Visible = false end
+        for _, l in pairs(ds.CHat) do l.Visible = false end
+        if h_p then pcall(function() h.Parent = nil end); h_p = nil end
+    end
+
+    rs.RenderStepped:Connect(function()
+        local char = p.Character
+        local hrp = char and char:FindFirstChild('HumanoidRootPart')
+        local hum = char and char:FindFirstChildOfClass('Humanoid')
+        
+        if (p == lp and not cfg.SelfEsp) or not char or not hrp or not hum or hum.Health <= 0 then return hide() end
+        local head = char:FindFirstChild('Head')
+        if not head then return hide() end
+        
+        local hrp_p, vis = cam:WorldToViewportPoint(hrp.Position)
+        if not vis then return hide() end
+        
+        local rb = cfg.RainbowVisuals and Color3.fromHSV((tick() * cfg.RainbowSpeed) % 1, 1, 1) or nil
+        if cfg.ChinaHatOthers then
+            local h_col = cfg.ChinaHatRainbow and Color3.fromHSV((tick() * cfg.RainbowSpeed) % 1, 1, 1) or cfg.ChinaHatColor
+            local h_v = math.abs(cam:WorldToViewportPoint(head.Position + Vector3.new(0, 0.5, 0)).Y - cam:WorldToViewportPoint(hrp.Position - Vector3.new(0, 3, 0)).Y)
+            draw_hat(head.Position, h_v, h_col, ds.CHat)
+        else for _, l in pairs(ds.CHat) do l.Visible = false end end
+
+        if not cfg.EspEnabled then
+            ds.Box.Visible, ds.Name.Visible, ds.Dist.Visible, ds.Tool.Visible = false, false, false, false
+            ds.Arrow.Visible, ds.Tracer.Visible, ds.HeadDot.Visible, ds.HBar.Visible, ds.HBg.Visible = false, false, false, false, false
+            for _, l in pairs(ds.Lines) do l.Visible = false end
+            for _, l in pairs(ds.Skeleton) do l.Visible = false end
+            if h_p then pcall(function() h.Parent = nil end); h_p = nil end
+            return
+        end
+        if cfg.Chams then 
+            if h_p ~= char then pcall(function() h.Parent = char end); h_p = char end
+            h.FillColor, h.OutlineColor = rb or cfg.ChamsFill, rb or cfg.ChamsOutline
+        elseif h_p then pcall(function() h.Parent = nil end); h_p = nil end
+        
+        local head = char:FindFirstChild('Head')
+        if not head then return hide() end
+        
+        local cframe, size = char:GetBoundingBox()
+        local cp, vis = cam:WorldToViewportPoint(cframe.Position)
+        if not vis then return hide() end
+        
+        local top = cam:WorldToViewportPoint(cframe.Position + Vector3.new(0, size.Y/2, 0))
+        local bot = cam:WorldToViewportPoint(cframe.Position - Vector3.new(0, size.Y/2, 0))
+        local h_val, off = math.abs(top.Y - bot.Y), cfg.BoxOffset
+        local w_val = (h_val * 0.6) * cfg.BoxWidthMult + off
+        h_val = h_val + off
+        local cx = cp.X
+        local x, y = cx - w_val/2, top.Y - (off/2)
+        local col, thk = rb or cfg.BoxColor, cfg.BoxThickness
+        
+        for _, l in pairs(ds.Lines) do l.Visible = false end
+        ds.Box.Visible = false
+        
+        if cfg.BoxType == '2D' then
+            ds.Box.Size, ds.Box.Position, ds.Box.Color = Vector2.new(w_val, h_val), Vector2.new(x, y), col
+            ds.Box.Thickness, ds.Box.Visible, ds.Box.Filled = thk, true, false
+        elseif cfg.BoxType == '2D Corner' then
+            local cl, l = w_val/4, ds.Lines
+            l[1].From, l[1].To = Vector2.new(x, y), Vector2.new(x + cl, y)
+            l[2].From, l[2].To = Vector2.new(x, y), Vector2.new(x, y + cl)
+            l[3].From, l[3].To = Vector2.new(x + w_val, y), Vector2.new(x + w_val - cl, y)
+            l[4].From, l[4].To = Vector2.new(x + w_val, y), Vector2.new(x + w_val, y + cl)
+            l[5].From, l[5].To = Vector2.new(x, y + h_val), Vector2.new(x + cl, y + h_val)
+            l[6].From, l[6].To = Vector2.new(x, y + h_val), Vector2.new(x, y + h_val - cl)
+            l[7].From, l[7].To = Vector2.new(x + w_val, y + h_val), Vector2.new(x + w_val - cl, y + h_val)
+            l[8].From, l[8].To = Vector2.new(x + w_val, y + h_val), Vector2.new(x + w_val, y + h_val - cl)
+            for i=1, 8 do l[i].Visible, l[i].Color, l[i].Thickness = true, col, thk end
+        elseif cfg.BoxType:find('3D') then
+            local s3 = size + Vector3.new(off/5, off/5, off/5)
+            local bcf = cframe
+            local c3 = {
+                (bcf*CFrame.new( s3.X/2, s3.Y/2, s3.Z/2)).Position, (bcf*CFrame.new(-s3.X/2, s3.Y/2, s3.Z/2)).Position,
+                (bcf*CFrame.new(-s3.X/2, s3.Y/2, -s3.Z/2)).Position, (bcf*CFrame.new( s3.X/2, s3.Y/2, -s3.Z/2)).Position,
+                (bcf*CFrame.new( s3.X/2,-s3.Y/2, s3.Z/2)).Position, (bcf*CFrame.new(-s3.X/2,-s3.Y/2, s3.Z/2)).Position,
+                (bcf*CFrame.new(-s3.X/2,-s3.Y/2, -s3.Z/2)).Position, (bcf*CFrame.new( s3.X/2,-s3.Y/2, -s3.Z/2)).Position,
+            }
+            local pts = {}
+            for _, cr in pairs(c3) do local ps = cam:WorldToViewportPoint(cr) table.insert(pts, Vector2.new(ps.X, ps.Y)) end
+            local e = {{1,2},{2,3},{3,4},{4,1},{5,6},{6,7},{7,8},{8,5},{1,5},{2,6},{3,7},{4,8}}
+            if cfg.BoxType == '3D' then
+                for i, v in ipairs(e) do ds.Lines[i].From, ds.Lines[i].To, ds.Lines[i].Color, ds.Lines[i].Thickness, ds.Lines[i].Visible = pts[v[1]], pts[v[2]], col, thk, true end
+            else
+                local idx = 1
+                for _, v in ipairs(e) do
+                    local pA, pB = pts[v[1]], pts[v[2]]
+                    local dn = (pB - pA).Unit * ((pB - pA).Magnitude / 4)
+                    ds.Lines[idx].From, ds.Lines[idx].To = pA, pA+dn
+                    ds.Lines[idx+1].From, ds.Lines[idx+1].To = pB, pB-dn
+                    ds.Lines[idx].Visible, ds.Lines[idx+1].Visible = true, true
+                    ds.Lines[idx].Color, ds.Lines[idx+1].Color = col, col
+                    ds.Lines[idx].Thickness, ds.Lines[idx+1].Thickness = thk, thk
+                    idx = idx + 2
+                end
+            end
+        end
+        
+        if cfg.HealthBar and hum then
+            local hp_pct, bx = math.clamp(hum.Health / (hum.MaxHealth > 0 and hum.MaxHealth or 100), 0, 1), x - 6
+            ds.HBg.From, ds.HBg.To, ds.HBg.Color, ds.HBg.Thickness, ds.HBg.Visible = Vector2.new(bx, y), Vector2.new(bx, y+h_val), Color3.new(0.2,0.2,0.2), 3, true
+            ds.HBar.From, ds.HBar.To, ds.HBar.Color, ds.HBar.Thickness, ds.HBar.Visible = Vector2.new(bx, y+h_val), Vector2.new(bx, y+h_val-(h_val*hp_pct)), Color3.new(1-hp_pct, hp_pct, 0), 1, true
+        else ds.HBg.Visible, ds.HBar.Visible = false, false end
+        
+        if cfg.Skeletons then
+            local sc = rb or cfg.SkeletonColor
+            for i, b in ipairs(skel_bones) do
+                local l = ds.Skeleton[i]
+                local f, t = char:FindFirstChild(b[1]), char:FindFirstChild(b[2])
+                if f and t then
+                    local fp, fv = cam:WorldToViewportPoint(f.Position)
+                    local tp, tv = cam:WorldToViewportPoint(t.Position)
+                    if fv and tv then
+                        l.From, l.To, l.Color, l.Thickness, l.Visible = Vector2.new(fp.X, fp.Y), Vector2.new(tp.X, tp.Y), sc, cfg.EspSkeletonThickness, true
+                    else l.Visible = false end
+                else l.Visible = false end
+            end
+        else for _, l in pairs(ds.Skeleton) do l.Visible = false end end
+        
+        if cfg.HeadDot then
+            local hp, v = cam:WorldToViewportPoint(head.Position)
+            ds.HeadDot.Position, ds.HeadDot.Radius, ds.HeadDot.Color, ds.HeadDot.Filled, ds.HeadDot.Visible = Vector2.new(hp.X, hp.Y), cfg.HeadDotSize, rb or cfg.HeadDotColor, true, true
+        else ds.HeadDot.Visible = false end
+        
+        if cfg.Tracers then
+            ds.Tracer.From, ds.Tracer.To = Vector2.new(cam.ViewportSize.X/2, cam.ViewportSize.Y), Vector2.new(x + w_val/2, y + h_val)
+            ds.Tracer.Color, ds.Tracer.Thickness, ds.Tracer.Visible = rb or cfg.TracerColor, 1, true
+        else ds.Tracer.Visible = false end
+        
+        if cfg.ViewArrow then
+            local sC = cam:WorldToViewportPoint(head.Position)
+            local ah = cam:WorldToViewportPoint(head.Position + head.CFrame.LookVector * 4)
+            local d = (Vector2.new(ah.X, ah.Y) - Vector2.new(sC.X, sC.Y)).Unit
+            local perp = Vector2.new(-d.Y, d.X)
+            local b = Vector2.new(x + w_val/2, y - 10)
+            ds.Arrow.PointA, ds.Arrow.PointB, ds.Arrow.PointC = b + d * 15, b + perp * 4, b - perp * 4
+            ds.Arrow.Color, ds.Arrow.Filled, ds.Arrow.Visible = rb or cfg.ViewArrowColor, true, true
+        else ds.Arrow.Visible = false end
+
+        local stk = {Top = {}, Bottom = {}, Left = {}, Right = {}}
+        if cfg.ShowName then table.insert(stk[cfg.NamePos], {p.Name, rb or cfg.NameColor, ds.Name}) end
+        if cfg.ShowDistance then table.insert(stk[cfg.DistPos], {math.round((hrp.Position - cam.CFrame.Position).Magnitude) .. 'm', rb or cfg.DistanceColor, ds.Dist}) end
+        if cfg.ShowItem then table.insert(stk[cfg.ItemPos], {get_item(char), rb or cfg.ItemColor, ds.Tool}) end
+        
+        ds.Name.Visible, ds.Dist.Visible, ds.Tool.Visible = false, false, false
+        local ty, by, ly, ry = 0, 0, 0, 0
+        local f_sz = cfg.EspFontSize
+        for _, i in ipairs(stk.Top) do i[3].Text, i[3].Color, i[3].Size, i[3].Center, i[3].Position, i[3].Visible = i[1], i[2], f_sz, true, Vector2.new(x+w_val/2, y-15-ty), true; ty = ty + f_sz end
+        for _, i in ipairs(stk.Bottom) do i[3].Text, i[3].Color, i[3].Size, i[3].Center, i[3].Position, i[3].Visible = i[1], i[2], f_sz, true, Vector2.new(x+w_val/2, y+h_val+2+by), true; by = by + f_sz end
+        for _, i in ipairs(stk.Left) do i[3].Text, i[3].Color, i[3].Size, i[3].Center, i[3].Position, i[3].Visible = i[1], i[2], f_sz, false, Vector2.new(x-5-i[3].TextBounds.X, y+ly), true; ly = ly + f_sz end
+        for _, i in ipairs(stk.Right) do i[3].Text, i[3].Color, i[3].Size, i[3].Center, i[3].Position, i[3].Visible = i[1], i[2], f_sz, false, Vector2.new(x+w_val+5, y+ry), true; ry = ry + f_sz end
+    end)
+end
+
+for _, v in pairs(ply:GetPlayers()) do new_esp(v) end
+ply.PlayerAdded:Connect(new_esp)
+
+local f_ctrl = require(lp.PlayerScripts:WaitForChild("Controllers"):WaitForChild("FighterController"))
+local u_mod = require(rep:WaitForChild("Modules"):WaitForChild("Utility"))
+repeat task.wait() until f_ctrl.LocalFighter
+local _old_ml = f_ctrl.LocalFighter.GetMouseLocation
+local _old_rc = u_mod.Raycast
+
+f_ctrl.LocalFighter.GetMouseLocation = function(...)
+    local src = debug.info(3, "s")
+    if src and src:find("Gun") and cfg.SilentAim then
+        local t = closest()
+        if t and math.random(1, 100) <= cfg.HitChance then
+            local sp, os = cam:WorldToScreenPoint(t.Position)
+            if os then return Vector2.new(sp.X, sp.Y) end
+        end
+    end
+    return _old_ml(...)
+end
+
+u_mod.Raycast = newcclosure(function(self, o, tp, md, p1, p2, p3)
+    if cfg.SilentAim then
+        local t = closest()
+        if t and math.random(1, 100) <= cfg.HitChance then tp = t.Position end
+    end
+    return _old_rc(self, o, tp, md, p1, p2, p3)
+end)
+
+local function mobile_gui()
+    local sg = Instance.new('ScreenGui')
+    sg.Name, sg.ResetOnSpawn = 'EsoMobile', false
+    pcall(function() sg.Parent = game:GetService('CoreGui') end)
+    if not sg.Parent then sg.Parent = lp.PlayerGui end
+
+    local b = Instance.new('TextButton', sg)
+    b.Size, b.Position = UDim2.new(0, 45, 0, 45), UDim2.new(1, -60, 0.5, -22)
+    b.BackgroundColor3, b.BorderColor3, b.BorderSizePixel = Color3.fromRGB(15, 15, 15), Color3.fromRGB(100, 40, 200), 2
+    b.TextColor3, b.Text, b.Font, b.TextSize = Color3.new(1, 1, 1), 'eso', Enum.Font.Code, 14
+    Instance.new('UICorner', b).CornerRadius = UDim.new(1, 0)
+
+    local drag, d_inp, d_start, s_pos
+    b.InputBegan:Connect(function(i)
+        if i.UserInputType == Enum.UserInputType.MouseButton1 or i.UserInputType == Enum.UserInputType.Touch then
+            drag, d_start, s_pos = true, i.Position, b.Position
+            i.Changed:Connect(function() if i.UserInputState == Enum.UserInputState.End then drag = false end end)
+        end
+    end)
+    b.InputChanged:Connect(function(i) if i.UserInputType == Enum.UserInputType.MouseMovement or i.UserInputType == Enum.UserInputType.Touch then d_inp = i end end)
+    uis.InputChanged:Connect(function(i)
+        if i == d_inp and drag then
+            local del = i.Position - d_start
+            b.Position = UDim2.new(s_pos.X.Scale, s_pos.X.Offset + del.X, s_pos.Y.Scale, s_pos.Y.Offset + del.Y)
+        end
+    end)
+    b.MouseButton1Click:Connect(function()
+        pcall(function()
+            if type(lib.Toggle) == 'function' then lib:Toggle() elseif type(lib.ToggleUI) == 'function' then lib:ToggleUI() else lib.Enabled = not lib.Enabled end
+        end)
+    end)
+end
+mobile_gui()
+
+local t_db = false
+rs.Stepped:Connect(function()
+    if uis:IsKeyDown(Enum.KeyCode.RightShift) then
+        if not t_db then
+            t_db = true
+            pcall(function()
+                if type(lib.Toggle) == 'function' then lib:Toggle() elseif type(lib.ToggleUI) == 'function' then lib:ToggleUI() else lib.Enabled = not lib.Enabled end
+            end)
+        end
+    else t_db = false end
+end)
+
+pcall(function() lib:SetKeybindVisibility(true) end)
+themes:SetLibrary(lib)
+saves:SetLibrary(lib)
+themes:SetFolder('Esoteric')
+saves:SetFolder('Esoteric/SimpleSA')
+saves:BuildConfigSection(tabs.UI)
+themes:ApplyToTab(tabs.UI)
+saves:LoadAutoloadConfig()
