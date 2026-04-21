@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esoteric.win v3.0 Release Notes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.min.css">
+    <style>
+        body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding: 15px;
+            }
+        }
+        
+        .markdown-alert {
+            padding: 8px 16px;
+            margin-bottom: 16px;
+            color: inherit;
+            border-left: .25em solid #30363d;
+        }
+        .markdown-alert-warning {
+            border-left-color: #d29922;
+        }
+        .markdown-alert-title {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            color: #d29922;
+            margin-bottom: 8px;
+        }
+        .markdown-alert-title svg {
+            margin-right: 8px;
+            fill: currentColor;
+        }
+        
+        pre, code {
+            background-color: #161b22 !important;
+            color: #e6edf3 !important;
+        }
+        
+        hr {
+            background-color: #30363d;
+        }
+
+        h2, h3 {
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.3em;
+        }
+    </style>
+</head>
+<body class="markdown-body">
+    
+    <h2>What's New in v3.0? (Feature Breakdown)</h2>
+    
+    <h3>1. Proprietary Virtual Machine (VM)</h3>
+    <p>Your script is no longer passed as a string to Roblox's native <code>loadstring</code>. Instead, your source is compiled into proprietary, randomized bytecode and executed inside an internal, register-based Lua emulator. This entirely defeats automated de-obfuscators and memory dumpers.</p>
+    
+    <h3>2. Payload Fragmentation</h3>
+    <p>Your compiled payload is shattered into 3 to 6 random-length encrypted chunks. These chunks are scattered randomly throughout the script's internal state machine, separated by junk code. Memory dumpers looking for a single contiguous encrypted string will find nothing.</p>
+    
+    <h3>3. FNV-1a Runtime Key Derivation</h3>
+    <p>Hardcoded XOR keys are dead. Every time you obfuscate a script, Esoteric bakes in 6 random seed variables disguised as math operations. At runtime, these seeds are mixed using an FNV-1a hashing algorithm to derive the actual decryption keys. A reverse engineer looking at the script's text will literally never find the key.</p>
+    
+    <h3>4. Metamethod Control Flow Hiding</h3>
+    <p>We no longer use standard <code>while</code> loops or direct function calls for the loader's state machine. The entire execution path is hidden behind opaque <code>setmetatable</code> proxies using <code>__index</code> and <code>__call</code>. To a static analysis tool, the script just looks like it's reading empty tables.</p>
+    
+    <h3>5. Polymorphic Kill Functions</h3>
+    <p>If the script detects an executor or spy, it no longer uses a recognizable <code>string.rep</code> crash loop. Instead, it randomly selects one of three devastating kill archetypes per run:</p>
+    <ul>
+        <li>Unpredictable Memory Exhaustion</li>
+        <li>Mutual-Recursion Stack Overflows</li>
+        <li>Coroutine Scheduler Exhaustion</li>
+    </ul>
+    
+    <h3>6. Behavioral Anti-Tamper & IC</h3>
+    <p>We upgraded the Integrity Check (IC) from a single line to a 7-layer behavioral detection suite:</p>
+    <ul>
+        <li>Validates the source of <code>debug.info</code> to ensure native C functions aren't hooked.</li>
+        <li>Detects <code>__index</code> and <code>__namecall</code> metamethod hooks on the <code>game</code> object.</li>
+        <li>Validates <code>rawget</code>/<code>rawset</code> correctness to catch poorly written executor overrides.</li>
+        <li>Ensures <code>Instance.new("Folder")</code> returns correct <code>typeof</code> and <code>ClassName</code> metadata.</li>
+        <li>Validates the exact error string formatting of <code>pcall(error, ...)</code> (often broken by executors).</li>
+        <li>Detects hidden global variables injected by Synapse, ScriptWare, Krnl, Fluxus, Delta, Ro-Exec, and Macsploit.</li>
+    </ul>
+    
+    <h3>7. Structural Pseudo-Hashing</h3>
+    <p>The loader actively counts and verifies its own internal state machine blocks. If a reverser attempts to delete the Anti-Cheat check state, the structural hash fails and the script silently self-destructs.</p>
+    
+    <h3>8. Dynamic Timing Thresholds</h3>
+    <p>Instead of hardcoding a timeout value (like <code>0.08</code> seconds) to catch debuggers, the script dynamically calculates a random sub-millisecond threshold at runtime using <code>math.pi</code>.</p>
+    
+    <hr>
+    
+    <h2>🛠️ Tips for Developers (Writing VM-Friendly Code)</h2>
+    
+    <p>Because v3.0 uses a highly secure Virtual Machine, your code is no longer running natively on C++. It is running inside an emulator. This means you must write optimized code, or your script will lag.</p>
+    
+    <div class="markdown-alert markdown-alert-warning">
+        <p class="markdown-alert-title">
+            <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+            Warning
+        </p>
+        <p>Do not put heavy calculations, loops, or complex math inside <code>RunService.RenderStepped</code> or <code>RunService.Heartbeat</code>. The VM tax will cause severe FPS drops!</p>
+    </div>
+    
+    <h3>Tip 1: Be Event-Driven</h3>
+    <p><strong>Do not do this:</strong></p>
+<pre><code class="language-lua">RunService.RenderStepped:Connect(function()
+    for _, player in pairs(game.Players:GetPlayers()) do
+    end
+end)</code></pre>
+
+    <p><strong>Do this instead:</strong> Use <code>PlayerAdded</code> and <code>PlayerRemoving</code> to create and destroy ESP objects once, and only use <code>RenderStepped</code> to update their coordinates.</p>
+    
+    <h3>Tip 2: Cache Your Variables</h3>
+    <p>Never call <code>game:GetService()</code> or deeply nested paths (<code>player.Character.HumanoidRootPart.Position</code>) inside a fast loop. Cache them outside the loop:</p>
+<pre><code class="language-lua">local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer</code></pre>
+    
+    <h3>Tip 3: Throttle Your Checks</h3>
+    <p>If you are writing a Kill Aura or an Aimbot targeting system, you do not need to check the distance of 20 players 144 times a second. Throttle the math so it only runs every <code>0.1</code> seconds.</p>
+<pre><code class="language-lua">local lastCheck = 0
+RunService.RenderStepped:Connect(function()
+    if tick() - lastCheck > 0.1 then 
+        lastCheck = tick()
+    end
+end)</code></pre>
+    
+    <h3>Tip 4: Avoid Heavy String Manipulation in Loops</h3>
+    <p>Functions like <code>string.sub</code>, <code>string.match</code>, and <code>string.lower</code> are expensive to emulate. Do your string comparisons once when an object loads, not every frame.</p>
+
+    <h3>Tip 5: Use Native Roblox Methods Where Possible</h3>
+    <p>The VM executes Lua. If you can offload a calculation to a native C++ Roblox method, do it. For example, instead of manually calculating the distance between two parts using math, use <code>Player:DistanceFromCharacter()</code>.</p>
+
+    <h3>Tip 6: Avoid Table Creations in Fast Loops</h3>
+    <p>Creating a new table <code>{}</code> every frame creates memory garbage. When the garbage collector runs, it pauses execution and causes micro-stutters. Reuse tables by emptying them with <code>table.clear(myTable)</code> instead of making a new one.</p>
+<pre><code class="language-lua">-- Bad:
+RunService.RenderStepped:Connect(function()
+    local visiblePlayers = {} -- Causes garbage collection lag!
+end)
+
+-- Good:
+local visiblePlayers = {}
+RunService.RenderStepped:Connect(function()
+    table.clear(visiblePlayers) -- Extremely fast, no GC impact
+end)</code></pre>
+
+    <h3>Tip 7: Limit <code>pcall()</code> in Critical Paths</h3>
+    <p>Wrapping code in <code>pcall</code> is significantly more expensive inside a VM than native Lua. Never wrap your entire <code>RenderStepped</code> logic in a pcall. Instead, properly validate your objects.</p>
+<pre><code class="language-lua">-- Bad:
+pcall(function() target.Character.Humanoid.Health = 0 end)
+
+-- Good:
+if target and target.Character and target.Character:FindFirstChild("Humanoid") then
+    target.Character.Humanoid.Health = 0
+end</code></pre>
+
+    <h3>Tip 8: Precompute CFrames and Math Constants</h3>
+    <p>Math is heavy to emulate. If a value does not change during the frame, calculate it <strong>before</strong> the loop.</p>
+<pre><code class="language-lua">-- Bad:
+for i = 1, 100 do
+    part.CFrame = CFrame.Angles(0, math.rad(90), 0) -- Calculates rad(90) 100 times!
+end
+
+-- Good:
+local rotation = CFrame.Angles(0, math.rad(90), 0)
+for i = 1, 100 do
+    part.CFrame = rotation
+end</code></pre>
+
+    <h3>Tip 9: Stop Recreating Anonymous Functions</h3>
+    <p>Defining a function inside a loop creates a new closure in memory every frame, which drains performance.</p>
+<pre><code class="language-lua">-- Bad:
+RunService.RenderStepped:Connect(function()
+    button.MouseButton1Click:Connect(function() print("Clicked") end) -- Memory leak!
+end)</code></pre>
+
+    <h3>Tip 10: Defer Non-Critical Tasks</h3>
+    <p>If you have heavy logic that doesn't <em>strictly</em> need to be tied to the camera's frame rate (like sorting a player list by distance), move it out of <code>RenderStepped</code> and use <code>task.spawn</code> or <code>task.defer</code>, or simply bind it to <code>Heartbeat</code> which runs after physics calculations.</p>
+
+    <h3>Tip 11: Optimize Raycasting</h3>
+    <p>Raycasting is expensive. If you are calculating visibility for ESP or Aimbot, do a single raycast to the target's <code>HumanoidRootPart</code> or <code>Head</code>. Do not raycast to every single limb of the character unless you are writing a highly specific wall-bang feature.</p>
+
+    <h3>Tip 12: Use Local Variables (Micro-Optimization)</h3>
+    <p>In a VM, fetching a global variable requires a table lookup, while fetching a local variable uses a direct register array index. Always localize frequently used global math functions and enums.</p>
+<pre><code class="language-lua">local v3 = Vector3.new
+local cnew = CFrame.new
+local find = string.find
+-- Use these instead of Vector3.new() everywhere</code></pre>
+
+</body>
+</html>
