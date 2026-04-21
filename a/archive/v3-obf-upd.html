@@ -142,5 +142,61 @@ end)</code></pre>
     <h3>Tip 5: Use Native Roblox Methods Where Possible</h3>
     <p>The VM executes Lua. If you can offload a calculation to a native C++ Roblox method, do it. For example, instead of manually calculating the distance between two parts using math, use <code>Player:DistanceFromCharacter()</code>.</p>
 
+    <h3>Tip 6: Avoid Table Creations in Fast Loops</h3>
+    <p>Creating a new table <code>{}</code> every frame creates memory garbage. When the garbage collector runs, it pauses execution and causes micro-stutters. Reuse tables by emptying them with <code>table.clear(myTable)</code> instead of making a new one.</p>
+<pre><code class="language-lua">-- Bad:
+RunService.RenderStepped:Connect(function()
+    local visiblePlayers = {} -- Causes garbage collection lag!
+end)
+
+-- Good:
+local visiblePlayers = {}
+RunService.RenderStepped:Connect(function()
+    table.clear(visiblePlayers) -- Extremely fast, no GC impact
+end)</code></pre>
+
+    <h3>Tip 7: Limit <code>pcall()</code> in Critical Paths</h3>
+    <p>Wrapping code in <code>pcall</code> is significantly more expensive inside a VM than native Lua. Never wrap your entire <code>RenderStepped</code> logic in a pcall. Instead, properly validate your objects.</p>
+<pre><code class="language-lua">-- Bad:
+pcall(function() target.Character.Humanoid.Health = 0 end)
+
+-- Good:
+if target and target.Character and target.Character:FindFirstChild("Humanoid") then
+    target.Character.Humanoid.Health = 0
+end</code></pre>
+
+    <h3>Tip 8: Precompute CFrames and Math Constants</h3>
+    <p>Math is heavy to emulate. If a value does not change during the frame, calculate it <strong>before</strong> the loop.</p>
+<pre><code class="language-lua">-- Bad:
+for i = 1, 100 do
+    part.CFrame = CFrame.Angles(0, math.rad(90), 0) -- Calculates rad(90) 100 times!
+end
+
+-- Good:
+local rotation = CFrame.Angles(0, math.rad(90), 0)
+for i = 1, 100 do
+    part.CFrame = rotation
+end</code></pre>
+
+    <h3>Tip 9: Stop Recreating Anonymous Functions</h3>
+    <p>Defining a function inside a loop creates a new closure in memory every frame, which drains performance.</p>
+<pre><code class="language-lua">-- Bad:
+RunService.RenderStepped:Connect(function()
+    button.MouseButton1Click:Connect(function() print("Clicked") end) -- Memory leak!
+end)</code></pre>
+
+    <h3>Tip 10: Defer Non-Critical Tasks</h3>
+    <p>If you have heavy logic that doesn't <em>strictly</em> need to be tied to the camera's frame rate (like sorting a player list by distance), move it out of <code>RenderStepped</code> and use <code>task.spawn</code> or <code>task.defer</code>, or simply bind it to <code>Heartbeat</code> which runs after physics calculations.</p>
+
+    <h3>Tip 11: Optimize Raycasting</h3>
+    <p>Raycasting is expensive. If you are calculating visibility for ESP or Aimbot, do a single raycast to the target's <code>HumanoidRootPart</code> or <code>Head</code>. Do not raycast to every single limb of the character unless you are writing a highly specific wall-bang feature.</p>
+
+    <h3>Tip 12: Use Local Variables (Micro-Optimization)</h3>
+    <p>In a VM, fetching a global variable requires a table lookup, while fetching a local variable uses a direct register array index. Always localize frequently used global math functions and enums.</p>
+<pre><code class="language-lua">local v3 = Vector3.new
+local cnew = CFrame.new
+local find = string.find
+-- Use these instead of Vector3.new() everywhere</code></pre>
+
 </body>
 </html>
