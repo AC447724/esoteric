@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esoteric.win v3.0 Release Notes</title>
-    <!-- Official GitHub Markdown Dark CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.min.css">
     <style>
         body {
@@ -13,7 +12,8 @@
             max-width: 980px;
             margin: 0 auto;
             padding: 45px;
-            background-color: #0d1117; /* Exact GitHub dark background */
+            background-color: #0d1117;
+            color: #c9d1d9;
         }
 
         @media (max-width: 767px) {
@@ -22,7 +22,6 @@
             }
         }
         
-        /* Fix for GitHub alert styling which is usually injected by github's pipeline */
         .markdown-alert {
             padding: 8px 16px;
             margin-bottom: 16px;
@@ -42,6 +41,20 @@
         .markdown-alert-title svg {
             margin-right: 8px;
             fill: currentColor;
+        }
+        
+        pre, code {
+            background-color: #161b22 !important;
+            color: #e6edf3 !important;
+        }
+        
+        hr {
+            background-color: #30363d;
+        }
+
+        h2, h3 {
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.3em;
         }
     </style>
 </head>
@@ -104,7 +117,6 @@
     <p><strong>Do not do this:</strong></p>
 <pre><code class="language-lua">RunService.RenderStepped:Connect(function()
     for _, player in pairs(game.Players:GetPlayers()) do
-        -- Update ESP for everyone
     end
 end)</code></pre>
 
@@ -121,7 +133,6 @@ local LocalPlayer = Players.LocalPlayer</code></pre>
 RunService.RenderStepped:Connect(function()
     if tick() - lastCheck > 0.1 then 
         lastCheck = tick()
-        -- Calculate closest player here
     end
 end)</code></pre>
     
@@ -132,4 +143,4 @@ end)</code></pre>
     <p>The VM executes Lua. If you can offload a calculation to a native C++ Roblox method, do it. For example, instead of manually calculating the distance between two parts using math, use <code>Player:DistanceFromCharacter()</code>.</p>
 
 </body>
-</html
+</html>
