@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esoteric Developer Optimization Tips</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.min.css">
+    <style>
+        body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding: 15px;
+            }
+        }
+        
+        .markdown-alert {
+            padding: 8px 16px;
+            margin-bottom: 16px;
+            color: inherit;
+            border-left: .25em solid #30363d;
+        }
+        .markdown-alert-warning {
+            border-left-color: #d29922;
+        }
+        .markdown-alert-title {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            color: #d29922;
+            margin-bottom: 8px;
+        }
+        .markdown-alert-title svg {
+            margin-right: 8px;
+            fill: currentColor;
+        }
+        
+        pre, code {
+            background-color: #161b22 !important;
+            color: #e6edf3 !important;
+        }
+        
+        hr {
+            background-color: #30363d;
+        }
+
+        h2, h3 {
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.3em;
+        }
+    </style>
+</head>
+<body class="markdown-body">
+    
+    <h1>Esoteric.win Developer Optimization Guide</h1>
+    <p>Using <strong>Esoteric.win v3.0</strong>, your script is protected by an industry-leading, proprietary Virtual Machine (VM). This means your code isn't just hidden; it's converted into custom bytecode and run through an internal Lua emulator.</p>
+    <p>While this provides impenetrable security against reverse engineers, it introduces what we call a <strong>"VM Tax."</strong> Operations inside the emulator take slightly longer than native Roblox C++ execution. For normal functions, this delay is entirely invisible. But for high-frequency loops (like ESP or Aimbots), unoptimized code will stack up and cause massive FPS drops.</p>
+
+    <div class="markdown-alert markdown-alert-warning">
+        <p class="markdown-alert-title">
+            <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+            The Golden Rule
+        </p>
+        <p>If a block of code runs on <code>RenderStepped</code> or <code>Heartbeat</code> (60 to 144+ times a second), look at every single line and ask: <em>"Does this absolutely have to be calculated this exact frame, or can I calculate it once outside the loop?"</em></p>
+    </div>
+
+    <hr>
+
+    <h2>The 12 Commandments of VM Scripting</h2>
+
+    <h3>Tip 1: Be Event-Driven</h3>
+    <p>Never use <code>RunService</code> loops to constantly search for players or update static states. Use Roblox's built-in event listeners to create objects, and only use <code>RenderStepped</code> to update their coordinates.</p>
+    <p><strong>Do not do this:</strong></p>
+<pre><code class="language-lua">RunService.RenderStepped:Connect(function()
+    for _, player in pairs(game.Players:GetPlayers()) do
+        -- Update ESP for everyone
+    end
+end)</code></pre>
+
+    <p><strong>Do this instead:</strong> Use <code>PlayerAdded</code> and <code>PlayerRemoving</code> to manage ESP objects.</p>
+    
+    <h3>Tip 2: Cache Your Variables</h3>
+    <p>Never call <code>game:GetService()</code> or fetch deeply nested paths (like <code>player.Character.HumanoidRootPart.Position</code>) inside a fast loop. Cache the static parts outside the loop.</p>
+<pre><code class="language-lua">local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer</code></pre>
+    
+    <h3>Tip 3: Throttle Your Checks</h3>
+    <p>If you are writing a Kill Aura or an Aimbot targeting system, you rarely need to check the distance of 20 players 144 times a second. Throttle the math so it runs less frequently (e.g., every <code>0.1</code> seconds).</p>
+<pre><code class="language-lua">local lastCheck = 0
+RunService.RenderStepped:Connect(function()
+    if tick() - lastCheck > 0.1 then 
+        lastCheck = tick()
+        -- Calculate closest player here
+    end
+end)</code></pre>
+    
+    <h3>Tip 4: Avoid Heavy String Manipulation in Loops</h3>
+    <p>Functions like <code>string.sub</code>, <code>string.match</code>, and <code>string.lower</code> are expensive to emulate. Do your string comparisons once when an object spawns or a UI loads, not every frame.</p>
+
+    <h3>Tip 5: Use Native Roblox Methods Where Possible</h3>
+    <p>The VM executes Lua. If you can offload a calculation to a native C++ Roblox method, do it. For example, instead of manually calculating the math distance between two Vector3 positions, use <code>Player:DistanceFromCharacter()</code>.</p>
+
+    <h3>Tip 6: Avoid Table Creations in Fast Loops</h3>
+    <p>Creating a new table <code>{}</code> every frame creates memory garbage. When the garbage collector runs, it pauses execution and causes micro-stutters. Reuse tables by emptying them with <code>table.clear(myTable)</code> instead of making a new one.</p>
+<pre><code class="language-lua">-- Bad:
+RunService.RenderStepped:Connect(function()
+    local visiblePlayers = {} -- Causes garbage collection lag!
+end)
+
+-- Good:
+local visiblePlayers = {}
+RunService.RenderStepped:Connect(function()
+    table.clear(visiblePlayers) -- Extremely fast, no GC impact
+end)</code></pre>
+
+    <h3>Tip 7: Limit <code>pcall()</code> in Critical Paths</h3>
+    <p>Wrapping code in <code>pcall</code> is significantly more expensive inside a VM emulator than in native Lua. Never wrap your entire <code>RenderStepped</code> logic in a pcall. Instead, properly validate your objects.</p>
+<pre><code class="language-lua">-- Bad:
+pcall(function() target.Character.Humanoid.Health = 0 end)
+
+-- Good:
+if target and target.Character and target.Character:FindFirstChild("Humanoid") then
+    target.Character.Humanoid.Health = 0
+end</code></pre>
+
+    <h3>Tip 8: Precompute CFrames and Math Constants</h3>
+    <p>Math operations are heavy to emulate. If a value does not change during the frame, calculate it <strong>before</strong> the loop.</p>
+<pre><code class="language-lua">-- Bad:
+for i = 1, 100 do
+    part.CFrame = CFrame.Angles(0, math.rad(90), 0) -- Calculates rad(90) 100 times!
+end
+
+-- Good:
+local rotation = CFrame.Angles(0, math.rad(90), 0)
+for i = 1, 100 do
+    part.CFrame = rotation
+end</code></pre>
+
+    <h3>Tip 9: Stop Recreating Anonymous Functions</h3>
+    <p>Defining a new function inside a loop creates a new closure in memory every single frame, which drains performance heavily under a VM.</p>
+<pre><code class="language-lua">-- Bad:
+RunService.RenderStepped:Connect(function()
+    -- This binds a new function memory address 144 times a second!
+    button.MouseButton1Click:Connect(function() print("Clicked") end) 
+end)</code></pre>
+
+    <h3>Tip 10: Defer Non-Critical Tasks</h3>
+    <p>If you have heavy logic that doesn't <em>strictly</em> need to be tied to the camera's frame rate (like sorting a player list by distance), move it out of <code>RenderStepped</code>. Use <code>task.spawn</code>, <code>task.defer</code>, or simply bind it to <code>Heartbeat</code> which runs after physics calculations.</p>
+
+    <h3>Tip 11: Optimize Raycasting</h3>
+    <p>Raycasting is mathematically expensive. If you are calculating visibility for ESP or Aimbot, do a single raycast to the target's <code>HumanoidRootPart</code> or <code>Head</code>. Do not raycast to every single limb of the character unless you are writing a highly specific wall-bang feature.</p>
+
+    <h3>Tip 12: Use Local Variables (Micro-Optimization)</h3>
+    <p>In a Virtual Machine, fetching a global variable requires an internal table lookup, while fetching a local variable uses a direct register array index. Always localize frequently used global math functions and enums at the top of your script.</p>
+<pre><code class="language-lua">local v3 = Vector3.new
+local cnew = CFrame.new
+local find = string.find
+
+-- Use these local aliases instead of Vector3.new() inside your fast loops
+</code></pre>
+
+</body>
+</html>
