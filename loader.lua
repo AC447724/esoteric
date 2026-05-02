@@ -1,5 +1,5 @@
 local P, H = game.PlaceId, "https://www.esoteric.win/api/v1/rbf/"
-local M = {[286090429]="arsenal",[2753915549]="bloxfruits",[4442272183]="bloxfruits",[7449423635]="bloxfruits",[11424731604]="bloxfruits",[15335232591]="bloxfruits",[10594246664]="bloxfruits",[994732206]="bloxfruits",[6403373529]="slap-battles",[142823291]="murder-mystery-2",[3956818381]="ninja-legends",[3101667897]="legends-of-speed",[9872472334]="evade",[6961824067]="ftap",[7326934954]="99-nights-in-the-forest"}
+local M = {[893973440]="flee",[286090429]="arsenal",[2753915549]="bloxfruits",[4442272183]="bloxfruits",[7449423635]="bloxfruits",[11424731604]="bloxfruits",[15335232591]="bloxfruits",[10594246664]="bloxfruits",[994732206]="bloxfruits",[6403373529]="slap-battles",[142823291]="murder-mystery-2",[3956818381]="ninja-legends",[3101667897]="legends-of-speed",[9872472334]="evade",[6961824067]="ftap",[7326934954]="99-nights-in-the-forest"}
 local MB = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
 local function Show(d, i, b, c) MB.Show({Position=UDim2.new(0.5,0,0.5,0), Text="esoteric.win", Description=d, MessageBoxIcon=i or "Warning", MessageBoxButtons=b or "OK", Result=c}) end
 local function Load(u)
