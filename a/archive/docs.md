@@ -1,6 +1,6 @@
-# Esoterica: The Complete Master Manual
+# Esoterica: The Absolute Master Manual (In-Depth)
 
-This guide contains every single one of the **448** commands available in the bot.
+This is the definitive guide for **448** commands. Every command includes syntax, parameters, and common use cases where available.
 
 ## Table of Contents
 - [AI](#ai)
@@ -35,7 +35,7 @@ This guide contains every single one of the **448** commands available in the bo
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .ai
 Example: .ai
@@ -50,7 +50,7 @@ Example: .ai
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: <on|off>
 Example: .aimemory
@@ -65,7 +65,7 @@ Example: .aimemory
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .ask
 Example: .ask
@@ -80,7 +80,7 @@ Example: .ask
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .beef
 Example: .beef
@@ -95,7 +95,7 @@ Example: .beef
 | :--- | :--- | :--- |
 | profile, identity, judgment | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .brain
 Example: .brain
@@ -110,7 +110,7 @@ Example: .brain
 | :--- | :--- | :--- |
 | wipe, clearcontext | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .forget
 Example: .forget
@@ -125,7 +125,7 @@ Example: .forget
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /forget
 Example: /forget
@@ -140,7 +140,7 @@ Example: /forget
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: <set | remove> <#channel> [chance_percentage]
 Example: .instigate
@@ -155,7 +155,7 @@ Example: .instigate
 | :--- | :--- | :--- |
 | mem | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .memory
 Example: .memory
@@ -170,7 +170,7 @@ Example: .memory
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /memory
 Example: /memory
@@ -185,7 +185,7 @@ Example: /memory
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: <set <prompt> | clear>
 Example: .persona
@@ -200,7 +200,7 @@ Example: .persona
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .redeem
 Example: .redeem
@@ -215,7 +215,7 @@ Example: .redeem
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /reset
 Example: /reset
@@ -230,7 +230,7 @@ Example: /reset
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /summarize
 Example: /summarize
@@ -245,7 +245,7 @@ Example: /summarize
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: [amount=50]
 Example: .tldr
@@ -262,7 +262,7 @@ Example: .tldr
 | :--- | :--- | :--- |
 | n/a | <user> <message> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /fakedm <user> <message>
 Example: /fakedm
@@ -277,7 +277,7 @@ Example: /fakedm
 | :--- | :--- | :--- |
 | n/a | [config] [words] [category] [view] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /word-filter [config] [words] [category] [view]
 Example: /word-filter
@@ -288,30 +288,30 @@ Example: /word-filter
 ## Anime
 
 ### .companion
-> Set a waifu as your companion to gain XP from fishing, mining, hunting, and work. Rarity determines XP gain (Trash=10 → Mythic=800). Usage: .companion [waifu_id] or .companion to view current
+> Set a waifu as your companion to gain XP from fishing, mining, hunting, and work. Rarity determines XP gain (Trash=10 → Mythic=800). .companion to view current
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | setcompanion, mycompanion | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .companion
+Syntax: .companion [waifu_id] or
 Example: .companion
 ```
 
 ---
 
 ### .evolve
-> Evolve your waifus through 6 tiers (Common → Uncommon → Rare → Epic → Legendary → Mythic). Requires credits and evolution materials (Essence Crystals, Celestial Shards, etc). Each tier boosts stats. Usage: .evolve <waifu_id>
+> Evolve your waifus through 6 tiers (Common → Uncommon → Rare → Epic → Legendary → Mythic). Requires credits and evolution materials (Essence Crystals, Celestial Shards, etc). Each tier boosts stats.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | evo | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .evolve
+Syntax: .evolve <waifu_id>
 Example: .evolve
 ```
 
@@ -324,7 +324,7 @@ Example: .evolve
 | :--- | :--- | :--- |
 | favourites, favorites, favs, favourites | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .favs
 Example: .favs
@@ -333,15 +333,15 @@ Example: .favs
 ---
 
 ### .favwaifu
-> Toggle favorite on a waifu you own. Usage: .favwaifu <id>
+> Toggle favorite on a waifu you own.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | fav, favorite | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .favwaifu
+Syntax: .favwaifu <id>
 Example: .favwaifu
 ```
 
@@ -354,7 +354,7 @@ Example: .favwaifu
 | :--- | :--- | :--- |
 | femboyroll, fr | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .froll
 Example: .froll
@@ -369,7 +369,7 @@ Example: .froll
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .gift
 Example: .gift
@@ -384,7 +384,7 @@ Example: .gift
 | :--- | :--- | :--- |
 | duel, pvp | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .pbattle
 Example: .pbattle
@@ -399,7 +399,7 @@ Example: .pbattle
 | :--- | :--- | :--- |
 | psell, sellpreview | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .previewsell
 Example: .previewsell
@@ -414,7 +414,7 @@ Example: .previewsell
 | :--- | :--- | :--- |
 | rrm, reroll-move | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .rerollmove
 Example: .rerollmove
@@ -429,7 +429,7 @@ Example: .rerollmove
 | :--- | :--- | :--- |
 | waifu, rwaifu | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .roll
 Example: .roll
@@ -444,7 +444,7 @@ Example: .roll
 | :--- | :--- | :--- |
 | sell | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .sellwaifu
 Example: .sellwaifu
@@ -459,7 +459,7 @@ Example: .sellwaifu
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .trade
 Example: .trade
@@ -468,15 +468,15 @@ Example: .trade
 ---
 
 ### .unfav
-> Unfavorite a waifu you own. Usage: .unfav <id>
+> Unfavorite a waifu you own.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | unfavorite | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .unfav
+Syntax: .unfav <id>
 Example: .unfav
 ```
 
@@ -489,7 +489,7 @@ Example: .unfav
 | :--- | :--- | :--- |
 | harem, collection | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .waifus
 Example: .waifus
@@ -504,7 +504,7 @@ Example: .waifus
 | :--- | :--- | :--- |
 | harem-list, hlist | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .wdex
 Example: .wdex
@@ -521,11 +521,14 @@ Example: .wdex
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .antidelete
 Example: .antidelete
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `ManageGuild`, `Administrator`  
 
 ---
@@ -537,141 +540,100 @@ Example: .antidelete
 | :--- | :--- | :--- |
 | n/a | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .antilink <subcommand>
 Example: .antilink config
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Administrator`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**enable**
+**ENABLE**
 > Enable link filtering
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .antilink enable
 Example: .antilink on
 ```
 
-**disable**
+**DISABLE**
 > Disable link filtering
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .antilink disable
 Example: .antilink off
 ```
 
-**action**
+**ACTION**
 > Set punishment for violations
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <delete|warn|timeout|kick|ban> | n/a |
 
 ```
 Syntax: .antilink action timeout
 Example: .antilink action ban
 ```
 
-**duration**
+**DURATION**
 > Set timeout duration
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <time> | n/a |
 
 ```
 Syntax: .antilink duration 10m
 Example: .antilink duration 1h
 ```
 
-**whitelist**
+**WHITELIST**
 > Whitelist a domain
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <domain> | n/a |
 
 ```
 Syntax: .antilink whitelist google.com
 Example: .antilink whitelist discord.gg
 ```
 
-**unwhitelist**
+**UNWHITELIST**
 > Remove whitelisted domain
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <domain> | n/a |
 
 ```
 Syntax: .antilink unwhitelist google.com
 Example: .antilink unwhitelist discord.gg
 ```
 
-**bypass**
+**BYPASS**
 > Manage bypass list
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <add/remove/list> <user|role> | n/a |
 
 ```
 Syntax: .antilink bypass add @Staff
 Example: .antilink bypass list
 ```
 
-**bypass-role**
+**BYPASS-ROLE**
 > Exempt a role
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <role> | n/a |
 
 ```
 Syntax: .antilink bypass-role @Staff
 Example: .antilink bypass-role @Admin
 ```
 
-**bypass-channel**
+**BYPASS-CHANNEL**
 > Exempt a channel
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <channel> | n/a |
 
 ```
 Syntax: .antilink bypass-channel #general
 Example: .antilink bypass-channel #media
 ```
 
-**log-channel**
+**LOG-CHANNEL**
 > Set logging channel
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <channel> | n/a |
 
 ```
 Syntax: .antilink log-channel #logs
 Example: .antilink log-channel #security
 ```
 
-**config**
+**CONFIG**
 > View current settings
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .antilink config
@@ -688,117 +650,84 @@ Example: .antilink config
 | :--- | :--- | :--- |
 | an | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .antinuke <subcommand>
 Example: .an config
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `ManageGuild`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**enable**
+**ENABLE**
 > Enable the anti-nuke protection system
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .an enable
 Example: .an enable
 ```
 
-**disable**
+**DISABLE**
 > Disable the anti-nuke protection system
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .an disable
 Example: .an disable
 ```
 
-**punishment**
+**PUNISHMENT**
 > Set action for protection violations
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <ban|kick|stripstaff|quarantine> | n/a |
 
 ```
 Syntax: .an punishment ban
 Example: .an punishment stripstaff
 ```
 
-**logchannel**
+**LOGCHANNEL**
 > Set channel for security audit logs
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <#channel> | n/a |
 
 ```
 Syntax: .an logchannel #security
 Example: .an logchannel #logs
 ```
 
-**whitelist**
+**WHITELIST**
 > Whitelist a user from all protection
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <user> | n/a |
 
 ```
 Syntax: .an whitelist @user
 Example: .an whitelist @Staff
 ```
 
-**adminlock**
+**ADMINLOCK**
 > Toggle Administrator role protection
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <on/off> | n/a |
 
 ```
 Syntax: .an adminlock on
 Example: .an adminlock off
 ```
 
-**restore**
+**RESTORE**
 > Attempt to restore deleted items from logs
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .an restore
 Example: .an restore
 ```
 
-**config**
+**CONFIG**
 > View current system status & modules
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .an config
 Example: .an config
 ```
 
-**bypass**
+**BYPASS**
 > Manage module-specific bypasses
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <add/remove/list> <target> [module] | n/a |
 
 ```
 Syntax: .an bypass add @user role_delete
@@ -815,117 +744,84 @@ Example: .an bypass add @Staff
 | :--- | :--- | :--- |
 | raid | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .antiraid <subcommand>
 Example: .antiraid on
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Administrator`, `ManageMessages`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**enable**
+**ENABLE**
 > Enable the anti-raid protection system
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .antiraid enable
 Example: .antiraid enable
 ```
 
-**disable**
+**DISABLE**
 > Disable anti-raid and lift active lockdowns
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .antiraid disable
 Example: .antiraid disable
 ```
 
-**panic**
+**PANIC**
 > INSTANT EMERGENCY LOCKDOWN: Locks all channels
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .antiraid panic
 Example: .antiraid panic
 ```
 
-**level**
+**LEVEL**
 > Set security severity (0-3)
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <0/1/2/3> | n/a |
 
 ```
 Syntax: .antiraid level 1
 Example: .antiraid level 2
 ```
 
-**age**
+**AGE**
 > Automatically kick accounts newer than X days
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <days> | n/a |
 
 ```
 Syntax: .antiraid age 7
 Example: .antiraid age 3
 ```
 
-**purge**
+**PURGE**
 > Mass-ban recent joiners (cutoff in minutes)
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <mins> | n/a |
 
 ```
 Syntax: .antiraid purge 10
 Example: .antiraid purge 30
 ```
 
-**silence**
+**SILENCE**
 > Mass-timeout recent joiners (cutoff in minutes)
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <mins> | n/a |
 
 ```
 Syntax: .antiraid silence 5
 Example: .antiraid silence 10
 ```
 
-**config**
+**CONFIG**
 > View current anti-raid settings
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .antiraid config
 Example: .antiraid config
 ```
 
-**bypass**
+**BYPASS**
 > Manage users/roles that bypass anti-raid
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <add/remove/list> <target> | n/a |
 
 ```
 Syntax: .antiraid bypass add @user
@@ -942,45 +838,36 @@ Example: .antiraid bypass add @Staff
 | :--- | :--- | :--- |
 | n/a | <on/off/bypass> [threshold] [seconds] [punishment] [duration] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .antispam on 5 10 timeout 5m
 Example: .antispam on 8 15 ban
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `ManageGuild`, `Administrator`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**on**
+**ON**
 > Enable anti-spam detection
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [threshold] [seconds] [punishment] [duration] | n/a |
 
 ```
 Syntax: .antispam on 5 10 timeout 5m
 Example: .antispam on 8 15 ban
 ```
 
-**off**
+**OFF**
 > Disable anti-spam detection
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .antispam off
 Example: .antispam off
 ```
 
-**bypass**
+**BYPASS**
 > Manage anti-spam bypass list
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <add/remove/list> <user|role> | n/a |
 
 ```
 Syntax: .antispam bypass add @Staff
@@ -997,81 +884,60 @@ Example: .antispam bypass list
 | :--- | :--- | :--- |
 | n/a | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .automod <subcommand>
 Example: .automod status
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `ManageGuild`, `Administrator`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**status**
+**STATUS**
 > View current module statuses
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .automod status
 Example: .automod status
 ```
 
-**setlog**
+**SETLOG**
 > Configure global AutoMod logs
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <#channel> | n/a |
 
 ```
 Syntax: .automod setlog #logs
 Example: .automod setlog #logs
 ```
 
-**enable**
+**ENABLE**
 > Activate the AutoMod system
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .automod enable
 Example: .automod enable
 ```
 
-**disable**
+**DISABLE**
 > Deactivate the AutoMod system
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .automod disable
 Example: .automod disable
 ```
 
-**bypass**
+**BYPASS**
 > Manage whitelist/bypass entries
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <add/remove/list> <target> [module] | n/a |
 
 ```
 Syntax: .automod bypass add @user antilink
 Example: .automod bypass add @Staff antilink
 ```
 
-**setup**
+**SETUP**
 > Launch interactive setup wizard
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .automod setup
@@ -1088,69 +954,52 @@ Example: .automod setup
 | :--- | :--- | :--- |
 | amantilink, antilink | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .antilink <subcommand>
 Example: .antilink on
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `ManageGuild`, `Administrator`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**on**
+**ON**
 > Enable link protection
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .antilink on
 Example: .antilink enable
 ```
 
-**off**
+**OFF**
 > Disable link protection
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .antilink off
 Example: .antilink disable
 ```
 
-**whitelist**
+**WHITELIST**
 > Allow links for target
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <role|channel> <mention> | n/a |
 
 ```
 Syntax: .antilink whitelist role @Staff
 Example: .antilink whitelist channel #media
 ```
 
-**unwhitelist**
+**UNWHITELIST**
 > Remove link allowance
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <role|channel> <mention> | n/a |
 
 ```
 Syntax: .antilink unwhitelist role @Staff
 Example: .antilink unwhitelist channel #media
 ```
 
-**list**
+**LIST**
 > View the link whitelist
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .antilink list
@@ -1167,93 +1016,68 @@ Example: .antilink list
 | :--- | :--- | :--- |
 | n/a | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .filter <subcommand>
 Example: .filter list
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `ManageGuild`, `Administrator`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**add**
+**ADD**
 > Add a word to the filter
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <word> [flags] | n/a |
 
 ```
 Syntax: .filter add nsfw --punishment ban
 Example: .filter add spam --category toxic
 ```
 
-**remove**
+**REMOVE**
 > Remove a word from the filter
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <word> | n/a |
 
 ```
 Syntax: .filter remove nsfw
 Example: .filter remove spam
 ```
 
-**list**
+**LIST**
 > List all filtered words
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .filter list
 Example: .filter list
 ```
 
-**enable**
+**ENABLE**
 > Enable the filter system
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .filter enable
 Example: .filter enable
 ```
 
-**disable**
+**DISABLE**
 > Disable the filter system
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .filter disable
 Example: .filter disable
 ```
 
-**category**
+**CATEGORY**
 > Manage word categories
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <add/remove/list> <name> | n/a |
 
 ```
 Syntax: .filter category add toxic
 Example: .filter category list
 ```
 
-**bypass**
+**BYPASS**
 > Manage filter bypasses
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <add/remove/list> <user|role> | n/a |
 
 ```
 Syntax: .filter bypass add @Staff
@@ -1270,117 +1094,85 @@ Example: .filter bypass list
 | :--- | :--- | :--- |
 | n/a | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .heat <subcommand>
 Example: .heat config
 ```
+**Common Use Cases:**
+- `.heat config`: Check current security levels.
+- `.heat threshold add 100 mute 1h`: Set a punishment threshold.
+
 **Required Permissions:** `Administrator`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**config**
+**CONFIG**
 > View system status and configuration
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .heat config
 Example: .heat config
 ```
 
-**enable**
+**ENABLE**
 > Enable the heat system
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .heat enable
 Example: .heat enable
 ```
 
-**disable**
+**DISABLE**
 > Disable the heat system
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .heat disable
 Example: .heat disable
 ```
 
-**decay**
+**DECAY**
 > Set heat decay rate per minute
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <rate> | n/a |
 
 ```
 Syntax: .heat decay 5
 Example: .heat decay 5
 ```
 
-**cascade**
+**CASCADE**
 > Toggle punishment cascading
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <on/off> | n/a |
 
 ```
 Syntax: .heat cascade on
 Example: .heat cascade on
 ```
 
-**weight**
+**WEIGHT**
 > Set heat weight for modules
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <module> <points> | n/a |
 
 ```
 Syntax: .heat weight caps 10
 Example: .heat weight zalgo 20
 ```
 
-**threshold**
+**THRESHOLD**
 > Manage punishment thresholds
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <add/remove> <heat> <action> | n/a |
 
 ```
 Syntax: .heat threshold add 100 ban
 Example: .heat threshold remove 50
 ```
 
-**user**
+**USER**
 > Check user heatmap
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <user> | n/a |
 
 ```
 Syntax: .heat user @Member
 Example: .heat user @Member
 ```
 
-**reset**
+**RESET**
 > Flush user heat points
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <user> | n/a |
 
 ```
 Syntax: .heat reset @Member
@@ -1399,69 +1191,50 @@ Example: .heat reset @Member
 | :--- | :--- | :--- |
 | bk | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .backup <subcommand>
 Example: .bk create
 ```
+
 **Required Permissions:** `ManageGuild`, `Administrator`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**create**
+**CREATE**
 > Generate a new backup
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [label] | n/a |
 
 ```
 Syntax: .backup create pre-raid
 Example: .bk create main
 ```
 
-**list**
+**LIST**
 > View available backups
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .backup list
 Example: .bk list
 ```
 
-**info**
+**INFO**
 > View backup specifications
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <id> | n/a |
 
 ```
 Syntax: .backup info 1234
 Example: .bk info aBcDeFgH
 ```
 
-**load**
+**LOAD**
 > Restore server state
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <id> | n/a |
 
 ```
 Syntax: .backup load 1234
 Example: .bk load aBcDeFgH
 ```
 
-**delete**
+**DELETE**
 > Remove a backup
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <id> | n/a |
 
 ```
 Syntax: .backup delete 1234
@@ -1478,11 +1251,12 @@ Example: .bk delete aBcDeFgH
 | :--- | :--- | :--- |
 | n/a | [create] [list] [info] [load] [delete] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /backup [create] [list] [info] [load] [delete]
 Example: /backup
 ```
+
 **Required Permissions:** `Administrator`  
 
 ---
@@ -1494,11 +1268,12 @@ Example: /backup
 | :--- | :--- | :--- |
 | autobackup | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .interval
 Example: .interval
 ```
+
 **Required Permissions:** `ManageGuild`  
 
 ---
@@ -1510,7 +1285,7 @@ Example: .interval
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .sync
 Example: .sync
@@ -1525,7 +1300,7 @@ Example: .sync
 | :--- | :--- | :--- |
 | n/a | [create] [join] [leave] [status] [toggle] [link] [unlink] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /sync [create] [join] [leave] [status] [toggle] [link] [unlink]
 Example: /sync
@@ -1540,11 +1315,12 @@ Example: /sync
 | :--- | :--- | :--- |
 | tp | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .template
 Example: .template
 ```
+
 **Required Permissions:** `ManageGuild`, `Administrator`  
 
 ---
@@ -1556,11 +1332,12 @@ Example: .template
 | :--- | :--- | :--- |
 | n/a | [create] [list] [search] [info] [load] [delete] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /template [create] [list] [search] [info] [load] [delete]
 Example: /template
 ```
+
 **Required Permissions:** `Administrator`  
 
 ---
@@ -1574,7 +1351,7 @@ Example: /template
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .define
 Example: .define
@@ -1589,7 +1366,7 @@ Example: .define
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .urban
 Example: .urban
@@ -1606,11 +1383,13 @@ Example: .urban
 | :--- | :--- | :--- |
 | medals, awards | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .achievements
 Example: .achievements
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1621,11 +1400,13 @@ Example: .achievements
 | :--- | :--- | :--- |
 | inv, inventory, bag | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .assets
 Example: .assets
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1636,11 +1417,13 @@ Example: .assets
 | :--- | :--- | :--- |
 | bacc | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .baccarat
 Example: .baccarat
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1651,11 +1434,13 @@ Example: .baccarat
 | :--- | :--- | :--- |
 | bal | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .balance
 Example: .balance
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1666,11 +1451,13 @@ Example: .balance
 | :--- | :--- | :--- |
 | bj | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .blackjack
 Example: .blackjack
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1681,11 +1468,13 @@ Example: .blackjack
 | :--- | :--- | :--- |
 | bm, shady | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .blackmarket
 Example: .blackmarket
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1696,11 +1485,13 @@ Example: .blackmarket
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .bonus
 Example: .bonus
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1711,11 +1502,13 @@ Example: .bonus
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .bribe
 Example: .bribe
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1726,56 +1519,42 @@ Example: .bribe
 | :--- | :--- | :--- |
 | biz | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .business <subcommand>
 Example: .business buy
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**buy**
+**BUY**
 > Purchase a new business
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [name] | n/a |
 
 ```
 Syntax: .business buy Coffee Shop
 Example: .business buy
 ```
 
-**collect**
+**COLLECT**
 > Claim hourly earnings
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .business collect
 Example: .business collect
 ```
 
-**upgrade**
+**UPGRADE**
 > Upgrade a business level
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <name> | n/a |
 
 ```
 Syntax: .business upgrade Coffee Shop
 Example: .business upgrade
 ```
 
-**portfolio**
+**PORTFOLIO**
 > View your owned businesses
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .business
@@ -1792,11 +1571,13 @@ Example: .business
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .buy
 Example: .buy
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1807,11 +1588,13 @@ Example: .buy
 | :--- | :--- | :--- |
 | cfight | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .cockfight
 Example: .cockfight
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1822,11 +1605,13 @@ Example: .cockfight
 | :--- | :--- | :--- |
 | cf | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .coinflip
 Example: .coinflip
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1837,11 +1622,13 @@ Example: .coinflip
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .cook
 Example: .cook
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1852,11 +1639,13 @@ Example: .cook
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .crash
 Example: .crash
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1867,11 +1656,13 @@ Example: .crash
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .crime
 Example: .crime
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1882,11 +1673,13 @@ Example: .crime
 | :--- | :--- | :--- |
 | day | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .daily
 Example: .daily
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1897,11 +1690,13 @@ Example: .daily
 | :--- | :--- | :--- |
 | dep | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .deposit
 Example: .deposit
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1912,11 +1707,13 @@ Example: .deposit
 | :--- | :--- | :--- |
 | rolldice | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .dice
 Example: .dice
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1927,44 +1724,34 @@ Example: .dice
 | :--- | :--- | :--- |
 | plant, harvest, crops, f | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .farm <subcommand>
 Example: .farm plant Wheat
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**plant**
+**PLANT**
 > Purchase and plant seeds
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <crop> | n/a |
 
 ```
 Syntax: .farm plant Corn
 Example: .farm plant Wheat
 ```
 
-**harvest**
+**HARVEST**
 > Harvest your grown crops
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .farm harvest
 Example: .farm harvest
 ```
 
-**status**
+**STATUS**
 > Check your plot progress
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .farm status
@@ -1981,11 +1768,13 @@ Example: .farm
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .fish
 Example: .fish
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -1996,11 +1785,13 @@ Example: .fish
 | :--- | :--- | :--- |
 | robbery | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .heist
 Example: .heist
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2011,11 +1802,13 @@ Example: .heist
 | :--- | :--- | :--- |
 | hl, hilo | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .higherlow
 Example: .higherlow
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2026,11 +1819,13 @@ Example: .higherlow
 | :--- | :--- | :--- |
 | race, horses | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .horserace
 Example: .horserace
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2041,11 +1836,13 @@ Example: .horserace
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .hunt
 Example: .hunt
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2056,11 +1853,13 @@ Example: .hunt
 | :--- | :--- | :--- |
 | stocks, stock | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .invest
 Example: .invest
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2071,11 +1870,13 @@ Example: .invest
 | :--- | :--- | :--- |
 | jp, pool | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .jackpot
 Example: .jackpot
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2086,11 +1887,13 @@ Example: .jackpot
 | :--- | :--- | :--- |
 | jobmarket, career, jobs | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .job
 Example: .job
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2101,11 +1904,13 @@ Example: .job
 | :--- | :--- | :--- |
 | numbers | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .keno
 Example: .keno
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2116,11 +1921,13 @@ Example: .keno
 | :--- | :--- | :--- |
 | lp, postmemes | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .laptop
 Example: .laptop
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2131,41 +1938,48 @@ Example: .laptop
 | :--- | :--- | :--- |
 | multpredict | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .limbo
 Example: .limbo
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
 ### .lootbox
-> Buy mystery lootboxes. Usage: .lootbox <tier> (common/rare/epic/legendary)
+> Buy mystery lootboxes.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | box, crate, open | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .lootbox
+Syntax: .lootbox <tier> (common/rare/epic/legendary)
 Example: .lootbox
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
 ### .lottery
-> Buy lottery tickets, view pool, or draw a winner. Usage: .lottery buy <amount> | .lottery pool | .lottery draw
+> Buy lottery tickets, view pool, or draw a winner. .lottery pool | .lottery draw
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | lotto | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .lottery
+Syntax: .lottery buy <amount> |
 Example: .lottery
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Administrator`  
 
 ---
@@ -2177,11 +1991,13 @@ Example: .lottery
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .mine
 Example: .mine
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2192,26 +2008,30 @@ Example: .mine
 | :--- | :--- | :--- |
 | give, transfer, send | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .pay
 Example: .pay
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
 ### .poker
-> Simplified Texas Hold'em. 2-5 players. Usage: .poker <bet>
+> Simplified Texas Hold'em. 2-5 players.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .poker
+Syntax: .poker <bet>
 Example: .poker
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2222,11 +2042,13 @@ Example: .poker
 | :--- | :--- | :--- |
 | p | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .profile
 Example: .profile
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2237,11 +2059,13 @@ Example: .profile
 | :--- | :--- | :--- |
 | re, property, housing | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .realestate
 Example: .realestate
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2252,11 +2076,13 @@ Example: .realestate
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .rep
 Example: .rep
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2267,11 +2093,13 @@ Example: .rep
 | :--- | :--- | :--- |
 | lb, leaderboard, topwaifus, waifulb | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .rich
 Example: .rich
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2282,11 +2110,13 @@ Example: .rich
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .rob
 Example: .rob
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2297,11 +2127,13 @@ Example: .rob
 | :--- | :--- | :--- |
 | rlt | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .roulette
 Example: .roulette
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2312,11 +2144,13 @@ Example: .roulette
 | :--- | :--- | :--- |
 | scratchticket | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .scratch
 Example: .scratch
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2327,11 +2161,13 @@ Example: .scratch
 | :--- | :--- | :--- |
 | market, store | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .shop
 Example: .shop
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2342,11 +2178,13 @@ Example: .shop
 | :--- | :--- | :--- |
 | slot, slotmachine | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .slots
 Example: .slots
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2357,11 +2195,13 @@ Example: .slots
 | :--- | :--- | :--- |
 | climb, twr | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tower
 Example: .tower
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2372,11 +2212,13 @@ Example: .tower
 | :--- | :--- | :--- |
 | bin, discard, drop | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .trash
 Example: .trash
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2387,26 +2229,30 @@ Example: .trash
 | :--- | :--- | :--- |
 | quiz | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .trivia
 Example: .trivia
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
 ### .use
-> Use consumable items from your inventory. Supports luck potions (personal XP boost), incenses (channel-wide boost), tools, weapons, and waifu leveling scrolls. Usage: .use <item_name>
+> Use consumable items from your inventory. Supports luck potions (personal XP boost), incenses (channel-wide boost), tools, weapons, and waifu leveling scrolls.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .use
+Syntax: .use <item_name>
 Example: .use
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2417,11 +2263,13 @@ Example: .use
 | :--- | :--- | :--- |
 | wlb, weeklyleaderboard | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .weeklylb
 Example: .weeklylb
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2432,11 +2280,13 @@ Example: .weeklylb
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .wheel
 Example: .wheel
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2447,11 +2297,13 @@ Example: .wheel
 | :--- | :--- | :--- |
 | with | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .withdraw
 Example: .withdraw
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2462,11 +2314,13 @@ Example: .withdraw
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .work
 Example: .work
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
 
 ---
 
@@ -2479,7 +2333,7 @@ Example: .work
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .adopt
 Example: .adopt
@@ -2494,7 +2348,7 @@ Example: .adopt
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .children
 Example: .children
@@ -2509,7 +2363,7 @@ Example: .children
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .disown
 Example: .disown
@@ -2524,7 +2378,7 @@ Example: .disown
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .divorce
 Example: .divorce
@@ -2539,7 +2393,7 @@ Example: .divorce
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .family
 Example: .family
@@ -2554,7 +2408,7 @@ Example: .family
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .grandparents
 Example: .grandparents
@@ -2569,7 +2423,7 @@ Example: .grandparents
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .hug
 Example: .hug
@@ -2584,7 +2438,7 @@ Example: .hug
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .kiss
 Example: .kiss
@@ -2599,7 +2453,7 @@ Example: .kiss
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .marry
 Example: .marry
@@ -2614,7 +2468,7 @@ Example: .marry
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .parents
 Example: .parents
@@ -2629,7 +2483,7 @@ Example: .parents
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .runaway
 Example: .runaway
@@ -2644,7 +2498,7 @@ Example: .runaway
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .siblings
 Example: .siblings
@@ -2659,7 +2513,7 @@ Example: .siblings
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tree
 Example: .tree
@@ -2676,7 +2530,7 @@ Example: .tree
 | :--- | :--- | :--- |
 | presence, act | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: [@user]
 Example: .activity
@@ -2691,7 +2545,7 @@ Example: .activity
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .anime
 Example: .anime
@@ -2706,7 +2560,7 @@ Example: .anime
 | :--- | :--- | :--- |
 | bump, adultswim | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .as
 Example: .as
@@ -2721,7 +2575,7 @@ Example: .as
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: ascii <text>
 Example: .ascii
@@ -2736,7 +2590,7 @@ Example: .ascii
 | :--- | :--- | :--- |
 | badye, badtweet | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .bad-kanye
 Example: .bad-kanye
@@ -2751,7 +2605,7 @@ Example: .bad-kanye
 | :--- | :--- | :--- |
 | smoke, sesh | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .blunt
 Example: .blunt
@@ -2766,7 +2620,7 @@ Example: .blunt
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .book
 Example: .book
@@ -2781,7 +2635,7 @@ Example: .book
 | :--- | :--- | :--- |
 | meme, text | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .caption
 Example: .caption
@@ -2796,7 +2650,7 @@ Example: .caption
 | :--- | :--- | :--- |
 | cash, ca | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .cashapp
 Example: .cashapp
@@ -2811,7 +2665,7 @@ Example: .cashapp
 | :--- | :--- | :--- |
 | kitty, meow | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .cat
 Example: .cat
@@ -2826,7 +2680,7 @@ Example: .cat
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .character
 Example: .character
@@ -2841,80 +2695,56 @@ Example: .character
 | :--- | :--- | :--- |
 | n/a | <#opponent/bot/resume/stats/lb> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .chess <@opponent|bot|resume>
 Example: .chess bot hard
 ```
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**bot**
+**BOT**
 > Play against Stockfish AI
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [difficulty] | n/a |
 
 ```
 Syntax: .chess bot medium
 Example: .chess bot hard
 ```
 
-**resume**
+**RESUME**
 > Resume an active game
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .chess resume
 Example: .chess resume
 ```
 
-**forfeit**
+**FORFEIT**
 > Abandon an active game
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .chess forfeit
 Example: .chess forfeit
 ```
 
-**stats**
+**STATS**
 > View chess statistics
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [@user] | n/a |
 
 ```
 Syntax: .chess stats @Staff
 Example: .chess stats @Staff
 ```
 
-**leaderboard**
+**LEADERBOARD**
 > View the wins leaderboard
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .chess lb
 Example: .chess leaderboard
 ```
 
-**engine**
+**ENGINE**
 > Run an engine-only match
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .chess engine
@@ -2931,7 +2761,7 @@ Example: .chess engine
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: compliment [@user]
 Example: .compliment
@@ -2946,7 +2776,7 @@ Example: .compliment
 | :--- | :--- | :--- |
 | cursed, deepfry | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: [@user|attachment] [effect]
 Example: .curse
@@ -2961,7 +2791,7 @@ Example: .curse
 | :--- | :--- | :--- |
 | doh, doggo, woof | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .dog
 Example: .dog
@@ -2976,7 +2806,7 @@ Example: .dog
 | :--- | :--- | :--- |
 | ddg | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .duckduckgo
 Example: .duckduckgo
@@ -2991,7 +2821,7 @@ Example: .duckduckgo
 | :--- | :--- | :--- |
 | ddgimage, ddgi | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .duckduckgoimage
 Example: .duckduckgoimage
@@ -3006,7 +2836,7 @@ Example: .duckduckgoimage
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: fact
 Example: .fact
@@ -3021,7 +2851,7 @@ Example: .fact
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: <artist name>
 Example: .find-id
@@ -3036,7 +2866,7 @@ Example: .find-id
 | :--- | :--- | :--- |
 | song | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: <song name>
 Example: .findsong
@@ -3051,11 +2881,12 @@ Example: .findsong
 | :--- | :--- | :--- |
 | fo, freakbattle | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .freakoff
 Example: .freakoff
 ```
+
 **Required Permissions:** `Administrator`  
 
 ---
@@ -3067,7 +2898,7 @@ Example: .freakoff
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .game
 Example: .game
@@ -3082,7 +2913,7 @@ Example: .game
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: [user]
 Example: .gayrate
@@ -3097,7 +2928,7 @@ Example: .gayrate
 | :--- | :--- | :--- |
 | gif | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .giphy
 Example: .giphy
@@ -3112,7 +2943,7 @@ Example: .giphy
 | :--- | :--- | :--- |
 | gh, repo | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .github
 Example: .github
@@ -3127,7 +2958,7 @@ Example: .github
 | :--- | :--- | :--- |
 | g | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .google
 Example: .google
@@ -3142,7 +2973,7 @@ Example: .google
 | :--- | :--- | :--- |
 | gimage, googleimage, img | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .image
 Example: .image
@@ -3157,7 +2988,7 @@ Example: .image
 | :--- | :--- | :--- |
 | n/a | <user> <message> [media] [tts] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /impersonate <user> <message> [media] [tts]
 Example: /impersonate
@@ -3172,11 +3003,12 @@ Example: /impersonate
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .juul
 Example: .juul
 ```
+
 **Required Permissions:** `ManageGuild`  
 
 ---
@@ -3188,7 +3020,7 @@ Example: .juul
 | :--- | :--- | :--- |
 | ye, yeezy | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .kanye
 Example: .kanye
@@ -3203,7 +3035,7 @@ Example: .kanye
 | :--- | :--- | :--- |
 | yesong, kanyesong | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .kanye-song
 Example: .kanye-song
@@ -3218,7 +3050,7 @@ Example: .kanye-song
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .lego
 Example: .lego
@@ -3233,7 +3065,7 @@ Example: .lego
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: [user]
 Example: .lesbianrate
@@ -3248,7 +3080,7 @@ Example: .lesbianrate
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .lyrics
 Example: .lyrics
@@ -3263,7 +3095,7 @@ Example: .lyrics
 | :--- | :--- | :--- |
 | distort, warp | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .magik
 Example: .magik
@@ -3278,7 +3110,7 @@ Example: .magik
 | :--- | :--- | :--- |
 | magik, imgtogif | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .makegif
 Example: .makegif
@@ -3293,7 +3125,7 @@ Example: .makegif
 | :--- | :--- | :--- |
 | malmanga | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .manga
 Example: .manga
@@ -3308,7 +3140,7 @@ Example: .manga
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .meme
 Example: .meme
@@ -3323,7 +3155,7 @@ Example: .meme
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: mock <text>
 Example: .mock
@@ -3338,7 +3170,7 @@ Example: .mock
 | :--- | :--- | :--- |
 | film, imdb | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .movie
 Example: .movie
@@ -3353,7 +3185,7 @@ Example: .movie
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .nitro
 Example: .nitro
@@ -3368,11 +3200,12 @@ Example: .nitro
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .ocr
 Example: .ocr
 ```
+
 **Required Permissions:** `AttachFiles`  
 
 ---
@@ -3384,11 +3217,12 @@ Example: .ocr
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .ocrtr
 Example: .ocrtr
 ```
+
 **Required Permissions:** `AttachFiles`  
 
 ---
@@ -3400,7 +3234,7 @@ Example: .ocrtr
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: owoify <text>
 Example: .owoify
@@ -3415,7 +3249,7 @@ Example: .owoify
 | :--- | :--- | :--- |
 | colors | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .palette
 Example: .palette
@@ -3430,7 +3264,7 @@ Example: .palette
 | :--- | :--- | :--- |
 | card, stats, profilecard | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .passport
 Example: .passport
@@ -3445,7 +3279,7 @@ Example: .passport
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: piglatin <text> OR reply to a message
 Example: .piglatin
@@ -3460,7 +3294,7 @@ Example: .piglatin
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: qr <text or url>
 Example: .qr
@@ -3475,7 +3309,7 @@ Example: .qr
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .quote
 Example: .quote
@@ -3490,7 +3324,7 @@ Example: .quote
 | :--- | :--- | :--- |
 | n/a | <user> <quote> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /quote <user> <quote>
 Example: /quote
@@ -3505,7 +3339,7 @@ Example: /quote
 | :--- | :--- | :--- |
 | rip, genip | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .randomip
 Example: .randomip
@@ -3520,7 +3354,7 @@ Example: .randomip
 | :--- | :--- | :--- |
 | gayrate, lesbianrate, coolrate, smartness, beautyrate, awkwardrate, funnyrate, sexyrate, hornyrate, simprate, epicrate, savage, chillrate, kindrate, crazyrate, hotrate, shyrate, nerdrate, swagrate, thugrate, cuterate, beastmode, tiredrate, romanticrate, danceability, hackerlevel, gamerate, bosslevel, clumsyrate, spicyrate, thing, rizzarate, dramarate, luckrate, basedrate, procrastinationrate, villainrate, angelrate | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .<type> [@user|text]
 Example: .rate
@@ -3535,7 +3369,7 @@ Example: .rate
 | :--- | :--- | :--- |
 | reverse | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .reverseimage
 Example: .reverseimage
@@ -3550,7 +3384,7 @@ Example: .reverseimage
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .roast
 Example: .roast
@@ -3565,7 +3399,7 @@ Example: .roast
 | :--- | :--- | :--- |
 | rblx | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .roblox
 Example: .roblox
@@ -3580,7 +3414,7 @@ Example: .roblox
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: ship <user1> [user2]
 Example: .ship
@@ -3595,7 +3429,7 @@ Example: .ship
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: shorten <url>
 Example: .shorten
@@ -3610,7 +3444,7 @@ Example: .shorten
 | :--- | :--- | :--- |
 | sp | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .spotify
 Example: .spotify
@@ -3625,11 +3459,12 @@ Example: .spotify
 | :--- | :--- | :--- |
 | enlarge, jumbo | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .steal
 Example: .steal
 ```
+
 **Required Permissions:** `ManageGuildExpressions`  
 
 ---
@@ -3641,7 +3476,7 @@ Example: .steal
 | :--- | :--- | :--- |
 | stream, live | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: [user]
 Example: .streaming
@@ -3656,117 +3491,82 @@ Example: .streaming
 | :--- | :--- | :--- |
 | n/a | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tags <subcommand>
 Example: .tags list
 ```
+
 **Required Permissions:** `AttachFiles`, `ManageGuild`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**add**
+**ADD**
 > Create a new tag
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <name> <content> | n/a |
 
 ```
 Syntax: .tags add <name> <content>
 Example: .tags add social @Esoterica
 ```
 
-**remove**
+**REMOVE**
 > Delete an existing tag
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <name> | n/a |
 
 ```
 Syntax: .tags remove <name>
 Example: .tags remove old
 ```
 
-**edit**
+**EDIT**
 > Update tag content
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <name> <new_content> | n/a |
 
 ```
 Syntax: .tags edit <name> <content>
 Example: .tags edit social @Esoterica_Security
 ```
 
-**rename**
+**RENAME**
 > Update tag name
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <old> <new> | n/a |
 
 ```
 Syntax: .tags rename <old> <new>
 Example: .tags rename old new
 ```
 
-**author**
+**AUTHOR**
 > View tag stats and creator
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <name> | n/a |
 
 ```
 Syntax: .tags author <name>
 Example: .tags author social
 ```
 
-**list**
+**LIST**
 > List all tags from a user
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [user] | n/a |
 
 ```
 Syntax: .tags list [@user]
 Example: .tags list @Staff
 ```
 
-**random**
+**RANDOM**
 > Retrieve a random tag
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .tags random
 Example: .tags random
 ```
 
-**search**
+**SEARCH**
 > Search tags by keyword
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <keyword> | n/a |
 
 ```
 Syntax: .tags search <query>
 Example: .tags search info
 ```
 
-**reset**
+**RESET**
 > Delete all server tags
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .tags reset
@@ -3783,44 +3583,32 @@ Example: .tags reset
 | :--- | :--- | :--- |
 | n/a | <#opponent/stats/lb> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tictactoe <@opponent>
 Example: .tictactoe @Friend
 ```
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**stats**
+**STATS**
 > View tic-tac-toe statistics
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [@user] | n/a |
 
 ```
 Syntax: .tictactoe stats [@user]
 Example: .tictactoe stats @Staff
 ```
 
-**leaderboard**
+**LEADERBOARD**
 > View the wins leaderboard
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .tictactoe lb
 Example: .tictactoe leaderboard
 ```
 
-**play**
+**PLAY**
 > Challenge a user to a game
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <@user> | n/a |
 
 ```
 Syntax: .tictactoe @Member
@@ -3837,7 +3625,7 @@ Example: .tictactoe @Member
 | :--- | :--- | :--- |
 | tt | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tiktok
 Example: .tiktok
@@ -3852,7 +3640,7 @@ Example: .tiktok
 | :--- | :--- | :--- |
 | analyze, sentiment | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tone
 Example: .tone
@@ -3867,7 +3655,7 @@ Example: .tone
 | :--- | :--- | :--- |
 | tr | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .translate
 Example: .translate
@@ -3882,7 +3670,7 @@ Example: .translate
 | :--- | :--- | :--- |
 | rbg, removebg | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .transparent
 Example: .transparent
@@ -3897,7 +3685,7 @@ Example: .transparent
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tts
 Example: .tts
@@ -3912,7 +3700,7 @@ Example: .tts
 | :--- | :--- | :--- |
 | tv, series | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tvshow
 Example: .tvshow
@@ -3927,7 +3715,7 @@ Example: .tvshow
 | :--- | :--- | :--- |
 | live | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .twitch
 Example: .twitch
@@ -3942,7 +3730,7 @@ Example: .twitch
 | :--- | :--- | :--- |
 | x, tw | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .twitter
 Example: .twitter
@@ -3957,7 +3745,7 @@ Example: .twitter
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .weather
 Example: .weather
@@ -3972,7 +3760,7 @@ Example: .weather
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .weed
 Example: .weed
@@ -3987,7 +3775,7 @@ Example: .weed
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .yart
 Example: .yart
@@ -4002,7 +3790,7 @@ Example: .yart
 | :--- | :--- | :--- |
 | yt | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .youtube
 Example: .youtube
@@ -4019,7 +3807,7 @@ Example: .youtube
 | :--- | :--- | :--- |
 | bs, ships | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .battleship
 Example: .battleship
@@ -4034,7 +3822,7 @@ Example: .battleship
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: [start|join]
 Example: .blacktea
@@ -4049,7 +3837,7 @@ Example: .blacktea
 | :--- | :--- | :--- |
 | c4 | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .connect4
 Example: .connect4
@@ -4064,7 +3852,7 @@ Example: .connect4
 | :--- | :--- | :--- |
 | hm | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .hangman
 Example: .hangman
@@ -4079,7 +3867,7 @@ Example: .hangman
 | :--- | :--- | :--- |
 | stophang, hstop | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .hangstop
 Example: .hangstop
@@ -4094,7 +3882,7 @@ Example: .hangstop
 | :--- | :--- | :--- |
 | ms | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .minesweeper
 Example: .minesweeper
@@ -4109,7 +3897,7 @@ Example: .minesweeper
 | :--- | :--- | :--- |
 | scram | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .scramble
 Example: .scramble
@@ -4124,7 +3912,7 @@ Example: .scramble
 | :--- | :--- | :--- |
 | ttt | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tictactoe
 Example: .tictactoe
@@ -4139,7 +3927,7 @@ Example: .tictactoe
 | :--- | :--- | :--- |
 | n/a | [challenge] [leaderboard] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /tictactoe [challenge] [leaderboard]
 Example: /tictactoe
@@ -4154,7 +3942,7 @@ Example: /tictactoe
 | :--- | :--- | :--- |
 | typetest, speedtype | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: !type [easy | medium | hard | impossible]
 Example: .type
@@ -4169,7 +3957,7 @@ Example: .type
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .uno
 Example: .uno
@@ -4184,7 +3972,7 @@ Example: .uno
 | :--- | :--- | :--- |
 | fisch, fw, bloxfruits, bf | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .wiki
 Example: .wiki
@@ -4199,7 +3987,7 @@ Example: .wiki
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .wordgame
 Example: .wordgame
@@ -4216,45 +4004,34 @@ Example: .wordgame
 | :--- | :--- | :--- |
 | n/a | subcommand | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .autorole <add/remove/list>
 Example: .autorole add @Members
 ```
+
 **Required Permissions:** `ManageRoles`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**add**
+**ADD**
 > Add roles to be automatically assigned to new members
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | role | n/a |
 
 ```
 Syntax: .autorole add <role>
 Example: .autorole add @Members
 ```
 
-**remove**
+**REMOVE**
 > Remove roles from being automatically assigned
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | role | n/a |
 
 ```
 Syntax: .autorole remove <role>
 Example: .autorole remove @Members
 ```
 
-**list**
+**LIST**
 > List all currently configured autoroles
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .autorole list
@@ -4271,7 +4048,7 @@ Example: .autorole list
 | :--- | :--- | :--- |
 | n/a | [add] [remove] [list] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /autorole [add] [remove] [list]
 Example: /autorole
@@ -4286,7 +4063,7 @@ Example: /autorole
 | :--- | :--- | :--- |
 | userbanner | [user] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .banner <@user/ID>
 Example: .banner @Staff
@@ -4295,33 +4072,35 @@ Example: .banner @Staff
 ---
 
 ### .dailyquestion
-> Configure daily questions. Usage: .dailyquestion <#channel> <HH:MM> [disable]
+> Configure daily questions.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | dailyquestion | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .dailyquestion
+Syntax: .dailyquestion <#channel> <HH:MM> [disable]
 Example: .dailyquestion
 ```
+
 **Required Permissions:** `ManageGuild`  
 
 ---
 
 ### .dailyquote
-> Configure daily quotes. Usage: .dailyquote <#channel> <HH:MM> [disable]
+> Configure daily quotes.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .dailyquote
+Syntax: .dailyquote <#channel> <HH:MM> [disable]
 Example: .dailyquote
 ```
+
 **Required Permissions:** `ManageGuild`  
 
 ---
@@ -4333,7 +4112,7 @@ Example: .dailyquote
 | :--- | :--- | :--- |
 | parserhelp, vhelp | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .embedhelp
 Example: .embedhelp
@@ -4348,7 +4127,7 @@ Example: .embedhelp
 | :--- | :--- | :--- |
 | fm, oldest | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .firstmessage
 Example: .firstmessage
@@ -4363,7 +4142,7 @@ Example: .firstmessage
 | :--- | :--- | :--- |
 | n/a | [create] [end] [reroll] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /giveaway [create] [end] [reroll]
 Example: /giveaway
@@ -4378,7 +4157,7 @@ Example: /giveaway
 | :--- | :--- | :--- |
 | h, commands | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .help
 Example: .help
@@ -4393,7 +4172,7 @@ Example: .help
 | :--- | :--- | :--- |
 | n/a | <role> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .inrole <@role/ID/Name>
 Example: .inrole Moderator
@@ -4408,93 +4187,66 @@ Example: .inrole Moderator
 | :--- | :--- | :--- |
 | n/a | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .leave <subcommand>
 Example: .leave status
 ```
+
 **Required Permissions:** `ManageGuild`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**channel**
+**CHANNEL**
 > Set channel goodbye message
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <#channel> <text|json> | n/a |
 
 ```
 Syntax: .leave channel #bye {user.tag} left.
 Example: .leave channel #bye {user.tag} left.
 ```
 
-**dm**
+**DM**
 > Set DM goodbye message
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <text|json> | n/a |
 
 ```
 Syntax: .leave dm Sorry to see you go!
 Example: .leave dm Sorry to see you go!
 ```
 
-**disable**
+**DISABLE**
 > Disable leave messages
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <channel|dm|all> | n/a |
 
 ```
 Syntax: .leave disable all
 Example: .leave disable dm
 ```
 
-**status**
+**STATUS**
 > View current leave setup
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .leave status
 Example: .leave status
 ```
 
-**variables**
+**VARIABLES**
 > View available placeholders
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .leave variables
 Example: .leave variables
 ```
 
-**test**
+**TEST**
 > Send a test leave message
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .leave test
 Example: .leave test
 ```
 
-**image**
+**IMAGE**
 > Toggle the leave image card
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <on/off> | n/a |
 
 ```
 Syntax: .leave image on
@@ -4511,7 +4263,7 @@ Example: .leave image on
 | :--- | :--- | :--- |
 | calc | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: <expression>
 Example: .math
@@ -4526,11 +4278,12 @@ Example: .math
 | :--- | :--- | :--- |
 | msgs, msg | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .messages
 Example: .messages
 ```
+
 **Required Permissions:** `ManageGuild`, `ManageMessages`  
 
 ---
@@ -4542,7 +4295,7 @@ Example: .messages
 | :--- | :--- | :--- |
 | avatar, av | [user] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .pfp <@user/ID>
 Example: .pfp @Staff
@@ -4557,7 +4310,7 @@ Example: .pfp @Staff
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .ping
 Example: .ping
@@ -4572,7 +4325,7 @@ Example: .ping
 | :--- | :--- | :--- |
 | ri | <role> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .roleinfo <@role/ID/Name>
 Example: .roleinfo Moderator
@@ -4587,7 +4340,7 @@ Example: .roleinfo Moderator
 | :--- | :--- | :--- |
 | si, server, guildinfo | none | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .serverinfo
 Example: .serverinfo
@@ -4602,93 +4355,66 @@ Example: .serverinfo
 | :--- | :--- | :--- |
 | n/a | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .welcome <subcommand>
 Example: .welcome channel #welcome Welcome!
 ```
+
 **Required Permissions:** `ManageGuild`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**channel**
+**CHANNEL**
 > Set channel welcome message
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <#channel> <text|json> | n/a |
 
 ```
 Syntax: .welcome channel #general Welcome {user.mention}!
 Example: .welcome channel #welcome Welcome {user.mention}!
 ```
 
-**dm**
+**DM**
 > Set DM welcome message
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <text|json> | n/a |
 
 ```
 Syntax: .welcome dm Welcome to the server!
 Example: .welcome dm Welcome to {guild.name}!
 ```
 
-**disable**
+**DISABLE**
 > Disable welcome messages
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <channel|dm|all> | n/a |
 
 ```
 Syntax: .welcome disable all
 Example: .welcome disable dm
 ```
 
-**status**
+**STATUS**
 > View current welcome setup
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .welcome status
 Example: .welcome status
 ```
 
-**variables**
+**VARIABLES**
 > View available placeholders
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .welcome variables
 Example: .welcome variables
 ```
 
-**test**
+**TEST**
 > Send a test welcome message
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .welcome test
 Example: .welcome test
 ```
 
-**image**
+**IMAGE**
 > Toggle the welcome image card
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <on/off> | n/a |
 
 ```
 Syntax: .welcome image on
@@ -4705,11 +4431,12 @@ Example: .welcome image on
 | :--- | :--- | :--- |
 | userinfo, ui, user | [user] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .whois <@user/ID>
 Example: .whois @Staff
 ```
+
 **Required Permissions:** `Administrator`, `ManageGuild`  
 
 ---
@@ -4723,7 +4450,7 @@ Example: .whois @Staff
 | :--- | :--- | :--- |
 | n/a | <level> <role> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /add-level-role <level> <role>
 Example: /add-level-role
@@ -4738,7 +4465,7 @@ Example: /add-level-role
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /level-roles-list
 Example: /level-roles-list
@@ -4753,7 +4480,7 @@ Example: /level-roles-list
 | :--- | :--- | :--- |
 | n/a | <level> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /level-roles-remove <level>
 Example: /level-roles-remove
@@ -4768,7 +4495,7 @@ Example: /level-roles-remove
 | :--- | :--- | :--- |
 | n/a | <enabled> [as_embed] [xp] [channel] [message] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /level-setup <enabled> [as_embed] [xp] [channel] [message]
 Example: /level-setup
@@ -4783,7 +4510,7 @@ Example: /level-setup
 | :--- | :--- | :--- |
 | lvl, level | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .rank
 Example: .rank
@@ -4798,7 +4525,7 @@ Example: .rank
 | :--- | :--- | :--- |
 | n/a | [user] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /rank [user]
 Example: /rank
@@ -4813,11 +4540,12 @@ Example: /rank
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .setxp
 Example: .setxp
 ```
+
 **Required Permissions:** `Administrator`  
 
 ---
@@ -4829,7 +4557,7 @@ Example: .setxp
 | :--- | :--- | :--- |
 | levels, ranklb | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .top
 Example: .top
@@ -4846,11 +4574,12 @@ Example: .top
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .log
 Example: .log
 ```
+
 **Required Permissions:** `ManageGuild`  
 
 ---
@@ -4864,27 +4593,35 @@ Example: .log
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .alias
 Example: .alias
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageGuild`  
 
 ---
 
 ### .ban
-> Permanently ban a user from the server. Can ban by mention, ID, or partial name. Include reason with `reason <text>`. Logs to modlog. Usage: .ban <user> [reason]
+> Permanently ban a user from the server. Can ban by mention, ID, or partial name. Include reason with `reason <text>`. Logs to modlog.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | b | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .ban
+Syntax: .ban <user> [reason]
 Example: .ban
 ```
+**Common Use Cases:**
+- `.ban @user`: Instantly ban a mentioned user.
+- `.ban 123456789 Spamming`: Ban by ID with a custom reason.
+- `.ban John Troll`: Search for a user named John and ban them.
+
 **Required Permissions:** `Manage Messages`, `BanMembers`  
 
 ---
@@ -4896,93 +4633,68 @@ Example: .ban
 | :--- | :--- | :--- |
 | n/a | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .channel <subcommand>
 Example: .channel create text general
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageChannels`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**create**
+**CREATE**
 > Create a new text, voice, or category channel
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <text|voice|category> <name> | n/a |
 
 ```
 Syntax: .channel create <type> <name>
 Example: .channel create text logs
 ```
 
-**delete**
+**DELETE**
 > Delete an existing channel
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <#channel/ID> | n/a |
 
 ```
 Syntax: .channel delete <channel>
 Example: .channel delete #old-chat
 ```
 
-**rename**
+**RENAME**
 > Change a channel's name
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <#channel/ID> <new_name> | n/a |
 
 ```
 Syntax: .channel rename <channel> <name>
 Example: .channel rename #help support
 ```
 
-**hide**
+**HIDE**
 > Hide a channel from standard users
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <#channel/ID> | n/a |
 
 ```
 Syntax: .channel hide [channel]
 Example: .channel hide #secret
 ```
 
-**unhide**
+**UNHIDE**
 > Make a channel visible to standard users
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <#channel/ID> | n/a |
 
 ```
 Syntax: .channel unhide [channel]
 Example: .channel unhide #secret
 ```
 
-**sync**
+**SYNC**
 > Sync channel permissions with its category
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <#channel/category> | n/a |
 
 ```
 Syntax: .channel sync <target>
 Example: .channel sync #general
 ```
 
-**clone**
+**CLONE**
 > Clone an existing channel with its settings
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <#channel/ID> [new_name] | n/a |
 
 ```
 Syntax: .channel clone <channel> [name]
@@ -4999,27 +4711,33 @@ Example: .channel clone #general copy
 | :--- | :--- | :--- |
 | cs | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .clearsnipe
 Example: .clearsnipe
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageMessages`  
 
 ---
 
 ### .clearwarns
-> Clear all warnings for a member. Resets their warning count to 0. Admin only. Usage: .clearwarns <user>
+> Clear all warnings for a member. Resets their warning count to 0. Admin only.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | cw, resetwarns | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .clearwarns
+Syntax: .clearwarns <user>
 Example: .clearwarns
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `Administrator`  
 
 ---
@@ -5031,11 +4749,14 @@ Example: .clearwarns
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .counter
 Example: .counter
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageChannels`  
 
 ---
@@ -5047,43 +4768,52 @@ Example: .counter
 | :--- | :--- | :--- |
 | enable, cmd, command | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .disable
 Example: .disable
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `Administrator`  
 
 ---
 
 ### .drag
-> Drag a member or members to your voice channel. Usage: .drag <@user> [@user2] [@user3]...
+> Drag a member or members to your voice channel. ...
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .drag
+Syntax: .drag <@user> [@user2] [@user3]
 Example: .drag
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `MoveMembers`  
 
 ---
 
 ### .editsnipe
-> View recently edited messages in this channel (last 50). Shows before/after content with timestamps. Usage: .editsnipe [number]
+> View recently edited messages in this channel (last 50). Shows before/after content with timestamps.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | es | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .editsnipe
+Syntax: .editsnipe [number]
 Example: .editsnipe
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`  
 
 ---
@@ -5095,27 +4825,33 @@ Example: .editsnipe
 | :--- | :--- | :--- |
 | e | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .emoji
 Example: .emoji
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageGuildExpressions`  
 
 ---
 
 ### .fame
-> Honor a member in the Hall of Fame. Usage: .fame <@user> <reason>
+> Honor a member in the Hall of Fame.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .fame
+Syntax: .fame <@user> <reason>
 Example: .fame
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageMessages`  
 
 ---
@@ -5127,11 +4863,14 @@ Example: .fame
 | :--- | :--- | :--- |
 | forcenick | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .fn
 Example: .fn
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageNicknames`  
 
 ---
@@ -5143,43 +4882,52 @@ Example: .fn
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: setup | send @user | free @user
 Example: .gulag
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Administrator`  
 
 ---
 
 ### .hardban
-> Permanently firewall a user from the server. IP-based ban (if possible). Complete access block. Usage: .hardban <user> [reason]
+> Permanently firewall a user from the server. IP-based ban (if possible). Complete access block.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | hban | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .hardban
+Syntax: .hardban <user> [reason]
 Example: .hardban
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `Administrator`  
 
 ---
 
 ### .hide
-> Hide a channel from @everyone role. Only specific roles can see it. Usage: .hide [reason]
+> Hide a channel from @everyone role. Only specific roles can see it.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .hide
+Syntax: .hide [reason]
 Example: .hide
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageChannels`  
 
 ---
@@ -5191,57 +4939,44 @@ Example: .hide
 | :--- | :--- | :--- |
 | hist, cases, punishments, h | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .history <subcommand>
 Example: .history @BadActor
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageMessages`, `Administrator`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**view**
+**VIEW**
 > View a user's full moderation history
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <user> | n/a |
 
 ```
 Syntax: .history @BadActor
 Example: .history view @User
 ```
 
-**case**
+**CASE**
 > View details of a specific case
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <id> | n/a |
 
 ```
 Syntax: .history 123
 Example: .history 10
 ```
 
-**remove**
+**REMOVE**
 > Delete a specific case record
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <id> | n/a |
 
 ```
 Syntax: .history remove 123
 Example: .history remove 5
 ```
 
-**removeall**
+**REMOVEALL**
 > Clear all records for a user
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <@user> | n/a |
 
 ```
 Syntax: .history removeall @Member
@@ -5252,17 +4987,20 @@ Example: .history clear @User
 ---
 
 ### .imute
-> Restrict a member from sending links and files. Still allows text. Usage: .imute <user> [reason]
+> Restrict a member from sending links and files. Still allows text.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .imute
+Syntax: .imute <user> [reason]
 Example: .imute
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ModerateMembers`  
 
 ---
@@ -5274,91 +5012,109 @@ Example: .imute
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .invoke
 Example: .invoke
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageGuild`  
 
 ---
 
 ### .iunmute
-> Restore link/file permissions to a member. Usage: .iunmute <user> [reason]
+> Restore link/file permissions to a member.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .iunmute
+Syntax: .iunmute <user> [reason]
 Example: .iunmute
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ModerateMembers`  
 
 ---
 
 ### .jail
-> Jail a member (blocks channel access, removes roles). Notifies user via DM. Auto-logs. Usage: .jail <user> [reason]
+> Jail a member (blocks channel access, removes roles). Notifies user via DM. Auto-logs.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .jail
+Syntax: .jail <user> [reason]
 Example: .jail
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ModerateMembers`  
 
 ---
 
 ### .kick
-> Kick a member from the server (they can rejoin). Can target by mention, ID, or name. Logs to modlog. Usage: .kick <user> [reason]
+> Kick a member from the server (they can rejoin). Can target by mention, ID, or name. Logs to modlog.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | k | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .kick
+Syntax: .kick <user> [reason]
 Example: .kick
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `KickMembers`  
 
 ---
 
 ### .lock
-> Lock a channel to prevent users from sending messages. Everyone can still read. Usage: .lock [reason]
+> Lock a channel to prevent users from sending messages. Everyone can still read.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .lock
+Syntax: .lock [reason]
 Example: .lock
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageChannels`  
 
 ---
 
 ### .lockdown
-> Advanced lockdown system for channels and servers. Complete access control with granular permissions. Usage: .lockdown <full|partial|view>
+> Advanced lockdown system for channels and servers. Complete access control with granular permissions.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .lockdown
+Syntax: .lockdown <full|partial|view>
 Example: .lockdown
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageChannels`  
 
 ---
@@ -5370,27 +5126,33 @@ Example: .lockdown
 | :--- | :--- | :--- |
 | n/a | <target> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /lookup <target>
 Example: /lookup
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`  
 
 ---
 
 ### .modlog
-> Set the channel where all moderation actions (bans, kicks, warns) are logged. Usage: .modlog <#channel>
+> Set the channel where all moderation actions (bans, kicks, warns) are logged.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .modlog
+Syntax: .modlog <#channel>
 Example: .modlog
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `Administrator`  
 
 ---
@@ -5402,139 +5164,166 @@ Example: .modlog
 | :--- | :--- | :--- |
 | searchmod | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .modsearch
 Example: .modsearch
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `8192`  
 
 ---
 
 ### .modstats
-> View moderator statistics (bans, kicks, warns, etc) for yourself or another mod. Usage: .modstats [@mod]
+> View moderator statistics (bans, kicks, warns, etc) for yourself or another mod.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | ms, mstats | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .modstats
+Syntax: .modstats [@mod]
 Example: .modstats
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`  
 
 ---
 
 ### .moveall
-> Move all members from your current voice channel to another voice channel. Usage: .moveall <#channel>
+> Move all members from your current voice channel to another voice channel.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .moveall
+Syntax: .moveall <#channel>
 Example: .moveall
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `Administrator`  
 
 ---
 
 ### .mute
-> Mute a member using the Muted role (blocks messages). Permanent until unmuted. Hierarchy protected. Usage: .mute <user> [reason]
+> Mute a member using the Muted role (blocks messages). Permanent until unmuted. Hierarchy protected.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | m | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .mute
+Syntax: .mute <user> [reason]
 Example: .mute
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ModerateMembers`  
 
 ---
 
 ### .nick
-> Change or reset a member's nickname in the server. Usage: .nick <user> [new_nickname]
+> Change or reset a member's nickname in the server.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .nick
+Syntax: .nick <user> [new_nickname]
 Example: .nick
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageNicknames`  
 
 ---
 
 ### .notes
-> Manage moderator notes for a member. Add/view/remove internal notes without penalties. Usage: .notes <user> [add/view/remove] [text]
+> Manage moderator notes for a member. Add/view/remove internal notes without penalties.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | note | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .notes
+Syntax: .notes <user> [add/view/remove] [text]
 Example: .notes
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageMessages`  
 
 ---
 
 ### .nuke
-> Nuke (delete and clone) a channel to clear all messages. Preserves permissions and settings. All messages deleted. Usage: .nuke [reason]
+> Nuke (delete and clone) a channel to clear all messages. Preserves permissions and settings. All messages deleted.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .nuke
+Syntax: .nuke [reason]
 Example: .nuke
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageChannels`  
 
 ---
 
 ### .permissions
-> Display a member's permissions and admin status in the server. Shows all permissions they have. Usage: .perms [@user]
+> Display a member's permissions and admin status in the server. Shows all permissions they have.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | perms, audit | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .permissions
+Syntax: .perms [@user]
 Example: .permissions
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `Administrator`  
 
 ---
 
 ### .prefix
-> View or change the server-specific bot prefix. Usage: .prefix [new_prefix]
+> View or change the server-specific bot prefix.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .prefix
+Syntax: .prefix [new_prefix]
 Example: .prefix
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageGuild`  
 
 ---
@@ -5546,11 +5335,14 @@ Example: .prefix
 | :--- | :--- | :--- |
 | n/a | [set] [reset] [status] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /prefix [set] [reset] [status]
 Example: /prefix
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`  
 
 ---
@@ -5562,81 +5354,60 @@ Example: /prefix
 | :--- | :--- | :--- |
 | clear, c, clean | [amount] [filter] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .purge <amount> [filter]
 Example: .purge 50 x
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageMessages`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**bots**
+**BOTS**
 > Purge messages sent only by bots
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [amount] | n/a |
 
 ```
 Syntax: .purge bots [amount]
 Example: .purge bots 20
 ```
 
-**humans**
+**HUMANS**
 > Purge messages sent only by human users
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [amount] | n/a |
 
 ```
 Syntax: .purge humans [amount]
 Example: .purge humans 20
 ```
 
-**images**
+**IMAGES**
 > Purge messages containing images
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [amount] | n/a |
 
 ```
 Syntax: .purge images [amount]
 Example: .purge images
 ```
 
-**links**
+**LINKS**
 > Purge messages containing any links
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [amount] | n/a |
 
 ```
 Syntax: .purge links [amount]
 Example: .purge links 10
 ```
 
-**contains**
+**CONTAINS**
 > Purge messages containing a specific string
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <string> [amount] | n/a |
 
 ```
 Syntax: .purge contains <text> [amount]
 Example: .purge contains hello 5
 ```
 
-**user**
+**USER**
 > Purge messages from a specific user
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <user> [amount] | n/a |
 
 ```
 Syntax: .purge user <@user> [amount]
@@ -5653,43 +5424,52 @@ Example: .purge user @sativa 50
 | :--- | :--- | :--- |
 | q, isolate | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .quarantine
 Example: .quarantine
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `Administrator`  
 
 ---
 
 ### .reactionsnipe
-> Retrieve recently removed reactions from messages. Shows emoji, user, and timestamp. Usage: .reactionsnipe [number]
+> Retrieve recently removed reactions from messages. Shows emoji, user, and timestamp.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | rs | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .reactionsnipe
+Syntax: .reactionsnipe [number]
 Example: .reactionsnipe
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`  
 
 ---
 
 ### .reason
-> Update or view last moderation action's reason in modlog. Admin only. Usage: .reason [new_reason]
+> Update or view last moderation action's reason in modlog. Admin only.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .reason
+Syntax: .reason [new_reason]
 Example: .reason
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageMessages`  
 
 ---
@@ -5701,11 +5481,14 @@ Example: .reason
 | :--- | :--- | :--- |
 | trustscore | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .rep [@user] | .rep leaderboard | .rep adjust <@user> <points> [reason]
 Example: .reputation
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ModerateMembers`  
 
 ---
@@ -5717,11 +5500,14 @@ Example: .reputation
 | :--- | :--- | :--- |
 | rc | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .restore
 Example: .restore
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`  
 
 ---
@@ -5733,11 +5519,14 @@ Example: .restore
 | :--- | :--- | :--- |
 | rc | <command> <role> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .rc <command> <role>
 Example: .rc ban @Staff
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `Administrator`  
 
 ---
@@ -5749,27 +5538,33 @@ Example: .rc ban @Staff
 | :--- | :--- | :--- |
 | stepdown | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .retire
 Example: .retire
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`  
 
 ---
 
 ### .rmute
-> Restrict a member from using reactions and external emotes. All reactions disabled. Usage: .rmute <user> [reason]
+> Restrict a member from using reactions and external emotes. All reactions disabled.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .rmute
+Syntax: .rmute <user> [reason]
 Example: .rmute
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ModerateMembers`  
 
 ---
@@ -5781,117 +5576,86 @@ Example: .rmute
 | :--- | :--- | :--- |
 | r | subcommand | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .role <subcommand>
 Example: .role add @user @role
 ```
+**Common Use Cases:**
+- `.role add @user @Member`: Give someone a role.
+- `.role color @Mod #ff0000`: Change a role color.
+- `.role gradient #000 #fff @R1, @R2`: Create a color fade.
+
 **Required Permissions:** `Manage Messages`, `ManageRoles`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**add**
+**ADD**
 > Give a role to a member
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <member> <role> | n/a |
 
 ```
 Syntax: .role add <member> <role>
 Example: .role add @user @Member
 ```
 
-**remove**
+**REMOVE**
 > Remove a role from a member
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <member> <role> | n/a |
 
 ```
 Syntax: .role remove <member> <role>
 Example: .role remove @user @Member
 ```
 
-**create**
+**CREATE**
 > Create a new server role
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <name> | n/a |
 
 ```
 Syntax: .role create <name>
 Example: .role create Moderators
 ```
 
-**delete**
+**DELETE**
 > Delete an existing role
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <role> | n/a |
 
 ```
 Syntax: .role delete <role>
 Example: .role delete @OldRole
 ```
 
-**rename**
+**RENAME**
 > Change a role's name
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <role> <name> | n/a |
 
 ```
 Syntax: .role rename <role> <name>
 Example: .role rename @Member Verified
 ```
 
-**icon**
+**ICON**
 > Set or remove a role icon
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <role> [icon_url/emoji] | n/a |
 
 ```
 Syntax: .role icon <role> <emoji>
 Example: .role icon @VIP 👑
 ```
 
-**color**
+**COLOR**
 > Change a role's hex color
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <hex> <role> | n/a |
 
 ```
 Syntax: .role color <hex> <role>
 Example: .role color #ff0000 @Admins
 ```
 
-**hoist**
+**HOIST**
 > Toggle if a role is displayed separately
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <role> | n/a |
 
 ```
 Syntax: .role hoist <role>
 Example: .role hoist @Staff
 ```
 
-**mentionable**
+**MENTIONABLE**
 > Toggle if anyone can mention the role
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <role> | n/a |
 
 ```
 Syntax: .role mentionable <role>
@@ -5908,27 +5672,33 @@ Example: .role mentionable @Everyone
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .roles
 Example: .roles
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`  
 
 ---
 
 ### .runmute
-> Restore reaction permissions to a member. Usage: .runmute <user> [reason]
+> Restore reaction permissions to a member.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .runmute
+Syntax: .runmute <user> [reason]
 Example: .runmute
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ModerateMembers`  
 
 ---
@@ -5940,11 +5710,14 @@ Example: .runmute
 | :--- | :--- | :--- |
 | sscore, secscore | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .securityscore
 Example: .securityscore
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `Administrator`  
 
 ---
@@ -5956,11 +5729,14 @@ Example: .securityscore
 | :--- | :--- | :--- |
 | sv | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .sendverify
 Example: .sendverify
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageGuild`  
 
 ---
@@ -5972,11 +5748,14 @@ Example: .sendverify
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .setup
 Example: .setup
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `Administrator`  
 
 ---
@@ -5988,43 +5767,52 @@ Example: .setup
 | :--- | :--- | :--- |
 | setup-mute | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .setupmute
 Example: .setupmute
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageGuild`  
 
 ---
 
 ### .shame
-> Shame a member in the Hall of Shame. Usage: .shame <@user> <reason>
+> Shame a member in the Hall of Shame.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .shame
+Syntax: .shame <@user> <reason>
 Example: .shame
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageMessages`  
 
 ---
 
 ### .slowmode
-> Set slowmode (message cooldown) for a channel. Format: 5s, 1m. Set to 0 to disable. Usage: .slowmode <time>
+> Set slowmode (message cooldown) for a channel. Format: 5s, 1m. Set to 0 to disable.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | slow | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .slowmode
+Syntax: .slowmode <time>
 Example: .slowmode
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageChannels`  
 
 ---
@@ -6036,43 +5824,52 @@ Example: .slowmode
 | :--- | :--- | :--- |
 | smsync | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .slowmode-sync
 Example: .slowmode-sync
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `16`  
 
 ---
 
 ### .snipe
-> View recently deleted messages in this channel (last 50). Shows author, timestamp, and content. Usage: .snipe [number]
+> View recently deleted messages in this channel (last 50). Shows author, timestamp, and content.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | s | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .snipe
+Syntax: .snipe [number]
 Example: .snipe
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`  
 
 ---
 
 ### .softban
-> Ban and immediately unban a user to delete all their messages. Member can rejoin. Usage: .softban <user> [reason]
+> Ban and immediately unban a user to delete all their messages. Member can rejoin.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .softban
+Syntax: .softban <user> [reason]
 Example: .softban
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `BanMembers`  
 
 ---
@@ -6084,123 +5881,147 @@ Example: .softban
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .sticker
 Example: .sticker
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageGuildExpressions`  
 
 ---
 
 ### .stickyrole
-> Enforce a role to always stay on a member when they rejoin. Usage: .stickyrole <user> <role> [enable/disable]
+> Enforce a role to always stay on a member when they rejoin.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | sticky | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .stickyrole
+Syntax: .stickyrole <user> <role> [enable/disable]
 Example: .stickyrole
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageRoles`  
 
 ---
 
 ### .stripstaff
-> Emergency protocol: remove staff roles from a member. Usage: .stripstaff <user> or .stripstaff set <@role>
+> Emergency protocol: remove staff roles from a member. .stripstaff set <@role>
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .stripstaff
+Syntax: .stripstaff <user> or
 Example: .stripstaff
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `Administrator`, `ManageGuild`, `BanMembers`, `KickMembers`  
 
 ---
 
 ### .tempban
-> Temporarily ban a user for a set duration (1h, 2d, etc). Auto-unbans after duration. Usage: .tempban <user> <time> [reason]
+> Temporarily ban a user for a set duration (1h, 2d, etc). Auto-unbans after duration.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .tempban
+Syntax: .tempban <user> <time> [reason]
 Example: .tempban
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `BanMembers`  
 
 ---
 
 ### .temprole
-> Temporarily give a role to a member for a duration (1h, 2d, etc). Auto-removes after time. Usage: .temprole <user> <role> <time>
+> Temporarily give a role to a member for a duration (1h, 2d, etc). Auto-removes after time.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .temprole
+Syntax: .temprole <user> <role> <time>
 Example: .temprole
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageRoles`  
 
 ---
 
 ### .thread
-> Commands to manage threads and forum posts. Create/archive/lock/delete threads. Usage: .thread <action> [args]
+> Commands to manage threads and forum posts. Create/archive/lock/delete threads.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .thread
+Syntax: .thread <action> [args]
 Example: .thread
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageThreads`  
 
 ---
 
 ### .timeout
-> Timeout a member (blocks all interaction) for a duration. Discord 2000-char limit applies. Format: 1h, 30m. Hierarchy protected. Usage: .timeout <user> <time> [reason]
+> Timeout a member (blocks all interaction) for a duration. Discord 2000-char limit applies. Format: 1h, 30m. Hierarchy protected.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | t, time | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .timeout
+Syntax: .timeout <user> <time> [reason]
 Example: .timeout
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ModerateMembers`  
 
 ---
 
 ### .unban
-> Unban a user from the server by ID, tag, or partial name. Usage: .unban <user> [reason]
+> Unban a user from the server by ID, tag, or partial name.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .unban
+Syntax: .unban <user> [reason]
 Example: .unban
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `BanMembers`  
 
 ---
@@ -6212,43 +6033,52 @@ Example: .unban
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .unbanall
 Example: .unbanall
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`  
 
 ---
 
 ### .unhide
-> Restore a hidden channel visibility to @everyone. Usage: .unhide [reason]
+> Restore a hidden channel visibility to @everyone.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .unhide
+Syntax: .unhide [reason]
 Example: .unhide
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageChannels`  
 
 ---
 
 ### .unjail
-> Release a jailed member and restore their roles. Notifies them via DM. Usage: .unjail <user> [reason]
+> Release a jailed member and restore their roles. Notifies them via DM.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .unjail
+Syntax: .unjail <user> [reason]
 Example: .unjail
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ModerateMembers`  
 
 ---
@@ -6260,43 +6090,52 @@ Example: .unjail
 | :--- | :--- | :--- |
 | unlockdown | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .unlock
 Example: .unlock
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageChannels`  
 
 ---
 
 ### .unlockall
-> Unlock all channels in the server. Reverts them all from locked state. Usage: .unlockall [reason]
+> Unlock all channels in the server. Reverts them all from locked state.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .unlockall
+Syntax: .unlockall [reason]
 Example: .unlockall
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `BanMembers`  
 
 ---
 
 ### .unmute
-> Remove mute from a member (restore message permissions). Usage: .unmute <user> [reason]
+> Remove mute from a member (restore message permissions).
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | um | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .unmute
+Syntax: .unmute <user> [reason]
 Example: .unmute
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ModerateMembers`  
 
 ---
@@ -6308,11 +6147,14 @@ Example: .unmute
 | :--- | :--- | :--- |
 | uq, release | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .unquarantine
 Example: .unquarantine
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `Administrator`  
 
 ---
@@ -6324,11 +6166,14 @@ Example: .unquarantine
 | :--- | :--- | :--- |
 | unrc, unrestrict | <command> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .unrestrict <command>
 Example: .unrestrict ban
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `Administrator`  
 
 ---
@@ -6340,11 +6185,14 @@ Example: .unrestrict ban
 | :--- | :--- | :--- |
 | ut, untime | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .untimeout
 Example: .untimeout
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ModerateMembers`  
 
 ---
@@ -6356,11 +6204,14 @@ Example: .untimeout
 | :--- | :--- | :--- |
 | vcpurge, vckickall | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .voicepurge
 Example: .voicepurge
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `16777216`  
 
 ---
@@ -6372,11 +6223,14 @@ Example: .voicepurge
 | :--- | :--- | :--- |
 | wl, heat | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .wantedlevel
 Example: .wantedlevel
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ManageGuild`  
 
 ---
@@ -6388,11 +6242,14 @@ Example: .wantedlevel
 | :--- | :--- | :--- |
 | n/a | [on] [off] [status] [top] [help] [invoke] [milestone] [config] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /wantedlevel [on] [off] [status] [top] [help] [invoke] [milestone] [config]
 Example: /wantedlevel
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`  
 
 ---
@@ -6404,11 +6261,14 @@ Example: /wantedlevel
 | :--- | :--- | :--- |
 | w | <user> [reason] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .warn <@user> [reason]
 Example: .warn @BadActor Spamming
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`, `ModerateMembers`  
 
 ---
@@ -6420,11 +6280,14 @@ Example: .warn @BadActor Spamming
 | :--- | :--- | :--- |
 | warnings, whistory, infractions | [@user] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .warns [@user]
 Example: .warns @BadActor
 ```
+**Common Use Cases:**
+- Standard usage in active channels or targeting specific members.
+
 **Required Permissions:** `Manage Messages`  
 
 ---
@@ -6438,7 +6301,7 @@ Example: .warns @BadActor
 | :--- | :--- | :--- |
 | 24/7, stay | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .247
 Example: .247
@@ -6453,7 +6316,7 @@ Example: .247
 | :--- | :--- | :--- |
 | cq, qc | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .clearqueue
 Example: .clearqueue
@@ -6468,7 +6331,7 @@ Example: .clearqueue
 | :--- | :--- | :--- |
 | inf, repeat | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .loop
 Example: .loop
@@ -6483,7 +6346,7 @@ Example: .loop
 | :--- | :--- | :--- |
 | mv | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .move
 Example: .move
@@ -6498,7 +6361,7 @@ Example: .move
 | :--- | :--- | :--- |
 | np | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .nowplaying
 Example: .nowplaying
@@ -6513,7 +6376,7 @@ Example: .nowplaying
 | :--- | :--- | :--- |
 | pa | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .pause
 Example: .pause
@@ -6528,7 +6391,7 @@ Example: .pause
 | :--- | :--- | :--- |
 | p | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: <song name or URL>
 Example: .play
@@ -6543,68 +6406,48 @@ Example: .play
 | :--- | :--- | :--- |
 | pl, plst | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .playlist <subcommand>
 Example: .playlist list
 ```
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**save**
+**SAVE**
 > Save current queue to a playlist
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <name> | n/a |
 
 ```
 Syntax: .playlist save MyHits
 Example: .playlist save chill
 ```
 
-**load**
+**LOAD**
 > Load a playlist to the queue
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <name> | n/a |
 
 ```
 Syntax: .playlist load MyHits
 Example: .playlist load chill
 ```
 
-**list**
+**LIST**
 > List your saved playlists
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .playlist list
 Example: .playlist list
 ```
 
-**delete**
+**DELETE**
 > Permanently delete a playlist
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <name> | n/a |
 
 ```
 Syntax: .playlist delete MyHits
 Example: .playlist delete old
 ```
 
-**import**
+**IMPORT**
 > Import playlist from URL
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <url> [name] | n/a |
 
 ```
 Syntax: .playlist import <url> My Favs
@@ -6621,7 +6464,7 @@ Example: .playlist import <url>
 | :--- | :--- | :--- |
 | q | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: [page]
 Example: .queue
@@ -6636,7 +6479,7 @@ Example: .queue
 | :--- | :--- | :--- |
 | rm, delete | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .remove
 Example: .remove
@@ -6651,7 +6494,7 @@ Example: .remove
 | :--- | :--- | :--- |
 | 83ygrguiyhg, res | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .resume
 Example: .resume
@@ -6666,7 +6509,7 @@ Example: .resume
 | :--- | :--- | :--- |
 | sh, mix | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .shuffle
 Example: .shuffle
@@ -6681,7 +6524,7 @@ Example: .shuffle
 | :--- | :--- | :--- |
 | sk, next | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .skip
 Example: .skip
@@ -6696,7 +6539,7 @@ Example: .skip
 | :--- | :--- | :--- |
 | st, leave, dc, disconnect | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .stop
 Example: .stop
@@ -6711,7 +6554,7 @@ Example: .stop
 | :--- | :--- | :--- |
 | v, vol | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: <1-100>
 Example: .volume
@@ -6728,7 +6571,7 @@ Example: .volume
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .airkiss
 Example: .airkiss
@@ -6743,7 +6586,7 @@ Example: .airkiss
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .angrystare
 Example: .angrystare
@@ -6758,7 +6601,7 @@ Example: .angrystare
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .bark
 Example: .bark
@@ -6773,7 +6616,7 @@ Example: .bark
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .bite
 Example: .bite
@@ -6788,7 +6631,7 @@ Example: .bite
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .bleh
 Example: .bleh
@@ -6803,7 +6646,7 @@ Example: .bleh
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .brofist
 Example: .brofist
@@ -6818,7 +6661,7 @@ Example: .brofist
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .celebrate
 Example: .celebrate
@@ -6833,7 +6676,7 @@ Example: .celebrate
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .cheers
 Example: .cheers
@@ -6848,7 +6691,7 @@ Example: .cheers
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .clap
 Example: .clap
@@ -6863,7 +6706,7 @@ Example: .clap
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .confused
 Example: .confused
@@ -6878,7 +6721,7 @@ Example: .confused
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .cool
 Example: .cool
@@ -6893,7 +6736,7 @@ Example: .cool
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .cry
 Example: .cry
@@ -6908,7 +6751,7 @@ Example: .cry
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .cuddle
 Example: .cuddle
@@ -6923,7 +6766,7 @@ Example: .cuddle
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .dance
 Example: .dance
@@ -6938,7 +6781,7 @@ Example: .dance
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .drool
 Example: .drool
@@ -6953,7 +6796,7 @@ Example: .drool
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .evillaugh
 Example: .evillaugh
@@ -6968,7 +6811,7 @@ Example: .evillaugh
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .facepalm
 Example: .facepalm
@@ -6983,7 +6826,7 @@ Example: .facepalm
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .fuck
 Example: .fuck
@@ -6998,7 +6841,7 @@ Example: .fuck
 | :--- | :--- | :--- |
 | waistgrab | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: [@user]
 Example: .grabbreast
@@ -7013,7 +6856,7 @@ Example: .grabbreast
 | :--- | :--- | :--- |
 | waistgrab | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: [@user]
 Example: .grabwaist
@@ -7028,7 +6871,7 @@ Example: .grabwaist
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .handhold
 Example: .handhold
@@ -7043,7 +6886,7 @@ Example: .handhold
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .happy
 Example: .happy
@@ -7058,7 +6901,7 @@ Example: .happy
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .headbang
 Example: .headbang
@@ -7073,7 +6916,7 @@ Example: .headbang
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .laugh
 Example: .laugh
@@ -7088,7 +6931,7 @@ Example: .laugh
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .lick
 Example: .lick
@@ -7103,7 +6946,7 @@ Example: .lick
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .love
 Example: .love
@@ -7118,7 +6961,7 @@ Example: .love
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .maclookup <mac_address>
 Example: .maclookup
@@ -7133,7 +6976,7 @@ Example: .maclookup
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .mad
 Example: .mad
@@ -7148,7 +6991,7 @@ Example: .mad
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .meow
 Example: .meow
@@ -7163,7 +7006,7 @@ Example: .meow
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .nervous
 Example: .nervous
@@ -7178,7 +7021,7 @@ Example: .nervous
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .nom
 Example: .nom
@@ -7193,7 +7036,7 @@ Example: .nom
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .nuzzle
 Example: .nuzzle
@@ -7208,7 +7051,7 @@ Example: .nuzzle
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .nyah
 Example: .nyah
@@ -7223,7 +7066,7 @@ Example: .nyah
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .pat
 Example: .pat
@@ -7238,7 +7081,7 @@ Example: .pat
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .peek
 Example: .peek
@@ -7253,7 +7096,7 @@ Example: .peek
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .pinch
 Example: .pinch
@@ -7268,7 +7111,7 @@ Example: .pinch
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .poke
 Example: .poke
@@ -7283,7 +7126,7 @@ Example: .poke
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .pout
 Example: .pout
@@ -7298,7 +7141,7 @@ Example: .pout
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .punch
 Example: .punch
@@ -7313,7 +7156,7 @@ Example: .punch
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .rape
 Example: .rape
@@ -7328,7 +7171,7 @@ Example: .rape
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .sad
 Example: .sad
@@ -7343,7 +7186,7 @@ Example: .sad
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .scared
 Example: .scared
@@ -7358,7 +7201,7 @@ Example: .scared
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .shout
 Example: .shout
@@ -7373,7 +7216,7 @@ Example: .shout
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .shrug
 Example: .shrug
@@ -7388,7 +7231,7 @@ Example: .shrug
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .shy
 Example: .shy
@@ -7403,7 +7246,7 @@ Example: .shy
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .sigh
 Example: .sigh
@@ -7418,7 +7261,7 @@ Example: .sigh
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .sip
 Example: .sip
@@ -7433,7 +7276,7 @@ Example: .sip
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .slap
 Example: .slap
@@ -7448,7 +7291,7 @@ Example: .slap
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .sleep
 Example: .sleep
@@ -7463,7 +7306,7 @@ Example: .sleep
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .slowclap
 Example: .slowclap
@@ -7478,7 +7321,7 @@ Example: .slowclap
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .smack
 Example: .smack
@@ -7493,7 +7336,7 @@ Example: .smack
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .smile
 Example: .smile
@@ -7508,7 +7351,7 @@ Example: .smile
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .smug
 Example: .smug
@@ -7523,7 +7366,7 @@ Example: .smug
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .sneeze
 Example: .sneeze
@@ -7538,7 +7381,7 @@ Example: .sneeze
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .sorry
 Example: .sorry
@@ -7553,7 +7396,7 @@ Example: .sorry
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .stare
 Example: .stare
@@ -7568,7 +7411,7 @@ Example: .stare
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .surprised
 Example: .surprised
@@ -7583,7 +7426,7 @@ Example: .surprised
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .sweat
 Example: .sweat
@@ -7598,7 +7441,7 @@ Example: .sweat
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .thumbsup
 Example: .thumbsup
@@ -7613,7 +7456,7 @@ Example: .thumbsup
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tickle
 Example: .tickle
@@ -7628,7 +7471,7 @@ Example: .tickle
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tired
 Example: .tired
@@ -7643,7 +7486,7 @@ Example: .tired
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .touch
 Example: .touch
@@ -7658,7 +7501,7 @@ Example: .touch
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .wave
 Example: .wave
@@ -7673,7 +7516,7 @@ Example: .wave
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .wink
 Example: .wink
@@ -7688,7 +7531,7 @@ Example: .wink
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .woah
 Example: .woah
@@ -7703,7 +7546,7 @@ Example: .woah
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .yawn
 Example: .yawn
@@ -7718,7 +7561,7 @@ Example: .yawn
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .yay
 Example: .yay
@@ -7733,7 +7576,7 @@ Example: .yay
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .yes
 Example: .yes
@@ -7744,17 +7587,18 @@ Example: .yes
 ## Settings
 
 ### .settings
-> Configure server settings for staff roles and retirement. Usage: .settings staff <add|remove|list> <role> or .settings retire <role>
+> Configure server settings for staff roles and retirement. .settings retire <role>
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | config, setup_staff | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .settings
+Syntax: .settings staff <add|remove|list> <role> or
 Example: .settings
 ```
+
 **Required Permissions:** `Administrator`  
 
 ---
@@ -7762,17 +7606,18 @@ Example: .settings
 ## Setup
 
 ### .boostconfig
-> Configure the server boost message and logging channel. Usage: .boostconfig channel <#channel> | .boostconfig message <customFormat>
+> Configure the server boost message and logging channel. .boostconfig message <customFormat>
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | boostmessage | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .boostconfig
+Syntax: .boostconfig channel <#channel> |
 Example: .boostconfig
 ```
+
 **Required Permissions:** `ManageGuild`  
 
 ---
@@ -7784,11 +7629,12 @@ Example: .boostconfig
 | :--- | :--- | :--- |
 | br | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .boosterrole
 Example: .boosterrole
 ```
+
 **Required Permissions:** `ManageRoles`, `Administrator`  
 
 ---
@@ -7800,27 +7646,29 @@ Example: .boosterrole
 | :--- | :--- | :--- |
 | confess | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .confessions
 Example: .confessions
 ```
+
 **Required Permissions:** `Administrator`  
 
 ---
 
 ### .hall
-> Configure Hall of Fame and Hall of Shame channels. Usage: .hall fame channel <#channel> | .hall shame channel <#channel>
+> Configure Hall of Fame and Hall of Shame channels. .hall shame channel <#channel>
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .hall
+Syntax: .hall fame channel <#channel> |
 Example: .hall
 ```
+
 **Required Permissions:** `ManageGuild`  
 
 ---
@@ -7832,7 +7680,7 @@ Example: .hall
 | :--- | :--- | :--- |
 | n/a | [channel] [dm] [test] [status] [disable] [image] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /leave [channel] [dm] [test] [status] [disable] [image]
 Example: /leave
@@ -7847,7 +7695,7 @@ Example: /leave
 | :--- | :--- | :--- |
 | n/a | [panel] [status] [captcha] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /verify [panel] [status] [captcha]
 Example: /verify
@@ -7862,7 +7710,7 @@ Example: /verify
 | :--- | :--- | :--- |
 | n/a | [channel] [dm] [test] [status] [disable] [image] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /welcome [channel] [dm] [test] [status] [disable] [image]
 Example: /welcome
@@ -7879,7 +7727,7 @@ Example: /welcome
 | :--- | :--- | :--- |
 | brb, away | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .afk [reason]
 Example: .afk
@@ -7894,57 +7742,42 @@ Example: .afk
 | :--- | :--- | :--- |
 | n/a | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .autoreact <subcommand>
 Example: .autoreact list
 ```
+
 **Required Permissions:** `Administrator`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**add**
+**ADD**
 > Add a new auto reaction
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <trigger> <emoji> | n/a |
 
 ```
 Syntax: .autoreact add "hi" 👋
 Example: .autoreact add hello 👋
 ```
 
-**remove**
+**REMOVE**
 > Remove a reaction trigger
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <trigger> | n/a |
 
 ```
 Syntax: .autoreact remove "hi"
 Example: .autoreact remove hello
 ```
 
-**edit**
+**EDIT**
 > Change trigger emoji
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <trigger> <emoji> | n/a |
 
 ```
 Syntax: .autoreact edit "hi" 👋
 Example: .autoreact edit hello 👋
 ```
 
-**list**
+**LIST**
 > List all auto reactions
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .autoreact list
@@ -7961,57 +7794,42 @@ Example: .autoreact list
 | :--- | :--- | :--- |
 | ar | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .autoresponder <subcommand>
 Example: .autoresponder list
 ```
+
 **Required Permissions:** `Administrator`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**add**
+**ADD**
 > Add a new auto responder
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <trigger> <response> [-embed] | n/a |
 
 ```
 Syntax: .autoresponder add "hi" Bye! -embed
 Example: .autoresponder add "perc" eagle
 ```
 
-**remove**
+**REMOVE**
 > Remove a responder trigger
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <trigger> | n/a |
 
 ```
 Syntax: .autoresponder remove "hi"
 Example: .autoresponder remove "perc"
 ```
 
-**edit**
+**EDIT**
 > Change responder response
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <trigger> <response> [-embed] | n/a |
 
 ```
 Syntax: .autoresponder edit "hi" hello -embed
 Example: .autoresponder edit "perc" fly
 ```
 
-**list**
+**LIST**
 > List all auto responders
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .autoresponder list
@@ -8028,7 +7846,7 @@ Example: .autoresponder list
 | :--- | :--- | :--- |
 | b64 | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: base64 <encode|decode> <text>
 Example: .base64
@@ -8043,7 +7861,7 @@ Example: .base64
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: binary <encode|decode> <text>
 Example: .binary
@@ -8058,11 +7876,12 @@ Example: .binary
 | :--- | :--- | :--- |
 | bday | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .birthday
 Example: .birthday
 ```
+
 **Required Permissions:** `Administrator`  
 
 ---
@@ -8074,7 +7893,7 @@ Example: .birthday
 | :--- | :--- | :--- |
 | n/a | add/remove <user_id> [scope] [reason] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .blacklist add <user_id> global "Spamming"
 .blacklist add <user_id> mc "Abuse"
@@ -8090,7 +7909,7 @@ Example: .blacklist
 | :--- | :--- | :--- |
 | br, boostrole | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .boosterrole
 Example: .boosterrole
@@ -8105,92 +7924,64 @@ Example: .boosterrole
 | :--- | :--- | :--- |
 | bump, bumper, bumprem | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .bumpreminder <subcommand>
 Example: .bumpreminder config
 ```
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**channel**
+**CHANNEL**
 > Set reminder channel
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <#channel> | n/a |
 
 ```
 Syntax: .bumpreminder channel #bumps
 Example: .bumpreminder channel #bumps
 ```
 
-**thankyou**
+**THANKYOU**
 > Set bump confirmation message
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <message|view> | n/a |
 
 ```
 Syntax: .bumpreminder thankyou Thanks!
 Example: .bumpreminder thankyou view
 ```
 
-**message**
+**MESSAGE**
 > Set reminder alert message
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <message|view> | n/a |
 
 ```
 Syntax: .bumpreminder message Time to bump!
 Example: .bumpreminder message view
 ```
 
-**autolock**
+**AUTOLOCK**
 > Toggle channel autolock
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <on/off> | n/a |
 
 ```
 Syntax: .bumpreminder autolock on
 Example: .bumpreminder autolock on
 ```
 
-**autoclean**
+**AUTOCLEAN**
 > Toggle channel autoclean
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <on/off> | n/a |
 
 ```
 Syntax: .bumpreminder autoclean on
 Example: .bumpreminder autoclean on
 ```
 
-**pingrole**
+**PINGROLE**
 > Set reminder ping role
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <@role|none> | n/a |
 
 ```
 Syntax: .bumpreminder pingrole @Staff
 Example: .bumpreminder pingrole none
 ```
 
-**config**
+**CONFIG**
 > View reminder configuration
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .bumpreminder config
@@ -8201,15 +7992,15 @@ Example: .bumpreminder config
 ---
 
 ### .buttonrole
-> Create interactive button role systems. Users click buttons to assign/remove roles. Admin only. Usage: .buttonrole <create|list|delete> [options]
+> Create interactive button role systems. Users click buttons to assign/remove roles. Admin only.
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | brole | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
-Syntax: .buttonrole
+Syntax: .buttonrole <create|list|delete> [options]
 Example: .buttonrole
 ```
 
@@ -8222,7 +8013,7 @@ Example: .buttonrole
 | :--- | :--- | :--- |
 | coin, price, check | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .crypto
 Example: .crypto
@@ -8237,7 +8028,7 @@ Example: .crypto
 | :--- | :--- | :--- |
 | dec | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: decode <format> <text>
 Example: .decode
@@ -8252,7 +8043,7 @@ Example: .decode
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .dig
 Example: .dig
@@ -8267,7 +8058,7 @@ Example: .dig
 | :--- | :--- | :--- |
 | say, announce, echo | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .embed
 Example: .embed
@@ -8282,7 +8073,7 @@ Example: .embed
 | :--- | :--- | :--- |
 | enc | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: encode <format> <text>
 Example: .encode
@@ -8297,7 +8088,7 @@ Example: .encode
 | :--- | :--- | :--- |
 | convert, currency | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .exchange
 Example: .exchange
@@ -8312,7 +8103,7 @@ Example: .exchange
 | :--- | :--- | :--- |
 | color, hexcode | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: hex <color_name>
 Example: .hex
@@ -8327,7 +8118,7 @@ Example: .hex
 | :--- | :--- | :--- |
 | hexenc, hexe | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: hex-encode <encode|decode> <text>
 Example: .hex-encode
@@ -8342,7 +8133,7 @@ Example: .hex-encode
 | :--- | :--- | :--- |
 | ipcheck, lookup | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .ip
 Example: .ip
@@ -8357,7 +8148,7 @@ Example: .ip
 | :--- | :--- | :--- |
 | israel, assad | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .jew
 Example: .jew
@@ -8372,7 +8163,7 @@ Example: .jew
 | :--- | :--- | :--- |
 | mac, oui | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .maclookup
 Example: .maclookup
@@ -8387,7 +8178,7 @@ Example: .maclookup
 | :--- | :--- | :--- |
 | mcs, mc | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .mcserver
 Example: .mcserver
@@ -8402,7 +8193,7 @@ Example: .mcserver
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: nato <text>
 Example: .nato
@@ -8417,7 +8208,7 @@ Example: .nato
 | :--- | :--- | :--- |
 | roastnews, dailyroast | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .news
 Example: .news
@@ -8432,33 +8223,26 @@ Example: .news
 | :--- | :--- | :--- |
 | vote, p | <duration> <question> | <opt1> | <opt2>... | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .poll <time> <question> | <options>
 Example: .poll 1h Favorite color? | Red | Blue
 ```
+
 **Required Permissions:** `ManageMessages`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**create**
+**CREATE**
 > Launch a new button poll
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <time> <question> | <options> | n/a |
 
 ```
 Syntax: .poll 1h Best Bot? | Esoterica | Others
 Example: .poll 1h Red or Blue? | Red | Blue
 ```
 
-**end**
+**END**
 > Terminate an active poll
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <message_id> | n/a |
 
 ```
 Syntax: .poll end 123456789
@@ -8469,13 +8253,13 @@ Example: .poll end 123456789
 ---
 
 ### .remind
-> Set a reminder. Usage: .remind <time> <message> | .remind list | .remind cancel <id>
+> Set a reminder. .remind list | .remind cancel <id>
 
 | **Aliases** | **Parameters** | **Information** |
 | :--- | :--- | :--- |
 | reminder, remindme | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .remind <time> <message>
 Example: .remind
@@ -8490,11 +8274,12 @@ Example: .remind
 | :--- | :--- | :--- |
 | schedulemsg, sched | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .schedule <time> <#channel> <message> | .schedule list | .schedule cancel <id>
 Example: .schedule
 ```
+
 **Required Permissions:** `ManageMessages`  
 
 ---
@@ -8506,7 +8291,7 @@ Example: .schedule
 | :--- | :--- | :--- |
 | ss, capture | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .screenshot
 Example: .screenshot
@@ -8521,57 +8306,42 @@ Example: .screenshot
 | :--- | :--- | :--- |
 | sb, star | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .starboard <subcommand>
 Example: .starboard set #starboard
 ```
+
 **Required Permissions:** `ManageGuild`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**set**
+**SET**
 > Set the starboard channel
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <#channel> | n/a |
 
 ```
 Syntax: .starboard set #starboard
 Example: .starboard set #starboard
 ```
 
-**threshold**
+**THRESHOLD**
 > Set minimum star count
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <number> | n/a |
 
 ```
 Syntax: .starboard threshold 5
 Example: .starboard threshold 3
 ```
 
-**enable**
+**ENABLE**
 > Enable the starboard system
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .starboard enable
 Example: .starboard enable
 ```
 
-**disable**
+**DISABLE**
 > Disable the starboard system
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .starboard disable
@@ -8588,11 +8358,12 @@ Example: .starboard disable
 | :--- | :--- | :--- |
 | tg | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: tag <name> | tag create <name> <content> | tag delete <name> | tag list
 Example: .tag
 ```
+
 **Required Permissions:** `ManageMessages`  
 
 ---
@@ -8604,7 +8375,7 @@ Example: .tag
 | :--- | :--- | :--- |
 | tv, tempvc | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tempvoice
 Example: .tempvoice
@@ -8619,7 +8390,7 @@ Example: .tempvoice
 | :--- | :--- | :--- |
 | chart, graph | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .ticker
 Example: .ticker
@@ -8634,93 +8405,66 @@ Example: .ticker
 | :--- | :--- | :--- |
 | tickets, t | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tickets <subcommand>
 Example: .ticket
 ```
+
 **Required Permissions:** `ManageGuild`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**panel**
+**PANEL**
 > Manage ticket panels
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | add/list/post/content/color | n/a |
 
 ```
 Syntax: .tickets panel add Support 112233
 Example: .tickets panel post Support
 ```
 
-**button**
+**BUTTON**
 > Add buttons to a panel
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <panel> <label> <cat_id> [role] | n/a |
 
 ```
 Syntax: .tickets button Support Billing 998877
 Example: .tickets button Support Billing 998877
 ```
 
-**modal**
+**MODAL**
 > Add form questions to a button
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <panel> <btn_label> <question> | n/a |
 
 ```
 Syntax: .tickets modal Support Billing "What is the issue?"
 Example: .tickets modal Support Billing "What is the issue?"
 ```
 
-**config**
+**CONFIG**
 > Configure global ticket settings
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <limit/inactivity/logs> <value> | n/a |
 
 ```
 Syntax: .tickets config limit 3
 Example: .tickets config logs 112233
 ```
 
-**list**
+**LIST**
 > List all panels and buttons
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .tickets list
 Example: .tickets list
 ```
 
-**claim**
+**CLAIM**
 > Claim the current ticket
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | none | n/a |
 
 ```
 Syntax: .t claim
 Example: .ticket claim
 ```
 
-**close**
+**CLOSE**
 > Close and purge the ticket
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [reason] | n/a |
 
 ```
 Syntax: .t close solved
@@ -8737,44 +8481,32 @@ Example: .ticket close
 | :--- | :--- | :--- |
 | tz, tzone, time | <#user/set/search> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .tz <@user|set|search>
 Example: .tz set London
 ```
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**set**
+**SET**
 > Set your personal timezone
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <city> | n/a |
 
 ```
 Syntax: .tz set London
 Example: .tz set Tokyo
 ```
 
-**search**
+**SEARCH**
 > Search for a city timezone
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | <query> | n/a |
 
 ```
 Syntax: .tz search Paris
 Example: .tz search Sydney
 ```
 
-**view**
+**VIEW**
 > View a user's current time
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [@user] | n/a |
 
 ```
 Syntax: .tz @Staff
@@ -8791,11 +8523,12 @@ Example: .tz
 | :--- | :--- | :--- |
 | statusreward, vr | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .vanity
 Example: .vanity
 ```
+
 **Required Permissions:** `ManageGuild`  
 
 ---
@@ -8807,7 +8540,7 @@ Example: .vanity
 | :--- | :--- | :--- |
 | n/a | n/a | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .vitals
 Example: .vitals
@@ -8822,33 +8555,26 @@ Example: .vitals
 | :--- | :--- | :--- |
 | n/a | <subcommand> | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .voicemaster <subcommand>
 Example: .voicemaster setup
 ```
+
 **Required Permissions:** `ManageChannels`  
 
-#### Subcommands
+#### Subcommands Breakdown
 
-**setup**
+**SETUP**
 > Create Voice Master category, hub channel and interface channel
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | n/a | n/a |
 
 ```
 Syntax: .voicemaster setup
 Example: .voicemaster setup
 ```
 
-**interface**
+**INTERFACE**
 > Deploy the control panel
-
-| **Aliases** | **Parameters** | **Information** |
-| :--- | :--- | :--- |
-| n/a | [channel] | n/a |
 
 ```
 Syntax: .voicemaster interface #commands
@@ -8865,7 +8591,7 @@ Example: .voicemaster interface
 | :--- | :--- | :--- |
 | n/a | <user> [comment] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .vouch <@user> [comment]
 Example: .vouch @Staff good service
@@ -8880,7 +8606,7 @@ Example: .vouch @Staff good service
 | :--- | :--- | :--- |
 | vouch-history, vh | [@user] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: .vouches [@user]
 Example: .vouches @Staff
@@ -8897,7 +8623,7 @@ Example: .vouches @Staff
 | :--- | :--- | :--- |
 | n/a | [reason] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /afk [reason]
 Example: /afk
@@ -8912,7 +8638,7 @@ Example: /afk
 | :--- | :--- | :--- |
 | n/a | [add] [remove] [edit] [list] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /autoreact [add] [remove] [edit] [list]
 Example: /autoreact
@@ -8927,7 +8653,7 @@ Example: /autoreact
 | :--- | :--- | :--- |
 | n/a | [add] [remove] [edit] [list] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /autoresponder [add] [remove] [edit] [list]
 Example: /autoresponder
@@ -8942,7 +8668,7 @@ Example: /autoresponder
 | :--- | :--- | :--- |
 | n/a | [create] [view] [list] [delete] [send] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /embed [create] [view] [list] [delete] [send]
 Example: /embed
@@ -8957,7 +8683,7 @@ Example: /embed
 | :--- | :--- | :--- |
 | n/a | [user] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /invites [user]
 Example: /invites
@@ -8972,7 +8698,7 @@ Example: /invites
 | :--- | :--- | :--- |
 | n/a | [set] [remove] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /sticky [set] [remove]
 Example: /sticky
@@ -8987,11 +8713,12 @@ Example: /sticky
 | :--- | :--- | :--- |
 | n/a | [help] [setup] [manager] [add-category] [panel] [panel-preview] [settings] [log] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /ticket [help] [setup] [manager] [add-category] [panel] [panel-preview] [settings] [log]
 Example: /ticket
 ```
+
 **Required Permissions:** `ManageGuild`  
 
 ---
@@ -9003,11 +8730,12 @@ Example: /ticket
 | :--- | :--- | :--- |
 | n/a | [set] [role] [list] [reset] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /vanity [set] [role] [list] [reset]
 Example: /vanity
 ```
+
 **Required Permissions:** `ManageGuild`  
 
 ---
@@ -9019,11 +8747,12 @@ Example: /vanity
 | :--- | :--- | :--- |
 | n/a | [setup] [interface] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /voicemaster [setup] [interface]
 Example: /voicemaster
 ```
+
 **Required Permissions:** `ManageChannels`  
 
 ---
@@ -9035,7 +8764,7 @@ Example: /voicemaster
 | :--- | :--- | :--- |
 | n/a | [add] [remove] [list] | n/a |
 
-**Usage**
+**Usage & Examples**
 ```
 Syntax: /whitelist [add] [remove] [list]
 Example: /whitelist
