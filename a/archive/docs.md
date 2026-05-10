@@ -2,7 +2,7 @@
 
 This is the complete guide to every single command in the bot. No corporate talk, just how it works and how to use it.
 
-**Categories covered:** Moderation, Security, Economy, Games, AI, Music, Fun, Social, Utility, and more.
+**Categories covered:** Moderation, Security, Economy, Games, AI, Music, Fun, Social, Utility, and all Slash Commands.
 
 ---
 
@@ -13,11 +13,17 @@ How to keep your server safe from spammers, raiders, and trolls.
 Tracks how "hot" a user is based on their messages. If they spam, they get points. If they hit a limit, they get punished.
 - `.heat config`: See what's active and how many points everything is worth.
 - `.heat enable / disable`: Turn the whole system on or off.
-- `.heat weight <type> <points>`: Set how annoying an action is (caps, emoji, lines, zalgo, duplicate).
+- `.heat weight <type> <points>`: Set how annoying an action is.
+    - `caps`: All-caps messages.
+    - `emoji`: Too many emojis.
+    - `lines`: Giant walls of text.
+    - `zalgo`: Glitched/corrupted text.
+    - `duplicate`: Sending the same thing over and over.
 - `.heat threshold add <score> <action> [time]`: Set punishments (warn, mute, kick, ban, quarantine).
 - `.heat decay <rate>`: How fast users "cool down" every minute.
 - `.heat user @member`: Check someone's points and their cool-down timer.
 - `.heat reset @member`: Instantly cool someone down to zero.
+- **Unique Way:** Use `.heat cascade on` to trigger every punishment a user crosses in a single message (e.g., if they hit 100 and 200 at once, they get both).
 
 ### Wanted Levels (.wl)
 A GTA-style "Stars" system for high-alert security.
@@ -26,7 +32,11 @@ A GTA-style "Stars" system for high-alert security.
 - `.wl top`: See who the biggest targets in the server are.
 - `.wl lockdown`: Emergency mode. Slashes all thresholds to stop raids.
 - `.wl milestone <score> <action>`: Set hard responses at specific star levels.
-- `.wl config <key> <value>`: Tweak the math (mention, link, emoji, decay, logchannel).
+- `.wl config <key> <value>`: Tweak the math.
+    - `mention`: Heat multiplier for pinging.
+    - `link`: Heat multiplier for links.
+    - `decay`: How fast stars disappear.
+- **Unique Way:** Use `.wl invoke dm <template>` to set a custom message the bot sends to people when they get heat. Use `{score}` and `{reason}` in your text.
 
 ---
 
@@ -48,26 +58,15 @@ The tools you need to run the server effectively.
 - `.lookup <@member | ID>`: Full account report (Creation, Join, Permissions).
 - `.snipe`: View the last deleted message.
 - `.editsnipe`: View the original text of the last edited message.
-- `.slowmode <seconds>`: Force a delay between messages.
 - `.role add / remove @member @role`: Manage roles manually.
-- `.role all / humans / bots @role`: Give a role to everyone in that group.
-- `.lock / .unlock`: Toggle the ability to send messages.
+- **Unique Way:** `.role gradient #color1 #color2 @role1, @role2`: Automatically fades colors across a list of roles.
+- **Unique Way:** `.role icon @role 👑`: Set a custom emoji or image as the role icon.
 
 ### Logging (.log)
 Watch everything that happens in the server with detailed logs.
-- `.log add #channel <event>`: Start logging specific actions (messages, members, channels, roles, voice, server, all).
-- `.log remove #channel <event>`: Stop logging specific actions.
-- `.log color #channel <event> <hex>`: Set the color for specific log types.
-- `.log ignore <@member | #channel>`: Exclude someone or a channel from logs.
-
-### Server Setup & Settings
-- `.setup`: Opens the master configuration menu for welcomes, roles, captcha, and more.
-- `.prefix <new>`: Change the bot's trigger character.
-- `.modlog #channel`: Set the main channel for automated mod logs.
-- `.counter add <type>`: Create a voice channel that shows live stats (members, bots, boosts, etc.).
-- `.invoke <command> <dm|message> <text>`: Customize punishment messages with variables like {user.mention} and {reason}.
-- `.disable <command>`: Block specific commands from being used.
-- `.restrictcommand <command> @role`: Only let specific roles use a command.
+- `.log add #channel <event>`: Start logging actions (messages, members, channels, roles, voice, server, all).
+- `.log color #channel <event> <hex>`: Set a custom embed color for that log type.
+- `.log ignore <@member | #channel>`: Stop the bot from logging specific people or channels.
 
 ---
 
@@ -75,70 +74,54 @@ Watch everything that happens in the server with detailed logs.
 The full game system where you build an empire.
 
 ### Farming & Business
-- `.farm status`: Check your 3 plots and the seed market.
+- `.farm status`: Check your plots and the seed market.
 - `.farm plant <crop>`: Buy and plant seeds (Wheat, Corn, Tomato, Strawberry, Golden Apple).
-- `.farm harvest`: Pick your crops for profit. 15% chance for a bonus payout.
 - `.business buy <name>`: Purchase a shop (Coffee Shop, Tech Startup, Nightclub, etc.).
-- `.business collect`: Claim your hourly earnings (Caps at 24h).
 - `.business upgrade <name>`: Level up a business to increase its hourly income.
+- **Unique Way:** Businesses collect money even while you're offline for up to 24 hours. Don't forget to `.business collect` every day.
 
 ### Gambling & Games
 - `.blackjack / .slots / .crash / .roulette`: Gamble your credits to win big.
-- `.coinflip / .dice / .baccarat / .poker`: More ways to bet and win.
-- `.work / .daily / .weeklylb`: Easy ways to get starting cash and track progress.
 - `.rob @member`: Try to steal from someone's wallet.
-- `.pay @member <amount>`: Send money to friends.
-
-### Anime & Waifus
-- `.roll`: Spend credits to pull a random waifu/character.
-- `.waifus`: View your collection.
-- `.battle @member`: Fight other users using your characters.
-- `.evolve <name>`: Power up your characters.
-- `.trade @member <my_waifu> <their_waifu>`: Swap characters with others.
+- **Unique Way:** Put your money in the bank using `.deposit` to protect it from being stolen by other players.
 
 ---
 
-## 4. AI & "Smart" Tools
-The bot uses advanced AI to help you and your members.
-
-- `.ask <question>`: Chat with the AI. It remembers your past talks.
+## 4. AI & Smart Tools
+- `.ask <question>`: Chat with the AI.
 - `.imagine <prompt>`: Create high-quality images from text.
 - `.tldr`: Summarize the last 50 messages in the channel.
-- `.persona <name>`: Change how the bot talks (Pirate, Scientist, Angry Mod, etc.).
-- `.beef`: Have the AI generate a fake argument between two users.
-- `.forget`: Wipe the bot's memory of your conversations.
+- `.persona <name>`: Change how the bot talks (e.g. `Pirate`, `Scientist`, `Angry Mod`).
 
 ---
 
-## 5. Music & Entertainment
-- `.play <song>`: High-quality music from YouTube, Spotify, or SoundCloud.
-- `.skip / .stop / .pause / .resume`: Control the playback.
-- `.queue / .nowplaying`: See what's playing and what's next.
-- `.loop / .shuffle`: Change how the queue plays.
-- `.volume <0-100>`: Adjust the bot's loudness.
+## 5. Slash Commands (/)
+Most prefix commands also work as Slash commands for a better UI.
+
+- `/lookup`: A visual version of the account lookup tool.
+- `/wantedlevel`: Configure your star system with a menu.
+- `/ask`: Talk to the AI using the slash interface.
+- `/imagine`: Generate images with easy-to-use options.
+- `/rank`: See your level and XP progress on a custom image card.
+- `/leaderboard`: View the top users in the server.
 
 ---
 
-## 6. Social & Family
-Build relationships and family trees.
-
-- `.marry @member`: Get married to another user.
-- `.adopt @member`: Add someone to your family as a child.
-- `.family / .tree`: View your family connections.
-- `.divorce / .disown`: Break family ties.
-- `.hug / .kiss / .slap / .cuddle`: Social roleplay actions.
-- `.rep @member`: Give someone a reputation point.
+## 6. Social, Music & Fun
+- `.play <song>`: High-quality music from YouTube/Spotify.
+- `.marry / .adopt @member`: Build a family tree.
+- `.uno / .battleship / .tictactoe`: Play games with friends.
+- `.meme`: Get fresh memes from Reddit.
+- `.weather <city>`: Check any city's weather.
+- `.translate <text> <language>`: Translate text instantly.
 
 ---
 
-## 7. Utility & Fun
-- `.ticket setup`: Create a support ticket system with categories and logs.
-- `.afk [reason]`: Let people know you're away when they ping you.
-- `.poll "Question" "Option 1" "Option 2"`: Start a vote.
-- `.remind "Text" <time>`: Get a DM reminder later.
+## 7. Utility & Setup
+- `.setup`: Opens the master config menu for welcomes, roles, and logs.
+- `.ticket setup`: Create a support ticket system with buttons and logs.
+- `.counter add <type>`: Create a voice channel that shows live stats.
+- `.sendverify`: Generate a verification button for new members.
+- `.afk [reason]`: Set an AFK status.
 - `.tag add <name> <text>`: Create shortcuts for common info.
 - `.ip <address>`: Get location and ISP info for an IP.
-- `.meme`: Get a fresh meme from Reddit.
-- `.tictactoe / .battleship / .uno`: Play games with friends.
-- `.weather <city>`: Check the current weather anywhere.
-- `.translate <text> <language>`: Translate text instantly.
