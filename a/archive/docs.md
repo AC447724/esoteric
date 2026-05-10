@@ -1,127 +1,226 @@
-# Esoterica: The Ultimate Manual
+# Esoterica: The Absolute Master Manual
 
-This is the complete guide to every single command in the bot. No corporate talk, just how it works and how to use it.
+This is the exhaustive list of every single command in the bot's prefix system.
 
-**Categories covered:** Moderation, Security, Economy, Games, AI, Music, Fun, Social, Utility, and all Slash Commands.
-
----
-
-## 1. Security & Protection
-How to keep your server safe from spammers, raiders, and trolls.
-
-### AutoMod Heat (.heat)
-Tracks how "hot" a user is based on their messages. If they spam, they get points. If they hit a limit, they get punished.
-- `.heat config`: See what's active and how many points everything is worth.
-- `.heat enable / disable`: Turn the whole system on or off.
-- `.heat weight <type> <points>`: Set how annoying an action is.
-    - `caps`: All-caps messages.
-    - `emoji`: Too many emojis.
-    - `lines`: Giant walls of text.
-    - `zalgo`: Glitched/corrupted text.
-    - `duplicate`: Sending the same thing over and over.
-- `.heat threshold add <score> <action> [time]`: Set punishments (warn, mute, kick, ban, quarantine).
-- `.heat decay <rate>`: How fast users "cool down" every minute.
-- `.heat user @member`: Check someone's points and their cool-down timer.
-- `.heat reset @member`: Instantly cool someone down to zero.
-- **Unique Way:** Use `.heat cascade on` to trigger every punishment a user crosses in a single message (e.g., if they hit 100 and 200 at once, they get both).
-
-### Wanted Levels (.wl)
-A GTA-style "Stars" system for high-alert security.
-- `.wl on / off`: Turn the star system on or off.
-- `.wl check [@member]`: See someone's search status (the stars image).
-- `.wl top`: See who the biggest targets in the server are.
-- `.wl lockdown`: Emergency mode. Slashes all thresholds to stop raids.
-- `.wl milestone <score> <action>`: Set hard responses at specific star levels.
-- `.wl config <key> <value>`: Tweak the math.
-    - `mention`: Heat multiplier for pinging.
-    - `link`: Heat multiplier for links.
-    - `decay`: How fast stars disappear.
-- **Unique Way:** Use `.wl invoke dm <template>` to set a custom message the bot sends to people when they get heat. Use `{score}` and `{reason}` in your text.
+**Categories Requested:** Moderation, Logger, Settings, Setup, Utility.
 
 ---
 
-## 2. Moderation & Administration
-The tools you need to run the server effectively.
+## 1. Security & AutoMod (.heat / .wl)
+### AutoMod (.heat)
+- `.heat config`: View system status and weights.
+- `.heat enable / disable`: Toggle the heat system.
+- `.heat weight <module> <points>`: Set heat for caps, emoji, lines, zalgo, or duplicates.
+- `.heat threshold add <score> <action> [time]`: Set punishments at specific scores.
+- `.heat decay <rate>`: Points lost per minute.
+- `.heat cascade <on/off>`: Trigger all thresholds at once.
+- `.heat user <member>`: Check current points.
+- `.heat reset <member>`: Clear all points.
 
-### Core Moderation
-- `.ban @member [reason]`: Permanent ban.
-- `.kick @member [reason]`: Kick out (they can rejoin).
-- `.timeout @member <time>`: Standard Discord timeout (e.g., 1h, 1d).
-- `.warn @member [reason]`: Log a formal warning.
-- `.jail @member`: Lock someone in a restricted jail channel.
-- `.quarantine @member`: Strip all roles and isolate a user.
-- `.hardban @member`: Ban and wipe every message they've ever sent.
-- `.softban @member`: Kick and wipe recent message history.
-- `.nuke`: Deletes every message in the channel by cloning it.
-- `.purge <amount>`: Delete up to 100 messages at once.
-- `.history @member`: View every ban, warn, and mute on someone's record.
-- `.lookup <@member | ID>`: Full account report (Creation, Join, Permissions).
+### Wanted Level (.wl)
+- `.wl on / off`: Toggle notoriety tracking.
+- `.wl check <member>`: View search status (Stars).
+- `.wl status`: Check system health and limits.
+- `.wl top`: View most wanted users.
+- `.wl config <key> <value>`: Tweak multipliers (mention, link, decay, etc.).
+- `.wl milestone <score> <action>`: Custom responses at star levels.
+- `.wl lockdown`: Enable emergency high-security mode.
+- `.wl ignore <channel>`: Stop tracking heat in a channel.
+- `.wl whitelist <role>`: Make a role immune.
+- `.wl invoke <dm|log> <template>`: Set custom alert messages.
+
+---
+
+## 2. Moderation (Full List)
+- `.alias add/remove`: Create custom command shortcuts.
+- `.ban <member> [reason]`: Permanent ban.
+- `.channel <create|delete|rename|hide|sync|clone>`: Manage channels.
+- `.clearsnipe`: Wipe the snipe history for the channel.
+- `.clearwarns <member>`: Delete all warnings for a user.
+- `.counter <add|remove|list|template>`: Manage live stat voice channels.
+- `.disable <command>`: Prevent a command from being used.
+- `.drag <member> <#voice>`: Force move a user to a voice channel.
+- `.editsnipe`: See the original version of the last edited message.
+- `.emoji <add|delete|rename>`: Manage server emojis.
+- `.fame <member> <amount>`: Adjust a user's fame points.
+- `.forcenickname <member> <name>`: Lock a user to a specific name.
+- `.gulag <member>`: Send a user to a highly restricted zone.
+- `.hardban <member>`: Ban and purge all message history.
+- `.hide [#channel]`: Hide a channel from standard users.
+- `.history <member>`: View all past punishments.
+- `.imute <member>`: Image-mute a user (prevents attachments).
+- `.invoke <command> <dm|message> <template>`: Customize punishment responses.
+- `.iunmute <member>`: Remove image-mute.
+- `.jail <member> [reason]`: Lock a user in the jail channel.
+- `.kick <member> [reason]`: Remove user from the server.
+- `.lock [#channel]`: Stop messages in a channel.
+- `.lockdown`: Toggle server-wide lockdown.
+- `.modlog #channel`: Set the automated log channel.
+- `.modsearch <query>`: Search logs for specific keywords.
+- `.modstats <member>`: View moderator action counts.
+- `.moveall <#voice>`: Move everyone to a new voice channel.
+- `.mute <member> [time]`: Legacy system mute.
+- `.nick <member> <name>`: Change a user's nickname.
+- `.notes <member> <add|view>`: Manage staff-only user notes.
+- `.nuke`: Clone and delete channel to clear all messages.
+- `.perms <member|role>`: Check exact permissions.
+- `.prefix <char>`: Change the bot's prefix.
+- `.purge <amount>`: Delete multiple messages.
+- `.quarantine <member>`: Strip roles and isolate user.
+- `.reactionsnipe`: See recently removed reactions.
+- `.reason <id> <text>`: Update the reason for a past action.
+- `.reputation <member>`: View server-wide reputation points.
+- `.restore <member>`: Manually restore roles for a user.
+- `.restrictcommand <command> <role>`: Limit a command to a role.
+- `.retire <member>`: Strip all staff roles from a user.
+- `.rmute <member>`: Reaction-mute a user.
+- `.role <add|remove|create|delete|rename|color|hoist|icon|gradient>`: Deep role management.
+- `.roles`: List all server roles and IDs.
+- `.runmute <member>`: Remove reaction-mute.
+- `.securityscore <member>`: Rate a user's safety level.
+- `.sendverify`: Post a verification button message.
+- `.setup`: Open the main config menu.
+- `.setupmute`: Configure the mute role and permissions.
+- `.shame <member>`: Publicly mark a user for an infraction.
+- `.slowmode <seconds>`: Set message delay.
+- `.slowmode-sync`: Sync slowmode across a category.
 - `.snipe`: View the last deleted message.
-- `.editsnipe`: View the original text of the last edited message.
-- `.role add / remove @member @role`: Manage roles manually.
-- **Unique Way:** `.role gradient #color1 #color2 @role1, @role2`: Automatically fades colors across a list of roles.
-- **Unique Way:** `.role icon @role 👑`: Set a custom emoji or image as the role icon.
-
-### Logging (.log)
-Watch everything that happens in the server with detailed logs.
-- `.log add #channel <event>`: Start logging actions (messages, members, channels, roles, voice, server, all).
-- `.log color #channel <event> <hex>`: Set a custom embed color for that log type.
-- `.log ignore <@member | #channel>`: Stop the bot from logging specific people or channels.
-
----
-
-## 3. Economy & Making Money
-The full game system where you build an empire.
-
-### Farming & Business
-- `.farm status`: Check your plots and the seed market.
-- `.farm plant <crop>`: Buy and plant seeds (Wheat, Corn, Tomato, Strawberry, Golden Apple).
-- `.business buy <name>`: Purchase a shop (Coffee Shop, Tech Startup, Nightclub, etc.).
-- `.business upgrade <name>`: Level up a business to increase its hourly income.
-- **Unique Way:** Businesses collect money even while you're offline for up to 24 hours. Don't forget to `.business collect` every day.
-
-### Gambling & Games
-- `.blackjack / .slots / .crash / .roulette`: Gamble your credits to win big.
-- `.rob @member`: Try to steal from someone's wallet.
-- **Unique Way:** Put your money in the bank using `.deposit` to protect it from being stolen by other players.
+- `.softban <member>`: Kick and clear 7 days of history.
+- `.sticker <add|delete|rename>`: Manage server stickers.
+- `.stickyrole <role>`: Set a role that persists through leaves/rejoins.
+- `.stripstaff <member>`: Instantly remove all staff permissions.
+- `.tempban <member> <time>`: Temporary ban.
+- `.temprole <member> <role> <time>`: Temporary role assignment.
+- `.thread <action>`: Manage threads and forum posts.
+- `.timeout <member> <time>`: Native Discord timeout.
+- `.unban <member>`: Remove a ban.
+- `.unbanall`: Remove every ban in the server.
+- `.unhide [#channel]`: Make a channel visible again.
+- `.unjail <member>`: Release from jail.
+- `.unlock [#channel]`: Allow messages again.
+- `.unlockall`: Unlock every locked channel.
+- `.unmute <member>`: Remove system mute.
+- `.unquarantine <member>`: Restore roles and access.
+- `.unrestrictcommand <command>`: Remove role restriction.
+- `.untimeout <member>`: Remove native timeout.
+- `.voicepurge`: Disconnect everyone from a voice channel.
+- `.warn <member> [reason]`: Record a warning.
+- `.warns <member>`: View a list of warnings.
 
 ---
 
-## 4. AI & Smart Tools
-- `.ask <question>`: Chat with the AI.
-- `.imagine <prompt>`: Create high-quality images from text.
-- `.tldr`: Summarize the last 50 messages in the channel.
-- `.persona <name>`: Change how the bot talks (e.g. `Pirate`, `Scientist`, `Angry Mod`).
+## 3. Logger (.log)
+- `.log add #channel <event>`: Enable logging for specific events (messages, members, channels, roles, voice, server, all).
+- `.log remove #channel <event>`: Disable logging for specific events.
+- `.log color #channel <event> <hex>`: Set custom embed colors.
+- `.log ignore <member|channel>`: Exclude targets from being logged.
 
 ---
 
-## 5. Slash Commands (/)
-Most prefix commands also work as Slash commands for a better UI.
-
-- `/lookup`: A visual version of the account lookup tool.
-- `/wantedlevel`: Configure your star system with a menu.
-- `/ask`: Talk to the AI using the slash interface.
-- `/imagine`: Generate images with easy-to-use options.
-- `/rank`: See your level and XP progress on a custom image card.
-- `/leaderboard`: View the top users in the server.
+## 4. Setup & Settings
+- `.boostconfig`: Configure rewards for server boosters.
+- `.boosterrole`: Set a custom role for boosters.
+- `.confessions`: Setup an anonymous confession channel.
+- `.hall`: Configure a "Hall of Fame" or specific highlight channel.
+- `.settings`: View and tweak general bot settings for the server.
 
 ---
 
-## 6. Social, Music & Fun
-- `.play <song>`: High-quality music from YouTube/Spotify.
-- `.marry / .adopt @member`: Build a family tree.
-- `.uno / .battleship / .tictactoe`: Play games with friends.
-- `.meme`: Get fresh memes from Reddit.
-- `.weather <city>`: Check any city's weather.
-- `.translate <text> <language>`: Translate text instantly.
+## 5. Utility (Full List)
+- `.afk [reason]`: Set an away status.
+- `.autoreact`: Setup automatic reactions to specific words.
+- `.autoresponder`: Setup automatic text replies.
+- `.base64 <encode|decode> <text>`: Convert text to/from Base64.
+- `.binary <encode|decode> <text>`: Convert text to/from Binary.
+- `.birthday`: Manage user birthdays and announcements.
+- `.blacklist`: Block specific users from using the bot.
+- `.boostR`: Manage booster-specific rewards and roles.
+- `.br`: Advanced booster role management.
+- `.bumpreminder`: Set reminders for server bumpers.
+- `.crypto <price|list>`: Check cryptocurrency prices.
+- `.decode <type> <text>`: Multi-format decoder.
+- `.dig <domain>`: Perform DNS lookups.
+- `.embed`: Create custom embedded messages with a builder.
+- `.encode <type> <text>`: Multi-format encoder.
+- `.exchange <amount> <from> <to>`: Currency conversion.
+- `.hex <color>`: View color info and conversions.
+- `.hex-encode <text>`: Convert text to Hex.
+- `.ip <address>`: Get location and ISP data for an IP.
+- `.jew`: Internal utility/tracking (Context specific).
+- `.maclookup <mac>`: Identify the manufacturer of a MAC address.
+- `.mcserver <ip>`: Check the status of a Minecraft server.
+- `.nato <text>`: Convert text to the NATO phonetic alphabet.
+- `.news`: Get the latest headlines.
+- `.poll`: Start a button-based poll.
+- `.remind <text> <time>`: Set a personal reminder.
+- `.schedule`: Manage server events and tasks.
+- `.ss <url>`: Take a screenshot of a website.
+- `.starboard`: Setup a channel for "starred" highlights.
+- `.tag <add|remove|list>`: Create custom text shortcuts.
+- `.tempvoice`: Setup auto-deleting temporary voice channels.
+- `.ticker`: Create a scrolling text banner (Context specific).
+- `.ticket <setup|close|add|remove>`: Full support ticket system.
+- `.timezone`: Set your personal timezone for bot features.
+- `.vanity`: Track and manage server vanity URLs.
+- `.vitals`: Check bot latency, uptime, and health.
+- `.voicemaster`: User-owned temporary voice channel system.
+- `.vouch / .vouches`: Manage a reputation/vouching system.
 
 ---
 
-## 7. Utility & Setup
-- `.setup`: Opens the master config menu for welcomes, roles, and logs.
-- `.ticket setup`: Create a support ticket system with buttons and logs.
-- `.counter add <type>`: Create a voice channel that shows live stats.
-- `.sendverify`: Generate a verification button for new members.
-- `.afk [reason]`: Set an AFK status.
-- `.tag add <name> <text>`: Create shortcuts for common info.
-- `.ip <address>`: Get location and ISP info for an IP.
+## 6. Economy (Highlights)
+- `.achievements`: View your earned milestones.
+- `.balance`: Check your cash and bank.
+- `.blackjack / .slots / .crash / .poker`: Gamble your credits.
+- `.business <buy|collect|upgrade>`: Build a passive income empire.
+- `.farm <plant|harvest|status>`: The weed/crop farming game.
+- `.heist`: Group up to rob the bank.
+- `.invest`: Put money into the market for long-term gains.
+- `.rob <member>`: Try to steal from a user's wallet.
+- `.shop`: Buy items, multipliers, and roles.
+- `.work / .daily / .weekly`: Get free cash.
+
+---
+
+## 7. AI & Smart Tools
+- `.ai / .ask`: Chat with the AI.
+- `.imagine`: Generate images from text.
+- `.tldr`: Summarize recent chat messages.
+- `.persona`: Change how the AI talks.
+- `.beef`: Generate an AI argument between users.
+- `.brain`: Check AI processing and memory.
+
+---
+
+## 8. Games & Entertainment
+- `.battleship / .uno / .tictactoe / .connect4`: Play against others.
+- `.hangman / .scramble / .wordgame`: Word-based puzzles.
+- `.minesweeper`: Generate a playable grid.
+- `.type`: Test your typing speed.
+
+---
+
+## 9. Family & Roleplay
+- `.marry / .divorce`: Manage relationships.
+- `.adopt / .disown`: Manage children.
+- `.family / .tree`: View the full family connections.
+- `.hug / .kiss / .slap / .touch`: Interaction commands.
+
+---
+
+## 10. Music
+- `.play <song>`: Start playing audio.
+- `.queue / .nowplaying`: Track the playlist.
+- `.skip / .stop / .pause / .resume`: Controls.
+- `.volume / .loop / .shuffle`: Tweaks.
+- `.247`: Keep the bot in the channel permanently.
+
+---
+
+## 11. Owner Commands (Internal)
+- `.eval`: Execute raw code (Highly restricted).
+- `.restart`: Reboot the bot.
+- `.setbal <member> <amount>`: Adjust a user's balance.
+- `.whitelist / .blacklist`: Global access control.
+- `.prompt`: Change the global AI behavior.
+- `.dbhealth / .econhealth`: Check database integrity.
